@@ -1,0 +1,6594 @@
+/** Fonts **/
+/** Colors **/
+/* line 19, ../sass/indexNew.scss */
+.loadingOverlay, .pageContainer, .unsupport, .logOverlay, .indexMain, .mainBody {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* line 27, ../sass/indexNew.scss */
+.cont, .indexMain .body, .indexMain .body .imgHead .headIcon {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 34, ../sass/indexNew.scss */
+.logAndReg .close, .forgotPW, .regSel .regBut {
+  cursor: pointer;
+  transition: all 0.25s linear;
+  outline: none;
+}
+
+/* line 44, ../sass/indexNew.scss */
+.unsupport .imgHead, .indexMain .body .imgHead {
+  position: absolute;
+  top: 40px;
+  width: 500px;
+  height: 88px;
+  left: calc(50% - 250px);
+}
+
+/** Misc **/
+/* line 57, ../sass/indexNew.scss */
+body {
+  font-family: Calibri, sans-serif;
+  background-color: #00090f;
+  overflow: hidden;
+  z-index: 99991;
+}
+
+/* line 63, ../sass/indexNew.scss */
+.bodyContent {
+  overflow: hidden;
+  opacity: 1;
+}
+
+/******* Fade In *********/
+/* line 69, ../sass/indexNew.scss */
+.fade-in.ng-enter {
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+/* line 73, ../sass/indexNew.scss */
+.fade-in.ng-enter.ng-enter-active {
+  transition: all 0.3s linear;
+  opacity: 1;
+}
+
+/* line 77, ../sass/indexNew.scss */
+.fade-in.ng-leave {
+  transition: all 0.3s linear;
+  opacity: 1;
+}
+
+/* line 81, ../sass/indexNew.scss */
+.fade-in.ng-leave.ng-leave-active {
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+/* line 85, ../sass/indexNew.scss */
+.fade-in {
+  transition: all 0.3s linear;
+  opacity: 1;
+}
+
+/******* Fade In Med *********/
+/* line 91, ../sass/indexNew.scss */
+.fade-in-med.ng-enter {
+  transition: all 0.4s linear;
+  opacity: 0;
+}
+
+/* line 95, ../sass/indexNew.scss */
+.fade-in-med.ng-enter.ng-enter-active {
+  transition: all 0.4s linear;
+  opacity: 1;
+}
+
+/* line 99, ../sass/indexNew.scss */
+.fade-in-med.ng-leave {
+  transition: all 0.4s linear;
+  opacity: 1;
+}
+
+/* line 103, ../sass/indexNew.scss */
+.fade-in-med.ng-leave.ng-leave-active {
+  transition: all 0.4s linear;
+  opacity: 0;
+}
+
+/* line 107, ../sass/indexNew.scss */
+.fade-in-med {
+  transition: all 0.4s linear;
+  opacity: 1;
+}
+
+/******* Slide UP *********/
+/* line 113, ../sass/indexNew.scss */
+.slide-up.ng-enter {
+  transition: all 0.4s linear;
+  top: 100vh;
+}
+
+/* line 117, ../sass/indexNew.scss */
+.slide-up.ng-enter.ng-enter-active {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/* line 121, ../sass/indexNew.scss */
+.slide-up.ng-leave {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/* line 125, ../sass/indexNew.scss */
+.slide-up.ng-leave.ng-leave-active {
+  transition: all 0.4s linear;
+  top: -100vh;
+}
+
+/* line 129, ../sass/indexNew.scss */
+.slide-up {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/******* Slide Down *********/
+/* line 135, ../sass/indexNew.scss */
+.slide-up.ng-enter {
+  transition: all 0.4s linear;
+  top: -100vh;
+}
+
+/* line 139, ../sass/indexNew.scss */
+.slide-up.ng-enter.ng-enter-active {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/* line 143, ../sass/indexNew.scss */
+.slide-up.ng-leave {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/* line 147, ../sass/indexNew.scss */
+.slide-up.ng-leave.ng-leave-active {
+  transition: all 0.4s linear;
+  top: 100vh;
+}
+
+/* line 151, ../sass/indexNew.scss */
+.slide-up {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/******************************************************************************************
+*** Progress ***
+******************************************************************************************/
+/* line 159, ../sass/indexNew.scss */
+.progressCircle {
+  position: fixed;
+  width: 80px;
+  left: calc(50vw - 15px);
+  top: calc(50vh - 15px);
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 9999999999;
+}
+
+/* line 169, ../sass/indexNew.scss */
+.loadingOverlay.ng-leave {
+  transition: all 0.3s linear;
+  opacity: 1;
+}
+
+/* line 173, ../sass/indexNew.scss */
+.loadingOverlay.ng-leave-active {
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+/* line 177, ../sass/indexNew.scss */
+.loadingOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s linear;
+  opacity: 1;
+  z-index: 999999;
+}
+
+/* line 184, ../sass/indexNew.scss */
+md-progress-circular svg path {
+  stroke: lime;
+}
+
+/******************************************************************************************
+*** Page Content ***
+******************************************************************************************/
+/* line 191, ../sass/indexNew.scss */
+.pageContainer {
+  background-color: transparent;
+  transition: all ease-in 0.25s;
+  z-index: 99992;
+}
+@media only screen and (max-width: 1360px) {
+  /* line 191, ../sass/indexNew.scss */
+  .pageContainer {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1360px) {
+  /* line 191, ../sass/indexNew.scss */
+  .pageContainer {
+    display: block;
+  }
+}
+
+/* line 203, ../sass/indexNew.scss */
+.cont {
+  position: absolute;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/******************************************************************************************
+*** Unsopported ***
+******************************************************************************************/
+/* line 212, ../sass/indexNew.scss */
+.unsupport {
+  background-color: rgba(0, 14, 32, 0.8);
+  text-align: center;
+}
+@media only screen and (max-width: 1360px) {
+  /* line 212, ../sass/indexNew.scss */
+  .unsupport {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1360px) {
+  /* line 212, ../sass/indexNew.scss */
+  .unsupport {
+    display: none;
+  }
+}
+
+/* line 226, ../sass/indexNew.scss */
+.unsupport .info {
+  position: relative;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 20px;
+  color: #0066cc;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 80%;
+  font-weight: bold;
+  align-content: center;
+  align-self: center;
+}
+
+/***********************************************************************************************************
+*** Login ***
+************************************************************************************************************/
+/* line 242, ../sass/indexNew.scss */
+.logOverlay.ng-hide {
+  opacity: 0;
+}
+
+/* line 245, ../sass/indexNew.scss */
+.logOverlay.ng-hide-add,
+.logOverlay.ng-hide-remove {
+  transition: all 0.4s linear;
+}
+
+/* line 249, ../sass/indexNew.scss */
+.logOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+}
+
+/* line 254, ../sass/indexNew.scss */
+.logAndReg.ng-hide {
+  opacity: 0;
+  top: -20vh;
+}
+
+/* line 258, ../sass/indexNew.scss */
+.logAndReg.ng-hide-add,
+.logAndReg.ng-hide-remove {
+  transition: all 0.4s linear;
+}
+
+/* line 262, ../sass/indexNew.scss */
+.logAndReg {
+  position: absolute;
+  height: 500px;
+  width: 400px;
+  top: 100px;
+  left: calc(50vw - 200px);
+  border-radius: 5px;
+  background-color: white;
+  z-index: 999991;
+  overflow: hidden;
+}
+
+/* line 273, ../sass/indexNew.scss */
+.logAndReg .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #888;
+  font-size: 15px;
+  font-family: Segoe Ui, sans-serif;
+  z-index: 9999;
+}
+
+/* line 283, ../sass/indexNew.scss */
+.logAndReg .close:hover {
+  color: #005bd1;
+}
+
+/* line 286, ../sass/indexNew.scss */
+.logAndReg .image {
+  position: absolute;
+  top: 30px;
+  width: 200px;
+  left: calc(50% - 100px);
+  height: auto;
+  z-index: 9999;
+}
+
+/* line 294, ../sass/indexNew.scss */
+.logAndReg .header {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  color: #fff;
+  font-size: 15px;
+  cursor: default;
+  z-index: 9999;
+}
+
+/* line 303, ../sass/indexNew.scss */
+.logAndReg .logForm.ng-hide {
+  left: -100%;
+}
+
+/* line 306, ../sass/indexNew.scss */
+.logAndReg .logForm.ng-hide-add,
+.logAndReg .logForm.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 310, ../sass/indexNew.scss */
+.logAndReg .logForm {
+  position: absolute;
+  top: 20%;
+  left: 40px;
+  width: calc(100% - 80px);
+  height: 70%;
+  transition: all 0.25s linear;
+}
+
+/* line 318, ../sass/indexNew.scss */
+.logAndReg .loginInputBar {
+  position: relative;
+  top: 30px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+  padding: 0 0 0 0;
+  z-index: 9999;
+}
+
+/* line 330, ../sass/indexNew.scss */
+.logAndReg .loginInputBar input {
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  border: none;
+}
+
+/* line 336, ../sass/indexNew.scss */
+.loginInputSep {
+  height: 20px;
+}
+
+/***************************************************************************************************************/
+/* line 340, ../sass/indexNew.scss */
+.logErrorMsg {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  color: Red;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+/* line 349, ../sass/indexNew.scss */
+.logErrorMsgOK {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  color: Lime;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+/* line 358, ../sass/indexNew.scss */
+.underInput {
+  position: relative;
+  top: 10px;
+  width: 100%;
+}
+
+/* line 363, ../sass/indexNew.scss */
+.forgotPW {
+  position: relative;
+  left: 0;
+  top: 30px;
+  font-family: Arial-nova, sans-serif;
+  color: #005bd1;
+  font-weight: bold;
+  font-size: 10px;
+  z-index: 9999;
+}
+
+/* line 374, ../sass/indexNew.scss */
+.regSel {
+  position: absolute;
+  top: 170px;
+  right: 0;
+  height: auto;
+  width: auto;
+  z-index: 9999;
+}
+
+/* line 382, ../sass/indexNew.scss */
+.regSel .regBut {
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  color: #005bd1;
+  z-index: 9999;
+}
+
+/* line 390, ../sass/indexNew.scss */
+.regSel .regTxt {
+  position: relative;
+  font-size: 12px;
+  color: #969696;
+  cursor: default;
+  z-index: 9999;
+}
+
+/* line 397, ../sass/indexNew.scss */
+.logBut {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #005bd1;
+  border-radius: 5px;
+  background-color: #005bd1;
+  color: #fff;
+  transition: all 0.2s linear;
+  z-index: 9999;
+}
+
+/* line 412, ../sass/indexNew.scss */
+.logBut:hover, .logBut:focus {
+  border: 1px solid #005bd1;
+  color: white;
+  background-color: rgba(0, 91, 209, 0.5);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 91, 209, 0.5);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 91, 209, 0.5);
+  box-shadow: 0 0 10px 5px rgba(0, 91, 209, 0.5);
+}
+
+/* line 420, ../sass/indexNew.scss */
+.logBut:disabled {
+  background-color: rgba(0, 91, 209, 0.2);
+  border: 1px solid rgba(0, 91, 209, 0.2);
+  color: #555;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: default;
+  z-index: 9999;
+}
+
+/* line 429, ../sass/indexNew.scss */
+.logBut:disabled:hover {
+  background-color: rgba(0, 91, 209, 0.2);
+  border: 1px solid rgba(0, 91, 209, 0.2);
+  color: #555;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: default;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0);
+  box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0);
+}
+
+/************************** Input Styling ****************************************/
+/* line 441, ../sass/indexNew.scss */
+.logInput {
+  margin-top: 0;
+  letter-spacing: 2px;
+  left: 5px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* line 454, ../sass/indexNew.scss */
+.loginInputBar md-input-container {
+  position: absolute;
+  margin-left: 0;
+  color: #0062bd;
+  border-bottom: 1px solid rgba(0, 46, 66, 0);
+  letter-spacing: 1px;
+  font-size: 10px;
+  width: 95%;
+  height: 100%;
+  z-index: 9999;
+}
+
+/* line 465, ../sass/indexNew.scss */
+.loginInputBar md-input-container .md-input:focus {
+  margin-left: 1px;
+  color: #0062bd;
+  border-bottom: 1px solid #0062bd;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+/* line 472, ../sass/indexNew.scss */
+.logInput .flex-gt-sm {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  box-sizing: content-box;
+  /*box-sizing: border-box;*/
+}
+
+/************************** Forgot Password ****************************************/
+/* line 480, ../sass/indexNew.scss */
+.logAndReg .logFormOne.ng-hide {
+  left: 100%;
+}
+
+/* line 483, ../sass/indexNew.scss */
+.logAndReg .logFormOne.ng-hide-add,
+.logAndReg .logFormOne.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 487, ../sass/indexNew.scss */
+.logAndReg .logFormOne {
+  position: absolute;
+  top: 20%;
+  left: 40px;
+  width: calc(100% - 80px);
+  height: 70%;
+  transition: all 0.25s linear;
+}
+
+/* line 495, ../sass/indexNew.scss */
+.newInput {
+  position: relative;
+  top: 50px;
+  left: -10px;
+}
+
+/******************************************************************************************
+*** Main ***
+******************************************************************************************/
+/* line 5, ../sass/_indexMain.scss */
+.indexMain {
+  /*background-color: rgba(0,0,0,1);*/
+  background: url("../Images/wall0013.jpg") top center no-repeat fixed;
+  background-size: 100% 100%;
+}
+
+/* line 11, ../sass/_indexMain.scss */
+.indexMain .body {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 21, ../sass/_indexMain.scss */
+.indexMain .body .selections {
+  position: relative;
+  width: auto;
+  height: 50%;
+  top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* line 30, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt {
+  position: relative;
+  border: 1px solid rgba(0, 128, 255, 0);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s linear;
+  height: 100%;
+  border-radius: 5px;
+  /*width: fit-content;*/
+  width: 60%;
+  background-color: rgba(0, 9, 15, 0.7);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+/* line 45, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt:hover {
+  border: 1px solid rgba(0, 128, 255, 0);
+  -webkit-box-shadow: 0 10px 10px -5px rgba(0, 102, 204, 0.7);
+  -moz-box-shadow: 0 10px 10px -5px rgba(0, 102, 204, 0.7);
+  box-shadow: 0 10px 10px -5px rgba(0, 102, 204, 0.7);
+}
+
+/* line 52, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt:hover > .ico {
+  fill: #0080ff;
+}
+
+/* line 55, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt .ico {
+  position: absolute;
+  transition: all 0.25s linear;
+  fill: rgba(255, 255, 255, 0.9);
+}
+@media only screen and (min-width: 1600px) {
+  /* line 55, ../sass/_indexMain.scss */
+  .indexMain .body .selections .opt .ico {
+    width: 120px;
+    height: 120px;
+    left: calc(50% - 60px);
+    top: calc(50% - 60px);
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 55, ../sass/_indexMain.scss */
+  .indexMain .body .selections .opt .ico {
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 55, ../sass/_indexMain.scss */
+  .indexMain .body .selections .opt .ico {
+    width: 90px;
+    height: 90px;
+    left: calc(50% - 45px);
+    top: calc(50% - 45px);
+  }
+}
+
+/* line 78, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt .txtCont {
+  position: relative;
+  color: #fff;
+  font-family: Segoe UI, sans-serif;
+  font-size: 35px;
+  width: fit-content;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 78, ../sass/_indexMain.scss */
+  .indexMain .body .selections .opt .txtCont {
+    top: 20px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 78, ../sass/_indexMain.scss */
+  .indexMain .body .selections .opt .txtCont {
+    top: 20px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 78, ../sass/_indexMain.scss */
+  .indexMain .body .selections .opt .txtCont {
+    top: 20px;
+  }
+}
+
+/* line 98, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt .txtCont .txt {
+  position: relative;
+  color: #0080ff;
+  font-family: Segoe UI, sans-serif;
+  font-size: 35px;
+  width: fit-content;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  top: 0;
+}
+
+/* line 108, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt .txtCont .txtOne {
+  position: relative;
+  color: white;
+  font-family: Segoe UI, sans-serif;
+  font-size: 35px;
+  width: fit-content;
+  margin-bottom: 10px;
+  top: 0;
+}
+
+/* line 117, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt .continue {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: fit-content;
+  cursor: pointer;
+  transition: all 0.25s linear;
+  border: 1px solid #0080ff;
+  background-color: rgba(0, 128, 255, 0);
+  border-radius: 5px;
+  padding: 2px 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 136, ../sass/_indexMain.scss */
+.indexMain .body .selections .opt .continue:hover {
+  color: #0080ff;
+}
+
+/******************************************************************************************
+*** Logistics ***
+******************************************************************************************/
+/* line 4, ../sass/_indexLogistics.scss */
+.mainBody {
+  z-index: 99991;
+  background: url("../Images/wall0011.jpg") top center no-repeat fixed;
+  background-size: 100% 100%;
+}
+
+/***************************************** Header *****************************************/
+/* line 11, ../sass/_indexLogistics.scss */
+.mainBody .headerBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  z-index: 99992;
+}
+
+/* line 20, ../sass/_indexLogistics.scss */
+.mainBody .headerBar .leftSide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: 50px;
+  background-color: #000e20;
+}
+
+/* line 28, ../sass/_indexLogistics.scss */
+.mainBody .headerBar .leftSide .leftMen {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 70px;
+}
+
+/* line 35, ../sass/_indexLogistics.scss */
+.mainBody .headerBar .leftSide .leftMen .menuIcon {
+  position: relative;
+  left: 20px;
+  top: 10px;
+  fill: #c8c8c8;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+}
+
+/* line 44, ../sass/_indexLogistics.scss */
+.mainBody .headerBar .leftSide .leftMen .menuIcon:hover {
+  fill: #0066cc;
+}
+
+/* line 47, ../sass/_indexLogistics.scss */
+.mainBody .headerBar .leftSide .headIcon {
+  position: relative;
+  margin-left: 20px;
+  padding: 0 10px 0 0;
+  top: 5px;
+  width: auto;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 57, ../sass/_indexLogistics.scss */
+.mainBody .headerBar .rightSide {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  border-left: 3px solid #0066cc;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+}
+
+/* line 69, ../sass/_indexLogistics.scss */
+.mainBody .headerBar .rightSide .txt {
+  position: relative;
+  top: 15px;
+  font-size: 17px;
+  font-family: Segoe Ui, sans-serif;
+  color: #fff;
+  transition: all 0.25s linear;
+}
+
+/* line 77, ../sass/_indexLogistics.scss */
+.mainBody .headerBar .rightSide:hover {
+  background-color: #000e20;
+}
+
+/******************************************************************************************
+*** Menu Left ***
+******************************************************************************************/
+/* line 83, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 50px;
+  height: calc(100vh - 50px);
+  background-color: #000714;
+  transition: all 0.4s linear;
+  z-index: 99992;
+}
+
+/* line 93, ../sass/_indexLogistics.scss */
+.mainBody .menuLeftOpen {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 327px;
+  height: calc(100vh - 50px);
+  background-color: rgba(0, 7, 20, 0.8);
+  transition: all 0.4s linear;
+  z-index: 99992;
+  overflow: hidden;
+}
+
+/* line 104, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  top: calc(50% - 100px);
+  left: 0;
+}
+
+/* line 111, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: calc(100% / 7);
+  width: 100%;
+}
+
+/* line 118, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.25s linear;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* line 131, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .itemActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.25s linear;
+  border-right: 3px solid #0066cc;
+  border-left: 3px solid #0066cc;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* line 144, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item:hover {
+  background-color: #000e20;
+  border-right: 3px solid #0066cc;
+  border-left: 3px solid #0066cc;
+}
+
+/* line 149, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .unselected {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: calc(50% - 5px);
+  left: 17px;
+  border-radius: 20px;
+  background-color: #0066cc;
+  transition: 0.4s linear;
+  opacity: 1;
+}
+
+/* line 160, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .selected {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: calc(50% - 5px);
+  left: 17px;
+  border-radius: 20px;
+  background-color: yellow;
+  transition: 0.4s linear;
+  opacity: 1;
+}
+
+/* line 171, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .unselectedFull {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: calc(50% - 5px);
+  left: -20px;
+  border-radius: 20px;
+  background-color: #0066cc;
+  transition: 0.4s linear;
+  opacity: 0;
+  text-align: center;
+}
+
+/* line 183, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .selectedFull {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  top: calc(50% - 5px);
+  left: 20px;
+  border-radius: 20px;
+  background-color: yellow;
+  transition: 0.4s linear;
+  text-align: center;
+}
+
+/* line 194, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .txt.ng-enter {
+  left: -100px;
+}
+
+/* line 197, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .txt.ng-enter-active {
+  left: 80px;
+}
+
+/* line 200, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .txt.ng-leave {
+  left: 80px;
+}
+
+/* line 203, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .txt.ng-leave-active {
+  left: -100px;
+}
+
+/* line 206, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .txt {
+  position: relative;
+  top: 5px;
+  left: 80px;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 15px;
+  outline: none;
+  color: #fff;
+}
+
+/* line 215, ../sass/_indexLogistics.scss */
+.mainBody .menuLeft .options .menuList .item .txtActive {
+  position: relative;
+  top: 5px;
+  left: 80px;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 15px;
+  outline: none;
+  color: yellow;
+  transition: all 0.4s linear;
+  opacity: 1;
+}
+
+/******************************************************************************************
+*** Pages ***
+******************************************************************************************/
+/* line 229, ../sass/_indexLogistics.scss */
+.mainBody .mainPage {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  height: calc(100vh - 50px);
+  width: 100vw;
+  transition: all 0.4s linear;
+}
+
+/* line 237, ../sass/_indexLogistics.scss */
+.mainBody .changeUP .mainPageCont.ng-enter {
+  transition: all 0.4s linear;
+  top: 100vh;
+}
+
+/* line 241, ../sass/_indexLogistics.scss */
+.mainBody .changeUP .mainPageCont.ng-enter-active {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/* line 245, ../sass/_indexLogistics.scss */
+.mainBody .changeUP .mainPageCont.ng-leave {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/* line 249, ../sass/_indexLogistics.scss */
+.mainBody .changeUP .mainPageCont.ng-leave-active {
+  transition: all 0.4s linear;
+  top: -100vh;
+}
+
+/* line 253, ../sass/_indexLogistics.scss */
+.mainBody .changeDOWN .mainPageCont.ng-enter {
+  transition: all 0.4s linear;
+  top: -100vh;
+}
+
+/* line 257, ../sass/_indexLogistics.scss */
+.mainBody .changeDOWN .mainPageCont.ng-enter-active {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/* line 261, ../sass/_indexLogistics.scss */
+.mainBody .changeDOWN .mainPageCont.ng-leave {
+  transition: all 0.4s linear;
+  top: 0;
+}
+
+/* line 265, ../sass/_indexLogistics.scss */
+.mainBody .changeDOWN .mainPageCont.ng-leave-active {
+  transition: all 0.4s linear;
+  top: 100vh;
+}
+
+/* line 269, ../sass/_indexLogistics.scss */
+.mainBody .changeUP .mainPageCont, .mainBody .changeDOWN .mainPageCont {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  transition: all 0.4s linear;
+}
+
+/* line 277, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .pageTitle {
+  position: absolute;
+  top: 10px;
+  width: 200px;
+  left: calc(50% - 100px);
+  color: #fff;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/******************************************************************************************
+*** Main Page ***
+******************************************************************************************/
+/* line 290, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay {
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  z-index: 9993;
+}
+@media only screen and (max-width: 1360px) {
+  /* line 290, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .med-overlay {
+    height: 500px;
+    top: calc(50% - 250px);
+    width: 1100px;
+    left: calc(50% - 525px);
+  }
+}
+@media only screen and (min-width: 1360px) {
+  /* line 290, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .med-overlay {
+    height: 550px;
+    top: calc(50% - 300px);
+    width: 1200px;
+    left: calc(50% - 575px);
+  }
+}
+
+/* line 317, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 65%;
+  height: 100%;
+}
+
+/* line 324, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .head {
+  position: relative;
+  top: 20px;
+  margin-left: 40px;
+  font-size: 35px;
+  color: #646464;
+  font-weight: bold;
+  font-family: Segoe Ui, sans-serif;
+}
+
+/* line 333, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont {
+  position: absolute;
+  left: 40px;
+  top: 60px;
+  width: calc(100% - 50px);
+  height: calc(100% - 140px);
+}
+
+/* line 340, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase.ng-hide {
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+
+/* line 344, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 348, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+
+/* line 361, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .EQN {
+  position: relative;
+  top: 0;
+  margin-top: 20px;
+  width: calc(100% - 0);
+  height: 30px;
+}
+
+/* line 368, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .EQN .longIn {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: calc(75% - 5px);
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  padding: 0 5px;
+  font-size: 13px;
+  font-family: Segoe UI, sans-serif;
+}
+
+/* line 382, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .EQN .clickEQN {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  width: calc(25% - 50px);
+  background-color: #005299;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.25s linear;
+  outline: none;
+}
+
+/* line 398, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .EQN .clickEQN:hover {
+  background-color: rgba(0, 128, 255, 0.5);
+  border: 1px solid #0080ff;
+}
+
+/* line 402, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .EQN .clickEQNdis {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  width: calc(25% - 50px);
+  background-color: rgba(0, 128, 255, 0.3);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: Segoe Ui, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.25s linear;
+  outline: none;
+  cursor: default;
+}
+
+/* line 419, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .EQN .clickEQNdis:hover {
+  background-color: rgba(0, 128, 255, 0.3);
+  border: 1px solid rgba(0, 128, 255, 0);
+}
+
+/* line 423, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .EQN .searchMsg {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  color: red;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+}
+
+/* line 434, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses {
+  position: relative;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 150px);
+}
+
+/* line 441, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr {
+  position: relative;
+  left: 0;
+  top: 20px;
+  height: 75%;
+  width: 50%;
+}
+
+/* line 448, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .O {
+  margin-right: 10px;
+}
+
+/* line 451, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .D {
+  margin-left: 10px;
+}
+
+/* line 454, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .title {
+  position: relative;
+  left: 0;
+  top: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  cursor: default;
+  transition: all 0.25s linear;
+}
+
+/* line 464, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .titleRight {
+  position: relative;
+  left: calc(100% + 20px);
+  top: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  cursor: default;
+  transition: all 0.25s linear;
+}
+
+/* line 474, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .titleLeft {
+  position: relative;
+  left: calc(-100% - 20px);
+  top: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  cursor: default;
+  transition: all 0.25s linear;
+}
+
+/* line 484, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .O .title {
+  color: lime;
+}
+
+/* line 487, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .D .title {
+  color: #0080ff;
+}
+
+/* line 490, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .siteAddrOne {
+  position: relative;
+  left: 0;
+  top: 10px;
+  margin-top: 15px;
+  width: calc(100% - 10px);
+  padding: 0 5px;
+  height: 30px;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-family: Segoe UI, sans-serif;
+  font-size: 14px;
+  color: #888;
+}
+
+/* line 506, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine {
+  position: relative;
+  left: 0;
+  top: 10px;
+  margin-top: 15px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+/* line 516, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .sitePostOne {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: calc(30% - 5px);
+  padding: 0 5px;
+  height: 30px;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-family: Segoe UI, sans-serif;
+  font-size: 13px;
+  color: #888;
+}
+
+/* line 531, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .siteCountry {
+  position: relative;
+  left: 0;
+  margin-left: 10px;
+  top: 0;
+  width: calc(70% - 5px);
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+/* line 544, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .siteCountry .txt {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+
+/* line 553, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .siteCountry .icon {
+  position: absolute;
+  right: 5px;
+  fill: #003380;
+  top: 6px;
+  transition: all 0.25s linear;
+  outline: none;
+}
+
+/* line 561, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .countryDrop.ng-hide {
+  height: 0;
+}
+
+/* line 564, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .countryDrop.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .countryDrop.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 568, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .countryDrop {
+  position: absolute;
+  right: 0;
+  top: calc(100% - 3px);
+  width: calc(70% - 12px);
+  height: 170px;
+  background-color: #f2f2f2;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 9994;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  border-bottom: 3px solid #f2f2f2;
+}
+
+/* line 584, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .countryDrop .scrl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* line 592, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .countryDrop .scrl .list {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 3px;
+  width: 100%;
+  height: fit-content;
+  transition: all 0.25s linear;
+  outline: none;
+  cursor: pointer;
+  z-index: 9994;
+}
+
+/* line 604, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .countryDrop .scrl .list:hover {
+  background-color: #c8c8c8;
+}
+
+/* line 607, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .addresses .addr .lastLine .countryDrop .scrl .list .txt {
+  position: relative;
+  left: 10px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #646464;
+}
+
+/* line 615, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .switch {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 626, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .switch .txt {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  color: #0080ff;
+  font-weight: bold;
+  margin-top: 15px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.25s linear;
+}
+
+/* line 636, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .switch:hover > .txt {
+  border-bottom: 1px solid lime;
+}
+
+/* line 639, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .switch .icon {
+  position: relative;
+  margin-top: 2px;
+  transition: all 0.25s linear;
+}
+
+/* line 644, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .switch .f {
+  fill: lime;
+  margin-left: 8px;
+  transition: all 0.25s linear;
+}
+
+/* line 649, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .switch .b {
+  fill: #0080ff;
+  margin-left: -8px;
+  margin-top: -15px;
+  transition: all 0.25s linear;
+}
+
+/* line 655, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .switch .fAct {
+  fill: #0080ff;
+  margin-left: 8px;
+  transition: all 0.25s linear;
+}
+
+/* line 660, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .switch .bAct {
+  fill: lime;
+  margin-left: -8px;
+  margin-top: -15px;
+  transition: all 0.25s linear;
+}
+
+/* line 670, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  left: 0;
+  margin-top: 25px;
+}
+
+/* line 677, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title .ttl {
+  position: relative;
+  left: 0;
+  color: #9b9b9b;
+  cursor: default;
+}
+
+/* line 683, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title .toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: fit-content;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 691, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title .toggle .txt {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9b9b9b;
+  transition: all 0.25s linear;
+}
+
+/* line 699, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title .toggle .txtAct {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0080ff;
+  transition: all 0.25s linear;
+}
+
+/* line 707, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title .toggle .switch {
+  position: relative;
+  width: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* line 713, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title .toggle .switch .bar {
+  position: relative;
+  top: 7px;
+  left: 0;
+  width: 20px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #9b9b9b;
+}
+
+/* line 722, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title .toggle .switch .dot {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(#0080ff, #003380);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s linear;
+}
+
+/* line 735, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .title .toggle .switch .dotRight {
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(#0080ff, #003380);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s linear;
+}
+
+/* line 748, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 150px);
+  overflow-y: auto;
+}
+
+/* line 756, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row {
+  position: relative;
+  left: 0;
+  height: 30px;
+  width: calc(100% - 5px);
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+/* line 765, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .one {
+  position: relative;
+  left: 0;
+  height: 30px;
+  width: calc(60% - 5px);
+  margin-right: 5px;
+  background-color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 776, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .drop.ng-hide {
+  height: 0;
+}
+
+/* line 779, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .drop.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .drop.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 783, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .drop {
+  position: absolute;
+  top: calc(100% - 3px);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #f2f2f2;
+  z-index: 9994;
+  overflow: hidden;
+  height: 170px;
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* line 796, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .drop .scr {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* line 804, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .drop .scr .listt {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 2px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+  width: 100%;
+  height: fit-content;
+  padding: 2px 0;
+}
+
+/* line 816, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .drop .scr .listt:hover {
+  background-color: #c8c8c8;
+}
+
+/* line 819, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .drop .scr .listt .txt {
+  position: relative;
+  left: 10px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #646464;
+}
+
+/* line 827, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .servType {
+  width: calc(60% - 5px);
+  left: 0;
+}
+
+/* line 831, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .incoTerm {
+  width: calc(40% - 5px);
+  left: calc(60% + 5px);
+}
+
+/* line 835, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .two {
+  position: relative;
+  left: 0;
+  height: 30px;
+  width: calc(40% - 5px);
+  margin-left: 5px;
+  background-color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 846, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .one .txt,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .two .txt {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  color: #003380;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* line 856, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .one .icon,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .row .two .icon {
+  fill: #005299;
+  position: absolute;
+  right: 10px;
+  top: 2px;
+}
+
+/* line 863, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+/* line 871, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .num {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  background-color: #005299;
+  text-align: center;
+  cursor: default;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* line 883, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .num .txt {
+  position: relative;
+  top: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* line 891, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .in {
+  position: relative;
+  left: 0;
+  height: 30px;
+  background-color: #fff;
+  border: none;
+  padding: 0 5px;
+  border-radius: 3px;
+  outline: none;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0080ff;
+}
+
+/* line 905, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .aa {
+  width: calc(75% - 25px);
+  margin-right: 8px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 911, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .bb {
+  width: calc(25% - 6px);
+}
+
+/* line 914, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .cc {
+  width: calc(25% - 11px);
+  margin-right: 8px;
+}
+
+/* line 918, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .dd {
+  width: calc(25% - 11px);
+  margin-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 924, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .ee {
+  width: calc(25% - 19px);
+  margin-left: 8px;
+}
+
+/* line 928, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .curDisp {
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  width: 7%;
+  height: 30px;
+  text-align: center;
+}
+
+/* line 937, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .curDisp .txt {
+  position: relative;
+  top: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #0080ff;
+  cursor: default;
+}
+
+/* line 946, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .curSel {
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: #005299;
+  width: calc(18% - 5px);
+  height: 30px;
+  text-align: center;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s linear;
+  outline: none;
+}
+
+/* line 960, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .curSel:hover {
+  background-color: rgba(0, 128, 255, 0.3);
+}
+
+/* line 963, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .curSel .txt {
+  position: relative;
+  top: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.25s linear;
+}
+
+/* line 972, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .curSel:hover > .txt {
+  color: #0080ff;
+}
+
+/* line 975, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .rem {
+  position: absolute;
+  right: 70px;
+  height: 30px;
+  width: calc(25% - 100px);
+  padding: 0 15px;
+  background-color: rgba(120, 0, 0, 0.6);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+  text-align: center;
+}
+
+/* line 989, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .rem:hover {
+  background-color: rgba(120, 0, 0, 0.3);
+}
+
+/* line 992, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .rem:hover > .txt {
+  color: #c80000;
+}
+
+/* line 995, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .list .row .rem .txt {
+  position: relative;
+  top: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.25s linear;
+}
+
+/* line 1004, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .add {
+  position: relative;
+  left: calc(100% - 70px);
+  top: -50px;
+  height: 30px;
+  width: 35px;
+  padding: 0 15px;
+  background-color: #005299;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+  text-align: center;
+}
+
+/* line 1019, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .add:hover {
+  background-color: rgba(0, 128, 255, 0.3);
+}
+
+/* line 1022, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .add:hover > .txt {
+  color: #0080ff;
+}
+
+/* line 1025, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .add .txt {
+  position: relative;
+  top: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.25s linear;
+}
+
+/* line 1034, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .scr .add .error {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  color: #c80000;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: default;
+  white-space: nowrap;
+}
+
+/* line 1045, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .currencyPop.ng-hide {
+  opacity: 0;
+  top: 150px;
+  height: 0;
+}
+
+/* line 1050, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .currencyPop.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .currencyPop.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 1054, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .currencyPop {
+  position: absolute;
+  top: 200px;
+  height: 130px;
+  width: 200px;
+  left: calc(50% - 100px);
+  background-color: #005299;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* line 1067, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .currencyPop .scrol {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* line 1076, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .currencyPop .scrol .list {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 5px;
+  width: calc(100% - 20px);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+  text-align: center;
+}
+
+/* line 1087, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .currencyPop .scrol .list:hover {
+  background-color: rgba(0, 7, 14, 0.5);
+}
+
+/* line 1090, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .currencyPop .scrol .list .txt {
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* line 1099, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .contact {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  left: 0;
+}
+
+/* line 1105, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .contact .in {
+  border: none;
+  position: relative;
+  left: 0;
+  height: 30px;
+  font-size: 12px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  color: #0080ff;
+  outline: none;
+  padding: 0 10px;
+  width: calc(70% - 20px);
+  border-radius: 3px;
+}
+
+/* line 1119, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .contact .ico {
+  position: relative;
+  margin-left: 10px;
+  fill: red;
+  transition: all 0.25s linear;
+  top: 2px;
+}
+
+/* line 1126, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .contact .icoA {
+  position: relative;
+  margin-left: 10px;
+  fill: lime;
+  transition: all 0.25s linear;
+  top: 2px;
+}
+
+/* line 1136, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider {
+  position: relative;
+  left: 0;
+  top: 15px;
+  width: 100%;
+  height: calc(100% - 70px);
+}
+
+/* line 1143, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  align-content: center;
+  vertical-align: center;
+  z-index: 9993;
+}
+
+/* line 1152, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .left {
+  left: 0;
+}
+
+/* line 1155, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .right {
+  right: 0;
+}
+
+/* line 1158, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side .arrow {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.25s linear;
+  border: 1px solid transparent;
+}
+
+/* line 1170, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side .arrow .icon {
+  position: relative;
+  height: 20px;
+  left: -3px;
+  top: -2px;
+  transition: all 0.25s linear;
+  fill: white;
+}
+
+/* line 1178, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side .arrow:hover {
+  background-color: rgba(0, 51, 128, 0.2);
+  border: 1px solid rgba(0, 128, 255, 0.4);
+}
+
+/* line 1182, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side .arrow:hover > .icon {
+  fill: #0080ff;
+}
+
+/* line 1185, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side .arrowDis {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+  text-align: center;
+  outline: none;
+  cursor: default;
+  border-radius: 20px;
+  transition: all 0.25s linear;
+  border: 1px solid transparent;
+}
+
+/* line 1197, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side .arrowDis .icon {
+  position: relative;
+  height: 20px;
+  left: -3px;
+  top: -2px;
+  transition: all 0.25s linear;
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+/* line 1205, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side .arrowDis:hover {
+  background-color: rgba(0, 51, 128, 0);
+  border: 1px solid rgba(0, 128, 255, 0);
+}
+
+/* line 1209, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .side .arrowDis:hover > .icon {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+/* line 1212, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer {
+  position: absolute;
+  left: 35px;
+  width: calc(100% - 60px);
+  height: 100%;
+}
+
+/* line 1218, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .empty {
+  position: relative;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+
+/* line 1225, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .empty .txt {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgba(100, 100, 100, 0.7);
+}
+
+/* line 1232, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list.ng-hide {
+  opacity: 0;
+}
+
+/* line 1235, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list.ng-hide-remove {
+  transition: all 0.2s linear;
+}
+
+/* line 1239, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list {
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 40px;
+  height: calc(100% - 80px);
+  width: 250px;
+  left: calc(50% - 125px);
+  -webkit-box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+  z-index: 9993;
+  transition: all 0.25s linear;
+  opacity: 1;
+  border: 1px solid white;
+  outline: none;
+}
+
+/* line 1258, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 50px;
+  height: calc(100% - 100px);
+  width: 250px;
+  left: calc(50% - 320px);
+  z-index: 9992;
+  transition: all 0.25s linear;
+  opacity: 1;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+
+/* line 1275, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM:hover {
+  border: 1px solid #0080ff;
+  background-color: rgba(0, 128, 255, 0.3);
+}
+
+/* line 1279, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 50px;
+  height: calc(100% - 100px);
+  width: 250px;
+  left: calc(50% + 70px);
+  z-index: 9992;
+  transition: all 0.25s linear;
+  opacity: 1;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+
+/* line 1296, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP:hover {
+  border: 1px solid #0080ff;
+  background-color: rgba(0, 128, 255, 0.3);
+}
+
+/* line 1300, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listMM {
+  position: absolute;
+  background-color: #646464;
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 50px;
+  height: calc(100% - 100px);
+  width: 250px;
+  left: -250px;
+  opacity: 0;
+  z-index: 9992;
+  transition: all 0.25s linear;
+  border: 1px solid white;
+}
+
+/* line 1315, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listPP {
+  position: absolute;
+  background-color: #646464;
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 50px;
+  height: calc(100% - 100px);
+  width: 250px;
+  z-index: 9992;
+  left: 100%;
+  opacity: 0;
+  transition: all 0.25s linear;
+  border: 1px solid white;
+}
+
+/* line 1330, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .headBar,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .headBar,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .headBar {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: calc(100% - 20px);
+  height: 60px;
+  background-color: #e6e6e6;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+/* line 1342, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .headBar .carrier,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .headBar .carrier,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .headBar .carrier {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  max-width: 60%;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  line-height: 15pt;
+  color: #646464;
+}
+
+/* line 1355, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .headBar .service,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .headBar .service,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .headBar .service {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #646464;
+}
+
+/* line 1367, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .headBar .time,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .headBar .time,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .headBar .time {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: default;
+  height: calc(100% - 20px);
+  width: fit-content;
+  text-align: right;
+}
+
+/* line 1378, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .headBar .time .num,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .headBar .time .num,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .headBar .time .num {
+  position: relative;
+  /*margin-top: auto;
+  margin-bottom: auto;*/
+  font-family: Segoe UI, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #646464;
+  cursor: default;
+  align-self: center;
+}
+
+/* line 1391, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .headBar .time .descr,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .headBar .time .descr,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .headBar .time .descr {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Segoe UI, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #646464;
+  cursor: default;
+  margin-left: 2px;
+}
+
+/* line 1404, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .addrBar,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .addrBar,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .addrBar {
+  position: absolute;
+  left: 5px;
+  top: 80px;
+  width: calc(100% - 10px);
+  height: 100px;
+}
+
+/* line 1413, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .addrBar .Country,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .addrBar .Country,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .addrBar .Country {
+  position: relative;
+  left: 0;
+  top: 0;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* line 1424, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .addrBar .or,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .addrBar .or,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .addrBar .or {
+  color: #00c800;
+}
+
+/* line 1429, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .addrBar .de,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .addrBar .de,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .addrBar .de {
+  color: #005299;
+}
+
+/* line 1434, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .addrBar .adrr,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .addrBar .adrr,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .addrBar .adrr {
+  position: relative;
+  left: 0;
+  top: 0;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #646464;
+}
+
+/* line 1446, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .addrBar .sep,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .addrBar .sep,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .addrBar .sep {
+  position: relative;
+  left: 0;
+  top: 0;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  color: #141414;
+}
+
+/* line 1457, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .dims,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .dims,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .dims {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* line 1466, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .dims .txt,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .dims .txt,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .dims .txt {
+  position: relative;
+  left: 0;
+  top: 0;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+
+/* line 1478, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .final,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .final,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .final {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: fit-content;
+  height: fit-content;
+  text-align: right;
+}
+
+/* line 1488, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .final .amount,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .final .amount,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .final .amount {
+  position: relative;
+  left: 0;
+  top: 0;
+  cursor: default;
+}
+
+/* line 1496, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .final .amount .cur,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .final .amount .cur,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .final .amount .cur {
+  position: relative;
+  left: 0;
+  top: 0;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #646464;
+  margin-bottom: 0;
+  margin-top: auto;
+  margin-right: 5px;
+}
+
+/* line 1511, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .final .amount .tot,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .final .amount .tot,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .final .amount .tot {
+  position: relative;
+  left: 0;
+  top: 0;
+  cursor: default;
+  font-family: Segoe UI, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #646464;
+  margin-bottom: 1px;
+  margin-top: auto;
+}
+
+/* line 1525, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .list .final .select,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listM .final .select,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .slider .listContainer .listP .final .select {
+  position: relative;
+  top: 0;
+  cursor: default;
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: #0066cc;
+  color: #fff;
+  font-family: Segoe UI, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* line 1545, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .top {
+  position: relative;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: 80px;
+  border-radius: 3px;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: default;
+}
+
+/* line 1556, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .top .half {
+  position: relative;
+  left: 0;
+  margin-left: 15px;
+  top: 5px;
+  width: calc(50% - 20px);
+  height: calc(100% - 10px);
+}
+
+/* line 1564, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .top .half .title {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+/* line 1571, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .top .half .from {
+  color: #00c800;
+}
+
+/* line 1574, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .top .half .to {
+  color: #005299;
+}
+
+/* line 1577, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .top .half .adr {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+  color: #646464;
+}
+
+/* line 1585, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid {
+  position: relative;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: calc(100% - 180px);
+  border-radius: 3px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+/* line 1595, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: calc(60% - 5px);
+  height: 100%;
+  border-radius: 3px;
+  margin-right: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* line 1606, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #e8e8e8;
+  cursor: default;
+}
+
+/* line 1617, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box .posi {
+  position: relative;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* line 1625, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box .posi .head {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: fit-content;
+  height: fit-content;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #646464;
+  margin-left: 10px;
+  line-height: 22pt;
+}
+
+/* line 1638, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box .posi .chrgItem {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 2px;
+  margin-left: 10px;
+  width: calc(100% - 20px);
+  height: fit-content;
+  transition: all 0.25s linear;
+}
+
+/* line 1648, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box .posi .chrgItem:hover {
+  background-color: rgba(100, 100, 100, 0.2);
+}
+
+/* line 1651, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box .posi .chrgItem .ttl {
+  position: relative;
+  width: 70%;
+  text-align: left;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  color: #646464;
+}
+
+/* line 1660, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box .posi .chrgItem .data {
+  position: absolute;
+  width: fit-content;
+  right: 0;
+  min-width: 90px;
+  color: #646464;
+}
+
+/* line 1667, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box .posi .chrgItem .data .cur {
+  position: relative;
+  text-align: left;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  width: 30px;
+}
+
+/* line 1675, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .left .box .posi .chrgItem .data .am {
+  position: relative;
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+  height: 100%;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+}
+
+/* line 1685, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .right {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: calc(40% - 5px);
+  height: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #005299;
+  cursor: default;
+}
+
+/* line 1696, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .right .carrier {
+  position: relative;
+  left: 10px;
+  top: 5px;
+  width: calc(100% - 20px);
+  white-space: pre-wrap;
+  line-height: 20pt;
+  font-family: Segoe UI, sans-serif;
+  font-size: 26px;
+  color: #fff;
+}
+
+/* line 1707, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .right .service {
+  position: relative;
+  left: 10px;
+  top: 5px;
+  margin-top: 5px;
+  width: calc(100% - 20px);
+  white-space: pre-wrap;
+  line-height: 14pt;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* line 1720, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .right .time {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* line 1727, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .right .time .num {
+  position: relative;
+  align-self: center;
+  margin-right: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 55px;
+  color: #fff;
+}
+
+/* line 1735, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .right .time .descr {
+  position: relative;
+  margin-right: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+
+/* line 1744, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .right .dims {
+  position: absolute;
+  left: 10px;
+  bottom: 65px;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* line 1751, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .mid .right .dims .data {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 2px;
+  color: #bbb;
+}
+
+/* line 1759, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .bot {
+  position: relative;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+/* line 1770, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .bot .cont {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  height: 100%;
+  width: calc(100% - 30px);
+  cursor: default;
+}
+
+/* line 1778, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .bot .cont .ttl {
+  position: relative;
+  left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Segoe UI, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #646464;
+  text-align: left;
+  width: 50%;
+}
+
+/* line 1790, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .bot .cont .data {
+  position: relative;
+  left: 0;
+  width: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: right;
+}
+
+/* line 1798, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .bot .cont .data .cur {
+  position: relative;
+  left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Segoe UI, sans-serif;
+  font-size: 25px;
+  color: #646464;
+  margin-right: 10px;
+}
+
+/* line 1808, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .bot .cont .data .am {
+  position: relative;
+  left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #646464;
+}
+
+/* line 1820, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: calc(100% - 30px);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* line 1830, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate.ng-hide {
+  left: 100%;
+}
+
+/* line 1833, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 1837, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+/* line 1845, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .head {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  left: 0;
+  top: 0;
+  margin-left: 0;
+  margin-top: 0;
+  font-family: Segoe UI, sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+  text-decoration: underline;
+  color: #0080ff;
+  cursor: default;
+}
+
+/* line 1861, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .how {
+  position: relative;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: fit-content;
+  margin-top: 30px;
+  cursor: default;
+}
+
+/* line 1869, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .how .ttl {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #bcbcbc;
+}
+
+/* line 1876, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .how .ttlOne {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  color: #0066cc;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 1886, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .enter {
+  position: relative;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: fit-content;
+  margin-top: 10px;
+}
+
+/* line 1893, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .enter .inContain {
+  position: relative;
+  left: 0;
+  top: 0;
+  border: none;
+  overflow: hidden;
+  height: 30px;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 3px;
+  background-color: white;
+}
+
+/* line 1906, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .enter .inContain .in {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #646464;
+  text-align: center;
+}
+
+/* line 1921, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .msg {
+  position: relative;
+  left: 20px;
+  margin-top: 10px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 13px;
+  color: #00c800;
+  cursor: default;
+}
+
+/* line 1930, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .msgEr {
+  position: relative;
+  left: 20px;
+  margin-top: 10px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 13px;
+  color: #c80000;
+  cursor: default;
+}
+
+/* line 1939, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .btn {
+  position: relative;
+  left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: calc(100% - 40px);
+  border: 1px solid #005299;
+  transition: all 0.25s linear;
+  background-color: #005299;
+  outline: none;
+  font-family: Segoe UI, sans-serif;
+  font-size: 16px;
+  color: white;
+  height: 30px;
+  border-radius: 3px;
+}
+
+/* line 1955, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .btn:hover {
+  background-color: rgba(0, 82, 153, 0.5);
+}
+
+/* line 1958, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .btnDis {
+  position: relative;
+  left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: calc(100% - 40px);
+  border: 1px solid rgba(0, 82, 153, 0.2);
+  transition: all 0.25s linear;
+  background-color: rgba(0, 82, 153, 0.2);
+  outline: none;
+  font-family: Segoe UI, sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.2);
+  height: 30px;
+  border-radius: 3px;
+  cursor: default;
+}
+
+/* line 1975, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .puDate .btnDis:hover {
+  background-color: rgba(0, 82, 153, 0.2);
+}
+
+/* line 1995, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .iframeOne {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.25s linear;
+}
+
+/* line 2006, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .iframeOneVis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.25s linear;
+}
+
+/* line 2024, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse.ng-hide {
+  left: 100%;
+}
+
+/* line 2027, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 2031, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+/* line 2039, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .ttlCont {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  background-color: transparent;
+}
+
+/* line 2048, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .ttlCont .title {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+  font-family: Segoe UI, sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  color: #0080ff;
+  cursor: default;
+  transition: all 0.25s linear;
+}
+
+/* line 2061, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .ttlCont .titleEr {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+  font-family: Segoe UI, sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  color: #c80000;
+  cursor: default;
+  transition: all 0.25s linear;
+}
+
+/* line 2074, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .contentHolder {
+  position: relative;
+  width: 100%;
+  left: 0;
+  height: fit-content;
+  text-align: center;
+  margin-top: 50px;
+  cursor: default;
+}
+
+/* line 2083, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .contentHolder .txt {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+
+/* line 2090, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .btn {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 3px;
+  background-color: #005299;
+  border: 1px solid #005299;
+  transition: all 0.25s linear;
+  outline: none;
+  height: 30px;
+  width: 100px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #fff;
+}
+
+/* line 2106, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .btn:hover {
+  background-color: rgba(0, 82, 153, 0.5);
+}
+
+/* line 2109, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .btnTwo {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 3px;
+  background-color: #005299;
+  border: 1px solid #005299;
+  transition: all 0.25s linear;
+  outline: none;
+  height: 30px;
+  width: 100px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #fff;
+}
+
+/* line 2125, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .paymentResponse .btnTwo:hover {
+  background-color: rgba(0, 82, 153, 0.5);
+}
+
+/* line 2137, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont .phase .box .progressCircl {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  top: 10px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 99999999;
+}
+
+/******************************************************************************************
+*** Quote Summary ***
+******************************************************************************************/
+/* line 2153, ../sass/_indexLogistics.scss */
+.mainBody .QteSum.ng-hide {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* line 2157, ../sass/_indexLogistics.scss */
+.mainBody .QteSum.ng-hide-add,
+.mainBody .QteSum.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 2161, ../sass/_indexLogistics.scss */
+.mainBody .QteSum {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 7, 14, 0.9);
+  z-index: 999999;
+  vertical-align: center;
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+
+/* line 2173, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: center;
+  overflow: hidden;
+}
+
+/* line 2180, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block.ng-hide {
+  opacity: 0;
+}
+
+/* line 2183, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block.ng-hide-add,
+.mainBody .QteSum .container .block.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 2187, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block {
+  position: absolute;
+  left: 25%;
+  top: 12%;
+  width: 50%;
+  height: 76%;
+  background-color: rgba(0, 82, 153, 0.9);
+  border-radius: 5px;
+  vertical-align: center;
+  min-width: 600px;
+  min-height: 400px;
+  opacity: 1;
+}
+
+/* line 2200, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .title {
+  position: relative;
+  top: 10px;
+  margin-left: 25px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: default;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 2210, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
+  transition: all 0.25s linear;
+}
+
+/* line 2222, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .close:hover {
+  color: #000e20;
+}
+
+/* line 2225, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr {
+  position: relative;
+  top: 20px;
+  height: calc(100% - 70px);
+  left: 25px;
+  width: calc(100% - 50px);
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+/* line 2235, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .infoTxt {
+  position: relative;
+  top: 0;
+  margin: auto;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* line 2244, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .sect {
+  position: relative;
+  top: 0;
+  left: 10px;
+  width: calc(100% - 20px);
+  cursor: default;
+  margin-bottom: 9px;
+}
+
+/* line 2252, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .sect .title {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  margin-bottom: 5px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  width: fit-content;
+  text-decoration: underline;
+}
+
+/* line 2265, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .sect .line {
+  position: relative;
+  left: 0;
+  width: 100%;
+  transition: all 0.25s linear;
+}
+
+/* line 2271, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .sect .line:hover {
+  background-color: rgba(0, 7, 14, 0.2);
+}
+
+/* line 2274, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .sect .line .ttl {
+  position: relative;
+  left: 0;
+  font-size: 12px;
+  font-family: Segoe UI, sans-serif;
+  color: rgba(200, 200, 200, 0.8);
+}
+
+/* line 2281, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .sect .line .data {
+  position: absolute;
+  right: 0;
+  font-size: 12px;
+  font-family: Segoe UI, sans-serif;
+  color: rgba(200, 200, 200, 0.8);
+}
+
+/* line 2288, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .sect .line .num {
+  position: relative;
+  left: calc(50% - 10px);
+  width: 20px;
+  font-size: 12px;
+  font-family: Segoe UI, sans-serif;
+  color: rgba(200, 200, 200, 0.8);
+}
+
+/* line 2296, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .bot {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+/* line 2301, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .bot .info {
+  position: relative;
+  left: 10px;
+  width: calc(100% - 120px);
+  white-space: normal;
+  text-wrap: normal;
+  cursor: default;
+}
+
+/* line 2309, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .bot .info .txt {
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 2315, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .bot .btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 90px;
+  height: 30px;
+  background-color: #fff;
+  color: #005299;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.25s linear;
+  outline: none;
+}
+
+/* line 2328, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .bot .btn:hover {
+  background-color: transparent;
+  color: #fff;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.5);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.5);
+  box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.5);
+}
+
+/* line 2335, ../sass/_indexLogistics.scss */
+.mainBody .QteSum .container .block .scr .payTerms {
+  padding: 5px;
+  color: #ccc;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+}
+
+/***********************************************************************************************************
+*** Phase Controls ***
+************************************************************************************************************/
+/* line 2345, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  height: 30px;
+  width: calc(100% - 50px);
+}
+
+/* line 2352, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .canc {
+  /*display: block;*/
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: calc(25% - 50px);
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #0080ff;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.25s linear;
+  outline: none;
+}
+
+/* line 2370, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .canc:hover {
+  background-color: rgba(0, 51, 128, 0.5);
+  border: 1px solid #003380;
+  color: #0080ff;
+}
+
+/* line 2375, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .cancGone {
+  /*display: none;*/
+  opacity: 0;
+  transition: all 0.25s linear;
+  cursor: default;
+}
+
+/* line 2381, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .proc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: calc(25% - 50px);
+  background-color: #005299;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.25s linear;
+  outline: none;
+}
+
+/* line 2397, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .proc:hover {
+  background-color: rgba(0, 51, 128, 0.5);
+  border: 1px solid #003380;
+}
+
+/* line 2401, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .procDis {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: calc(25% - 50px);
+  background-color: rgba(0, 128, 255, 0.3);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: Segoe Ui, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.25s linear;
+  outline: none;
+  cursor: default;
+}
+
+/* line 2418, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .procDis:hover {
+  background-color: rgba(0, 128, 255, 0.3);
+  border: 1px solid rgba(0, 128, 255, 0);
+}
+
+/* line 2422, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .procGone {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: calc(25% - 50px);
+  background-color: rgba(0, 128, 255, 0);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0);
+  font-family: Segoe Ui, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.25s linear;
+  outline: none;
+  cursor: default;
+}
+
+/* line 2439, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .procGone:hover {
+  background-color: rgba(0, 128, 255, 0);
+  border: 1px solid rgba(0, 128, 255, 0);
+}
+
+/* line 2443, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .txtSect {
+  position: absolute;
+  left: calc(25% - 50px);
+  top: 0;
+  height: 100%;
+  width: calc(50% + 100px);
+  border: none;
+  cursor: default;
+  text-align: center;
+}
+
+/* line 2453, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .txtSect .center {
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+/* line 2460, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .left .controls .txtSect .center .txt {
+  position: relative;
+  width: fit-content;
+  align-self: center;
+  color: #aaa;
+  font-family: Segoe UI, sans-serif;
+  font-size: 13px;
+}
+
+/***********************************************************************************************************
+*** Mini Login ***
+************************************************************************************************************/
+/* line 2473, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain {
+  position: absolute;
+  height: calc(100% - 120px);
+  top: 80px;
+  width: 350px;
+  right: 40px;
+  border-radius: 5px;
+  background-color: #005299;
+  overflow: hidden;
+  z-index: 9994;
+}
+
+/* line 2484, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote.ng-hide {
+  left: 100%;
+}
+
+/* line 2487, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 2491, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 100%;
+  height: calc(100% - 25px);
+  transition: 0.25s linear;
+}
+
+/* line 2499, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .head {
+  position: relative;
+  left: 25px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: default;
+}
+
+/* line 2508, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .contentCont {
+  position: relative;
+  left: 25px;
+  width: calc(100% - 50px);
+  height: 30px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-top: 20px;
+  top: 10px;
+  overflow: hidden;
+}
+
+/* line 2519, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .contentCont .input {
+  position: absolute;
+  left: 10px;
+  width: calc(100% - 20px);
+  top: 5px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-family: Segoe Ui, sans-serif;
+  color: #000714;
+  font-weight: bold;
+}
+
+/* line 2531, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .underInput {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  margin-top: 25px;
+}
+
+/* line 2539, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .underInput .forgottPW {
+  position: absolute;
+  left: 25px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.25s linear;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 2550, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .underInput .forgottPW:hover {
+  color: #00070e;
+}
+
+/* line 2553, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .underInput .regButt {
+  position: absolute;
+  right: 25px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(255, 255, 0, 0.8);
+  transition: all 0.25s linear;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 2564, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .underInput .regButt:hover {
+  color: #00070e;
+}
+
+/* line 2567, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .qtMsg {
+  position: absolute;
+  bottom: 60px;
+  right: 25px;
+  font-weight: bold;
+  font-size: 12px;
+  color: lime;
+}
+
+/* line 2575, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .qtEr {
+  position: absolute;
+  bottom: 60px;
+  right: 25px;
+  font-weight: bold;
+  font-size: 12px;
+  color: red;
+}
+
+/* line 2583, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .quoteBtn {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  height: 30px;
+  width: 120px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 102, 204, 0);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+  background-color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Segoe UI, sans-serif;
+  color: #005299;
+}
+
+/* line 2601, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .quoteBtn:hover {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.8);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.8);
+  box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 2608, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .quoteBtn:disabled {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: default;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* line 2613, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .quoteBtn:disabled:hover {
+  background-color: rgba(0, 102, 204, 0);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0);
+  box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0);
+}
+
+/* line 2619, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .quote .quoteBtn .txt {
+  position: relative;
+  top: 0;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 15px;
+  color: #fff;
+}
+
+/***********************************************************************************************************
+*** Register ***
+************************************************************************************************************/
+/* line 2629, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register.ng-hide {
+  left: -100%;
+}
+
+/* line 2632, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 2636, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 100%;
+  height: calc(100% - 25px);
+  transition: 0.25s linear;
+  background-color: #005299;
+}
+
+/* line 2645, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 2652, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .head {
+  position: relative;
+  left: 25px;
+  top: 0;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: default;
+  margin-bottom: 0;
+}
+
+/* line 2663, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .contentCont {
+  position: relative;
+  left: 25px;
+  width: calc(100% - 50px);
+  height: 30px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-top: 15px;
+  top: 10px;
+}
+
+/* line 2673, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .contentCont .input {
+  position: absolute;
+  left: 10px;
+  width: calc(100% - 20px);
+  top: 5px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Segoe Ui, sans-serif;
+  color: #000714;
+}
+
+/* line 2685, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .underReg {
+  position: relative;
+  left: 25px;
+  top: 10px;
+  width: calc(100% - 50px);
+  margin-top: 10px;
+}
+
+/* line 2692, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .underReg .logBtn {
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.25s linear;
+  outline: none;
+  cursor: pointer;
+}
+
+/* line 2703, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .underReg .logBtn:hover {
+  color: #00070e;
+}
+
+/* line 2706, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .msg {
+  position: relative;
+  margin-top: 30px;
+  padding: 0 20px;
+  white-space: pre-wrap;
+  font-size: 12px;
+  color: lime;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+/* line 2716, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .msgEr {
+  position: relative;
+  margin-top: 30px;
+  padding: 0 20px;
+  white-space: pre-wrap;
+  font-size: 12px;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 2725, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .regButton {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  height: 30px;
+  width: 120px;
+  border: 1px solid #0066cc;
+  background-color: #0066cc;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  color: #fff;
+  font-family: Segoe Ui, sans-serif;
+  font-size: 15px;
+}
+
+/* line 2743, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .register .regPage .regButton:hover {
+  background-color: rgba(0, 102, 204, 0.5);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0.5);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0.5);
+  box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0.5);
+}
+
+/***********************************************************************************************************
+*** Forgot Password ***
+************************************************************************************************************/
+/* line 2752, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass.ng-hide {
+  left: -100%;
+}
+
+/* line 2755, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass.ng-hide-add,
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 2759, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  height: calc(100% - 25px);
+  width: 100%;
+  background-color: #005299;
+}
+
+/* line 2767, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .head {
+  position: relative;
+  top: 0;
+  left: 25px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+/* line 2777, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .contentCont {
+  position: relative;
+  left: 25px;
+  top: 10px;
+  width: calc(100% - 50px);
+  margin-top: 10px;
+}
+
+/* line 2784, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .contentCont .input {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #0080ff;
+  background-color: #fff;
+  height: 30px;
+}
+
+/* line 2800, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .forgotPW {
+  position: relative;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+/* line 2813, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .forgotPW:hover {
+  color: #00070e;
+}
+
+/* line 2816, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .resetBtn {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Segoe UI, sans-serif;
+  color: #005299;
+  transition: all 0.25s linear;
+  outline: none;
+}
+
+/* line 2832, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .resetBtn:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.5);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.5);
+  box-shadow: 0 0 10px 5px rgba(0, 128, 255, 0.5);
+  color: #fff;
+}
+
+/* line 2839, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .resetBtn:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+}
+
+/* line 2844, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .fPass .resetBtn:disabled:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0);
+  box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0);
+}
+
+/******************************************************************************************
+*** Logged Profile ***
+******************************************************************************************/
+/* line 2853, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  height: calc(100% - 25px);
+  background-color: #005299;
+  width: 100%;
+}
+
+/* line 2861, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .head {
+  position: relative;
+  top: 0;
+  left: 25px;
+  width: calc(100% - 50px);
+  height: 90px;
+  border-bottom: 1px solid rgba(0, 7, 14, 0.5);
+}
+
+/* line 2869, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .head .profPic {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+/* line 2878, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .head .profPic .icon {
+  fill: rgba(0, 7, 14, 0.8);
+}
+
+/* line 2881, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .head .profPic .crp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.25s linear;
+  opacity: 1;
+  display: block;
+}
+
+/* line 2892, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .head .profPic .crpNone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.25s linear;
+  opacity: 0;
+  display: none;
+}
+
+/* line 2903, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .head .title {
+  position: relative;
+  left: 15px;
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: default;
+}
+
+/* line 2911, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .head .title .nme {
+  font-family: Segoe UI, sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/* line 2917, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .head .title .comp {
+  font-family: Segoe UI, sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+/* line 2922, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .dets {
+  position: relative;
+  left: 25px;
+  width: calc(100% - 50px);
+  height: calc(100% - 150px);
+  top: 10px;
+}
+
+/* line 2929, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .dets .line {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  margin-top: 5px;
+}
+
+/* line 2937, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .dets .line .ttl {
+  position: relative;
+  left: 0;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: default;
+  color: rgba(255, 255, 255, 0);
+}
+
+/* line 2946, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .dets .line .data {
+  position: absolute;
+  right: 0;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  cursor: default;
+  color: #fff;
+}
+
+/* line 2954, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .out {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 128, 255, 0);
+  height: 30px;
+  width: fit-content;
+  transition: all 0.25s linear;
+  cursor: pointer;
+}
+
+/* line 2965, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .out:hover {
+  border-bottom: 1px solid #00070e;
+  -webkit-box-shadow: 0 6px 10px -5px rgba(0, 7, 14, 0.5);
+  -moz-box-shadow: 0 6px 10px -5px rgba(0, 7, 14, 0.5);
+  box-shadow: 0 6px 10px -5px rgba(0, 7, 14, 0.5);
+}
+
+/* line 2971, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .out .txt {
+  position: relative;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0);
+  transition: all 0.25s linear;
+  align-self: center;
+  cursor: pointer;
+}
+
+/* line 2981, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .out:hover > .txt {
+  color: #fff;
+}
+
+/* line 2984, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .out .icon {
+  position: relative;
+  margin-left: 5px;
+  fill: rgba(255, 255, 0, 0.8);
+  transition: all 0.25s linear;
+}
+
+/* line 2990, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .med-overlay .containerMain .loggedProf .out:hover > .icon {
+  fill: #fff;
+}
+
+/******************************************************************************************
+*** About Us ***
+******************************************************************************************/
+/* line 2998, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay {
+  position: absolute;
+  left: 0;
+  top: 12%;
+  width: 100%;
+  height: 75%;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: default;
+  overflow: hidden;
+}
+
+/* line 3008, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .left {
+  position: absolute;
+  left: 50px;
+  width: calc(45% - 160px);
+  top: 25px;
+  height: calc(100% - 50px);
+  border-right: 5px solid yellow;
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3008, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .left {
+    padding: 0 20px;
+  }
+}
+@media only screen and (min-width: 1360px) {
+  /* line 3008, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .left {
+    padding: 0 30px;
+  }
+}
+
+/* line 3022, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .left .head {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 70%;
+  word-wrap: normal;
+}
+
+/* line 3029, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .left .head .txt {
+  position: relative;
+  font-family: Segoe Ui, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  text-wrap: normal;
+  height: fit-content;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3029, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .left .head .txt {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3029, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .left .head .txt {
+    font-size: 25px;
+  }
+}
+
+/* line 3043, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .left .info {
+  position: relative;
+  top: -10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  width: 95%;
+  white-space: pre-line;
+  height: auto;
+  text-align: left;
+}
+
+/* line 3054, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .left .info .txt {
+  color: #fff;
+  font-family: Segoe Ui, sans-serif;
+  white-space: pre-wrap;
+  position: relative;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3054, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .left .info .txt {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3054, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .left .info .txt {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3054, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .left .info .txt {
+    font-size: 12px;
+  }
+}
+
+/* line 3069, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right {
+  position: absolute;
+  right: 50px;
+  width: calc(55% - 40px);
+  top: 50px;
+  height: calc(100% - 100px);
+}
+
+/* line 3076, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 3083, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .top {
+  height: 16%;
+}
+
+/* line 3086, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .mid {
+  height: 56%;
+  margin-top: 10px;
+}
+
+/* line 3090, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .bot {
+  height: 28%;
+  margin-top: 10px;
+}
+
+/* line 3094, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .block {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  background-color: rgba(100, 100, 100, 0.3);
+  height: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 3104, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one {
+  width: calc(100% - 10px);
+}
+
+/* line 3107, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two {
+  width: calc(50% - 10px);
+  height: 100%;
+}
+
+/* line 3111, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three {
+  width: calc(100% - 5px);
+  height: calc(50% - 5px);
+}
+
+/* line 3115, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four {
+  width: calc(100% - 5px);
+  height: calc(50% - 5px);
+  margin-top: 10px;
+}
+
+/* line 3120, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five {
+  width: 50%;
+  height: 100%;
+}
+
+/* line 3126, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .count {
+  position: relative;
+  left: 0;
+  font-family: Segoe Ui, sans-serif;
+  color: #969696;
+  font-weight: bold;
+  margin-left: 20px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3126, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .count {
+    font-size: 35px;
+    top: 16px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3126, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .count {
+    font-size: 30px;
+    top: 6px;
+  }
+}
+
+/* line 3142, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .plus {
+  position: relative;
+  left: 0;
+  font-family: Segoe Ui, sans-serif;
+  color: #969696;
+  font-weight: bold;
+  margin-left: 10px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3142, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .plus {
+    font-size: 35px;
+    top: 13px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3142, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .plus {
+    font-size: 30px;
+    top: 4px;
+  }
+}
+
+/* line 3158, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .txt {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: -50px;
+  font-family: Segoe Ui, sans-serif;
+  color: #969696;
+  font-weight: bold;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3158, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .txt {
+    font-size: 25px;
+    top: 26px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3158, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .txt {
+    font-size: 20px;
+    top: 12px;
+  }
+}
+
+/* line 3179, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .count {
+  top: 50px;
+  position: relative;
+  left: 0;
+  font-family: Segoe Ui, sans-serif;
+  color: #969696;
+  font-weight: bold;
+  margin-left: 20px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3179, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .count {
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3179, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .count {
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3179, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .count {
+    font-size: 50px;
+  }
+}
+
+/* line 3197, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .txt {
+  top: 50px;
+  position: relative;
+  left: 0;
+  font-family: Segoe Ui, sans-serif;
+  color: #969696;
+  font-weight: bold;
+  margin-left: 20px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3197, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .txt {
+    font-size: 25px;
+    top: 50px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3197, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .txt {
+    font-size: 20px;
+    top: 50px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3197, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .txt {
+    font-size: 15px;
+    top: 50px;
+  }
+}
+
+/* line 3222, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .count, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .count, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .count {
+  position: relative;
+  left: 0;
+  font-family: Segoe Ui, sans-serif;
+  color: #969696;
+  font-weight: bold;
+  margin-left: 20px;
+  top: 5px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3222, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .count, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .count, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .count {
+    font-size: 52px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3222, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .count, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .count, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .count {
+    font-size: 42px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3222, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .count, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .count, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .count {
+    font-size: 32px;
+  }
+}
+
+/* line 3240, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .txt, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .txt, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .txt {
+  position: relative;
+  left: 0;
+  font-family: Segoe Ui, sans-serif;
+  color: #969696;
+  font-weight: bold;
+  margin-left: 20px;
+  top: 5px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3240, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .txt, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .txt, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .txt {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3240, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .txt, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .txt, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .txt {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3240, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .txt, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .txt, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .txt {
+    font-size: 15px;
+  }
+}
+
+/* line 3259, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .ico {
+  position: absolute;
+  fill: #969696;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3259, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .ico {
+    top: 13px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3259, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .ico {
+    top: 13px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3259, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .one .ico {
+    top: 13px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* line 3281, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .ico {
+  position: absolute;
+  fill: #969696;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3281, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .ico {
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3281, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .ico {
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3281, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .two .ico {
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+  }
+}
+
+/* line 3303, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .ico, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .ico, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .ico {
+  position: absolute;
+  fill: #969696;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3303, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .ico, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .ico, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .ico {
+    top: 40px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3303, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .ico, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .ico, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .ico {
+    top: 35px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3303, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .three .ico, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .four .ico, .mainBody .mainPage .mainPageCont .aboutUs .overlay .right .row .five .ico {
+    top: 30px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/******************************************************************************************
+*** Transport Services ***
+******************************************************************************************/
+/* line 3331, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+/* line 3339, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 3348, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ .overlay .contain {
+  position: absolute;
+  left: 70px;
+  width: calc(100% - 90px);
+  top: 70px;
+  height: calc(100% - 140px);
+  overflow: hidden;
+}
+
+/* line 3356, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ .overlay .contain .top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(50% - 10px);
+}
+
+/* line 3363, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ .overlay .contain .top .big {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: calc(((100% / 3) * 2) - 10px);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 3372, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ .overlay .contain .top .sml {
+  position: relative;
+  left: 20px;
+  top: 0;
+  height: 100%;
+  width: calc((100% / 3) - 10px);
+  border-radius: 5px;
+  background-color: rgba(255, 102, 0, 0.9);
+}
+
+/* line 3381, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ .overlay .contain .bot {
+  position: absolute;
+  left: 0;
+  top: calc(50% + 10px);
+  width: 100%;
+  height: calc(50% - 10px);
+}
+
+/* line 3388, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ .overlay .contain .bot .sml {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: calc((100% - 40px) / 3);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 3397, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .transpServ .overlay .contain .bot .smlOne {
+  position: relative;
+  left: 0;
+  margin-left: 20px;
+  top: 0;
+  height: 100%;
+  width: calc((100% - 40px) / 3);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 3410, ../sass/_indexLogistics.scss */
+.transpServ .divTop {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3410, ../sass/_indexLogistics.scss */
+  .transpServ .divTop {
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3410, ../sass/_indexLogistics.scss */
+  .transpServ .divTop {
+    height: 30px;
+  }
+}
+
+/* line 3422, ../sass/_indexLogistics.scss */
+.transpServ .divTop .divHead {
+  font-family: Segoe UI, sans-serif;
+  color: #fff;
+  cursor: default;
+  position: absolute;
+  text-wrap: none;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3422, ../sass/_indexLogistics.scss */
+  .transpServ .divTop .divHead {
+    font-size: 30px;
+    padding: 25px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3422, ../sass/_indexLogistics.scss */
+  .transpServ .divTop .divHead {
+    font-size: 20px;
+    padding: 5px 25px;
+  }
+}
+
+/* line 3440, ../sass/_indexLogistics.scss */
+.transpServ .divTxt {
+  position: relative;
+  margin-top: 0;
+  height: fit-content;
+  padding: 0 25px;
+  font-family: Segoe UI, sans-serif;
+  color: #fff;
+  cursor: default;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3440, ../sass/_indexLogistics.scss */
+  .transpServ .divTxt {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3440, ../sass/_indexLogistics.scss */
+  .transpServ .divTxt {
+    font-size: 12px;
+  }
+}
+
+/* line 3455, ../sass/_indexLogistics.scss */
+.transpServ .divTop .divIco {
+  position: absolute;
+  right: 0;
+  top: 0;
+  fill: white;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3455, ../sass/_indexLogistics.scss */
+  .transpServ .divTop .divIco {
+    padding: 25px;
+    width: 35px;
+    height: 35px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3455, ../sass/_indexLogistics.scss */
+  .transpServ .divTop .divIco {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* line 3471, ../sass/_indexLogistics.scss */
+.transpServ .listing {
+  position: relative;
+  top: 0;
+  margin-top: 20px;
+  left: 25px;
+  border-left: 5px solid yellow;
+  cursor: default;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3471, ../sass/_indexLogistics.scss */
+  .transpServ .listing {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3471, ../sass/_indexLogistics.scss */
+  .transpServ .listing {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+/* line 3487, ../sass/_indexLogistics.scss */
+.transpServ .listing .itemise {
+  position: relative;
+  left: 10px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3487, ../sass/_indexLogistics.scss */
+  .transpServ .listing .itemise {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3487, ../sass/_indexLogistics.scss */
+  .transpServ .listing .itemise {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+/* line 3499, ../sass/_indexLogistics.scss */
+.transpServ .listing .itemise .ar {
+  position: relative;
+  color: yellow;
+  font-family: Calibri, sans-serif;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3499, ../sass/_indexLogistics.scss */
+  .transpServ .listing .itemise .ar {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3499, ../sass/_indexLogistics.scss */
+  .transpServ .listing .itemise .ar {
+    font-size: 14px;
+  }
+}
+
+/* line 3510, ../sass/_indexLogistics.scss */
+.transpServ .listing .itemise .srv {
+  position: relative;
+  color: #969696;
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
+  margin-left: 5px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3510, ../sass/_indexLogistics.scss */
+  .transpServ .listing .itemise .srv {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3510, ../sass/_indexLogistics.scss */
+  .transpServ .listing .itemise .srv {
+    font-size: 14px;
+  }
+}
+
+/* line 3523, ../sass/_indexLogistics.scss */
+.transpServ .listing .itemise .nme {
+  position: relative;
+  color: white;
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
+  margin-left: 5px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3523, ../sass/_indexLogistics.scss */
+  .transpServ .listing .itemise .nme {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3523, ../sass/_indexLogistics.scss */
+  .transpServ .listing .itemise .nme {
+    font-size: 14px;
+  }
+}
+
+/* line 3536, ../sass/_indexLogistics.scss */
+.transpServ .listingNo {
+  position: relative;
+  top: 0;
+  /*margin-top: 10px;*/
+  left: 15px;
+  margin-right: 10px;
+  cursor: default;
+  width: 45%;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3536, ../sass/_indexLogistics.scss */
+  .transpServ .listingNo {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3536, ../sass/_indexLogistics.scss */
+  .transpServ .listingNo {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+/* line 3553, ../sass/_indexLogistics.scss */
+.transpServ .listingNo .itemise {
+  position: relative;
+  left: 10px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3553, ../sass/_indexLogistics.scss */
+  .transpServ .listingNo .itemise {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3553, ../sass/_indexLogistics.scss */
+  .transpServ .listingNo .itemise {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+/* line 3565, ../sass/_indexLogistics.scss */
+.transpServ .listingNo .itemise .ar {
+  position: relative;
+  color: white;
+  font-family: Calibri, sans-serif;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3565, ../sass/_indexLogistics.scss */
+  .transpServ .listingNo .itemise .ar {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3565, ../sass/_indexLogistics.scss */
+  .transpServ .listingNo .itemise .ar {
+    font-size: 14px;
+  }
+}
+
+/* line 3580, ../sass/_indexLogistics.scss */
+.divTop {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+}
+
+/* line 3587, ../sass/_indexLogistics.scss */
+.divTop .divHead {
+  font-size: x-large;
+  font-family: Segoe UI, sans-serif;
+  color: #fff;
+  cursor: default;
+  position: absolute;
+  text-wrap: none;
+  padding: 25px;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* line 3599, ../sass/_indexLogistics.scss */
+.divTxt {
+  position: relative;
+  margin-top: 0;
+  height: fit-content;
+  padding: 0 25px;
+  font-family: Segoe UI, sans-serif;
+  color: #fff;
+  cursor: default;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3599, ../sass/_indexLogistics.scss */
+  .divTxt {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3599, ../sass/_indexLogistics.scss */
+  .divTxt {
+    font-size: 13px;
+  }
+}
+
+/* line 3614, ../sass/_indexLogistics.scss */
+.divTop .divIco {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 25px;
+  width: 35px;
+  height: 35px;
+  fill: white;
+}
+
+/* line 3623, ../sass/_indexLogistics.scss */
+.listing {
+  position: relative;
+  top: 0;
+  margin-top: 20px;
+  left: 25px;
+  border-left: 5px solid yellow;
+  cursor: default;
+}
+
+/* line 3631, ../sass/_indexLogistics.scss */
+.listing .itemise {
+  position: relative;
+  left: 10px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3631, ../sass/_indexLogistics.scss */
+  .listing .itemise {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3631, ../sass/_indexLogistics.scss */
+  .listing .itemise {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3631, ../sass/_indexLogistics.scss */
+  .listing .itemise {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+/* line 3647, ../sass/_indexLogistics.scss */
+.listing .itemise .ar {
+  position: relative;
+  color: yellow;
+  font-family: Calibri, sans-serif;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3647, ../sass/_indexLogistics.scss */
+  .listing .itemise .ar {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3647, ../sass/_indexLogistics.scss */
+  .listing .itemise .ar {
+    font-size: 14px;
+  }
+}
+
+/* line 3658, ../sass/_indexLogistics.scss */
+.listing .itemise .srv {
+  position: relative;
+  color: #969696;
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
+  margin-left: 5px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3658, ../sass/_indexLogistics.scss */
+  .listing .itemise .srv {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3658, ../sass/_indexLogistics.scss */
+  .listing .itemise .srv {
+    font-size: 14px;
+  }
+}
+
+/* line 3671, ../sass/_indexLogistics.scss */
+.listing .itemise .nme {
+  position: relative;
+  color: white;
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
+  margin-left: 5px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3671, ../sass/_indexLogistics.scss */
+  .listing .itemise .nme {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3671, ../sass/_indexLogistics.scss */
+  .listing .itemise .nme {
+    font-size: 14px;
+  }
+}
+
+/* line 3684, ../sass/_indexLogistics.scss */
+.listingNo {
+  position: relative;
+  top: 0;
+  margin-top: 10px;
+  left: 15px;
+  margin-right: 10px;
+  cursor: default;
+  width: 45%;
+}
+
+/* line 3693, ../sass/_indexLogistics.scss */
+.listingNo .itemise {
+  position: relative;
+  left: 10px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3693, ../sass/_indexLogistics.scss */
+  .listingNo .itemise {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3693, ../sass/_indexLogistics.scss */
+  .listingNo .itemise {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3693, ../sass/_indexLogistics.scss */
+  .listingNo .itemise {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+/* line 3709, ../sass/_indexLogistics.scss */
+.listingNo .itemise .ar {
+  position: relative;
+  color: white;
+  font-family: Calibri, sans-serif;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3709, ../sass/_indexLogistics.scss */
+  .listingNo .itemise .ar {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3709, ../sass/_indexLogistics.scss */
+  .listingNo .itemise .ar {
+    font-size: 14px;
+  }
+}
+
+/******************************************************************************************
+*** Technology Overview ***
+******************************************************************************************/
+/* line 3723, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+/* line 3731, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 3739, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain {
+  position: absolute;
+  left: 70px;
+  width: calc(100% - 90px);
+  top: 70px;
+  height: calc(100% - 140px);
+}
+
+/* line 3746, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain .div {
+  position: relative;
+  left: 0;
+  margin-left: 20px;
+  top: 0;
+  height: 100%;
+  width: calc((100% / 3) - 10px);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 3756, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .head {
+  font-size: 12px;
+  font-family: Segoe UI, sans-serif;
+  color: #fff;
+  cursor: default;
+  position: relative;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* line 3767, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .ttl {
+  position: relative;
+  font-weight: bold;
+  padding: 25px;
+  font-family: Segoe UI, sans-serif;
+  color: #fff;
+  cursor: default;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3767, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .ttl {
+    margin-top: 0;
+    margin-bottom: auto;
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3767, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .ttl {
+    margin-top: 0;
+    margin-bottom: auto;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3767, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .ttl {
+    margin-top: 0;
+    margin-bottom: auto;
+    font-size: 25px;
+  }
+}
+
+/* line 3790, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .txt {
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  padding: 5px 35px 5px 10px;
+  left: 20px;
+  font-family: Segoe UI, sans-serif;
+  color: #fff;
+  cursor: default;
+  border-left: 5px solid yellow;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 3790, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .txt {
+    font-size: 16px;
+    top: -15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 3790, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .txt {
+    font-size: 14px;
+    top: -15px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 3790, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .txt {
+    font-size: 12px;
+    top: -15px;
+  }
+}
+
+/* line 3813, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .img {
+  position: relative;
+  left: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 200px;
+  background-size: 100% 100%;
+}
+
+/* line 3821, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .one {
+  background: url("../Images/index05.jpg") top center no-repeat;
+}
+
+/* line 3824, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .two {
+  background: url("../Images/index06.jpg") top center no-repeat;
+}
+
+/* line 3827, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .techOver .overlay .contain .div .three {
+  background: url("../Images/index04.jpg") top center no-repeat;
+}
+
+/******************************************************************************************
+*** Solutions Overview ***
+******************************************************************************************/
+/* line 3833, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+/* line 3841, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 3849, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv .overlay .contain {
+  position: absolute;
+  left: 70px;
+  width: calc(100% - 90px);
+  top: 70px;
+  height: calc(100% - 140px);
+}
+
+/* line 3856, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv .overlay .contain .top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(50% - 10px);
+}
+
+/* line 3863, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv .overlay .contain .top .sml {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: calc((100% - 40px) / 3);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 3872, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv .overlay .contain .top .smlOne {
+  position: relative;
+  left: 0;
+  margin-left: 20px;
+  top: 0;
+  height: 100%;
+  width: calc((100% - 40px) / 3);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 3882, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv .overlay .contain .bot {
+  position: absolute;
+  left: 0;
+  top: calc(50% + 10px);
+  width: 100%;
+  height: calc(50% - 10px);
+}
+
+/* line 3889, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv .overlay .contain .bot .sml {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: calc((100% - 40px) / 3);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 3898, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .solutOv .overlay .contain .bot .smlOne {
+  position: relative;
+  left: 0;
+  margin-left: 20px;
+  top: 0;
+  height: 100%;
+  width: calc((100% - 40px) / 3);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/******************************************************************************************
+*** Contact Us ***
+******************************************************************************************/
+/* line 3911, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq {
+  position: relative;
+  left: 70px;
+  width: calc(60% - 50px);
+  top: 20px;
+  height: calc(100% - 90px);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* line 3921, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm.ng-enter {
+  transition: all 0.3s linear;
+  left: -100%;
+}
+
+/* line 3925, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm.ng-enter-active {
+  transition: all 0.3s linear;
+  left: 0;
+}
+
+/* line 3929, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm.ng-leave {
+  transition: all 0.3s linear;
+  left: 0;
+}
+
+/* line 3933, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm.ng-leave-active {
+  transition: all 0.3s linear;
+  left: -100%;
+}
+
+/* line 3937, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+/* line 3945, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .headerTxt {
+  position: relative;
+  padding: 25px 0 0 25px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  cursor: default;
+}
+
+/* line 3954, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .desc {
+  position: relative;
+  padding: 15px 25px;
+  cursor: default;
+}
+
+/* line 3959, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .desc .descript {
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  padding: 0;
+}
+
+/* line 3965, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .desc .descriptSpec {
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  color: Yellow;
+  font-style: italic;
+  padding: 0;
+}
+
+/* line 3972, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+  padding: 0 25px 25px 25px;
+  width: auto;
+}
+
+/* line 3980, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .bar {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+/* line 3989, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .thin {
+  height: 30px;
+}
+
+/* line 3992, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .thick {
+  height: calc(100% - 180px);
+  margin-bottom: 20px;
+}
+
+/* line 3996, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .in {
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 0 10px 0 10px;
+  height: 100%;
+  width: calc(100% - 20px);
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #646464;
+  outline: none;
+  border: none;
+}
+
+/* line 4010, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 4019, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .txt {
+  position: absolute;
+  left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #646464;
+  font-family: Segoe UI, sans-serif;
+  top: 6px;
+}
+
+/* line 4028, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .icon {
+  position: absolute;
+  right: 10px;
+  fill: #0080ff;
+  top: 3px;
+}
+
+/* line 4035, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop.ng-enter {
+  transition: all 0.25s linear;
+  height: 0;
+}
+
+/* line 4039, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop.ng-enter-active {
+  transition: all 0.25s linear;
+  height: 100px;
+}
+
+/* line 4043, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop.ng-leave {
+  transition: all 0.25s linear;
+  height: 100px;
+}
+
+/* line 4047, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop.ng-leave-active {
+  transition: all 0.25s linear;
+  height: 0;
+}
+
+/* line 4051, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop {
+  position: relative;
+  top: calc(100% - 3px);
+  z-index: 9994;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(100, 100, 100, 0.5);
+  -moz-box-shadow: 0 2px 3px 1px rgba(100, 100, 100, 0.5);
+  box-shadow: 0 2px 3px 1px rgba(100, 100, 100, 0.5);
+  transition: all 0.25s linear;
+}
+
+/* line 4067, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop .scr {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 4075, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop .scr .list {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 2px;
+  width: 100%;
+  height: 20px;
+}
+
+/* line 4083, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop .scr .list .cont {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+}
+
+/* line 4093, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop .scr .list .cont:hover {
+  background-color: rgba(100, 100, 100, 0.2);
+}
+
+/* line 4096, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .toDrop .drop .scr .list .cont .item {
+  position: relative;
+  left: 10px;
+  top: 0;
+  color: #646464;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* line 4105, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .msg {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Segoe Ui, sans-serif;
+  color: lime;
+}
+
+/* line 4114, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .msgFail {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Segoe Ui, sans-serif;
+  color: red;
+}
+
+/* line 4123, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .submit {
+  position: relative;
+  height: 30px;
+  border: 1px solid #0080ff;
+  background-color: #0080ff;
+  transition: all 0.25s linear;
+  outline: none;
+  border-radius: 3px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* line 4139, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .submit:hover {
+  background-color: rgba(0, 128, 255, 0.5);
+}
+
+/* line 4142, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .submitDis {
+  position: relative;
+  height: 30px;
+  border: 1px solid rgba(100, 100, 100, 0.1);
+  background-color: transparent;
+  transition: all 0.25s linear;
+  outline: none;
+  border-radius: 3px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgba(100, 100, 100, 0.5);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: default;
+}
+
+/* line 4159, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .mainPageCont .overlayEnq .contactForm .form .submitDis:hover {
+  background-color: transparent;
+}
+
+/******************************************************************************************
+*** Under Wall ***
+******************************************************************************************/
+/* line 4173, ../sass/_indexLogistics.scss */
+.UnderWall {
+  position: absolute;
+  top: 100vh;
+  width: 100vw;
+}
+
+/******************************************************************************************
+*** Footer ***
+******************************************************************************************/
+/* line 4181, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.4s linear;
+  overflow: hidden;
+  border-top: 1px solid transparent;
+}
+
+/* line 4192, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer #smallFoot.ng-enter {
+  transition: all 0.25s linear;
+  opacity: 0;
+}
+
+/* line 4196, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer #smallFoot.ng-enter-active {
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+
+/* line 4200, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer #smallFoot.ng-leave {
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+
+/* line 4204, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer #smallFoot.ng-leave-active {
+  transition: all 0.25s linear;
+  opacity: 0;
+}
+
+/* line 4208, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer #smallFoot {
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+
+/* line 4212, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer .border {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  background-color: yellow;
+}
+
+/* line 4220, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer .txt.ng-enter {
+  transition: all 0.4s linear;
+  opacity: 0;
+}
+
+/* line 4224, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer .txt.ng-enter-active {
+  transition: all 0.4s linear;
+  opacity: 1;
+}
+
+/* line 4228, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer .txt.ng-leave {
+  transition: all 0.4s linear;
+  opacity: 1;
+}
+
+/* line 4232, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer .txt.ng-leave-active {
+  transition: all 0.4s linear;
+  opacity: 0;
+}
+
+/* line 4236, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .footer .txt {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  color: #fff;
+  cursor: default;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.4s linear;
+}
+
+/******************************************************************************************
+*** Full Footer ***
+******************************************************************************************/
+/* line 4250, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s linear;
+  overflow: hidden;
+  border-top: 40px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 10px solid yellow;
+}
+
+/* line 4262, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter #bigFoot.ng-enter {
+  transition: all 0.25s linear;
+  opacity: 0;
+}
+
+/* line 4266, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter #bigFoot.ng-enter-active {
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+
+/* line 4270, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter #bigFoot.ng-leave {
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+
+/* line 4274, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter #bigFoot.ng-leave-active {
+  transition: all 0.25s linear;
+  opacity: 0;
+}
+
+/* line 4278, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter #bigFoot {
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+
+/* line 4282, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content {
+  position: absolute;
+  left: 65px;
+  width: calc(100% - 80px);
+  top: 15px;
+  height: calc(100% - 20px);
+}
+
+/* line 4289, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(90% - 15px);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* line 4299, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left {
+  position: relative;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  top: 0;
+}
+
+/* line 4306, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .list {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  height: calc(100% - 40px);
+  width: 35%;
+}
+
+/* line 4313, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .bord {
+  border-left: 5px solid yellow;
+}
+
+/* line 4316, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .list .item, .mainBody .mainPage .fullFooter .content .top .left .listLast .item {
+  position: relative;
+  left: 0;
+  margin-left: 10px;
+  height: calc(100% / 6);
+  text-align: left;
+  cursor: default;
+}
+
+/* line 4324, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .list .item .ico {
+  position: relative;
+  left: 0;
+  top: 0;
+  fill: #fff;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 4332, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .list .item .txts {
+  position: relative;
+  left: 0;
+  font-size: 12px;
+  font-weight: bold;
+  width: fit-content;
+  margin-left: 10px;
+  color: #fff;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* line 4343, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .list .item .mail {
+  position: relative;
+  left: 0;
+  font-size: 12px;
+  width: fit-content;
+  margin-left: 10px;
+  color: #fff;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 10px;
+}
+
+/* line 4354, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .listLast {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  height: calc(100% - 40px);
+  width: 30%;
+}
+
+/* line 4361, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .listLast .item .txts {
+  position: relative;
+  left: 0;
+  font-size: 14px;
+  font-weight: bold;
+  width: fit-content;
+  margin-left: 10px;
+  color: #fff;
+  top: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* line 4373, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .listLast .itema {
+  position: relative;
+  left: 0;
+  margin-left: 10px;
+  height: calc(100% / 10);
+  text-align: left;
+  cursor: default;
+}
+
+/* line 4381, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .listLast .itema .maila {
+  position: relative;
+  font-size: 12px;
+  color: yellow;
+  margin-left: 20px;
+}
+
+/* line 4387, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .listLast .itema .mail {
+  position: relative;
+  font-size: 12px;
+  color: #969696;
+  margin-left: 5px;
+}
+
+/* line 4393, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .left .listLast .itema .mailb {
+  position: relative;
+  font-size: 12px;
+  color: white;
+  margin-left: 5px;
+}
+
+/* line 4406, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .right {
+  position: relative;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  top: 0;
+}
+
+/* line 4413, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .right .topLeft {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 140px);
+  height: 52px;
+  border-left: 5px solid yellow;
+  word-wrap: break-spaces;
+}
+
+/* line 4422, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .right .topLeft .txt {
+  position: relative;
+  color: #fff;
+  font-family: Calibri, sans-serif;
+  cursor: default;
+  left: 10px;
+  top: 5px;
+  padding: 5px 0;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 4422, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .fullFooter .content .top .right .topLeft .txt {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 4422, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .fullFooter .content .top .right .topLeft .txt {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* line 4422, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .fullFooter .content .top .right .topLeft .txt {
+    font-size: 13px;
+  }
+}
+
+/* line 4440, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .right .footImg {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 40%;
+  height: auto;
+}
+
+/* line 4447, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .right .social {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 40%;
+  height: fit-content;
+}
+
+/* line 4455, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .right .social .circ {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* line 4467, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .right .social .circ .icon {
+  fill: #fff;
+  transition: all 0.25s linear;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+/* line 4474, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .top .right .social .circ .icon:hover {
+  fill: #0066cc;
+}
+
+/* line 4477, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .toTop {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 80px;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s linear;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  vert-align: bottom;
+}
+
+/* line 4492, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .toTop:hover {
+  border: 1px solid black;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 4498, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .toTop .icon {
+  position: absolute;
+  top: -7px;
+  left: calc(50% - 20px);
+  fill: #0080ff;
+}
+
+/* line 4504, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .toTop .toptxt {
+  position: relative;
+  height: fit-content;
+  color: #0080ff;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  width: fit-content;
+  top: 25px;
+}
+
+/* line 4524, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .bot {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  margin-top: 5px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+/* line 4535, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .bot .ttl {
+  position: absolute;
+  left: 20px;
+  color: #fff;
+  font-family: Calibri, sans-serif;
+  font-weight: bold;
+  cursor: default;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 4535, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .fullFooter .content .bot .ttl {
+    font-size: 14px;
+    top: 13px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 4535, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .fullFooter .content .bot .ttl {
+    font-size: 12px;
+    top: 10px;
+  }
+}
+
+/* line 4551, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .bot .right {
+  position: absolute;
+  right: 20px;
+  height: fit-content;
+  width: fit-content;
+  font-size: 12px;
+  font-family: Calibri, sans-serif;
+  top: 10px;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 4551, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .fullFooter .content .bot .right {
+    font-size: 14px;
+    top: 13px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  /* line 4551, ../sass/_indexLogistics.scss */
+  .mainBody .mainPage .fullFooter .content .bot .right {
+    font-size: 12px;
+    top: 10px;
+  }
+}
+
+/* line 4568, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .bot .right .btn {
+  position: relative;
+  margin-right: 10px;
+  color: yellow;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+/* line 4575, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .bot .right .bord {
+  padding-left: 10px;
+  border-left: 1px solid yellow;
+}
+
+/* line 4579, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .bot .right .btn:hover {
+  color: #0066cc;
+}
+
+/* line 4582, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .terms.ng-hide {
+  top: 100%;
+}
+
+/* line 4585, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .terms.ng-hide-add,
+.mainBody .mainPage .fullFooter .content .terms.ng-hide-remove {
+  transition: all 0.25s linear;
+}
+
+/* line 4589, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .terms {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  background-color: rgba(0, 14, 32, 0.9);
+  overflow: hidden;
+}
+
+/* line 4599, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .terms .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 15px;
+  color: #bbb;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+/* line 4609, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .terms .close:hover {
+  color: #0066cc;
+}
+
+/* line 4612, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .terms .cont {
+  position: absolute;
+  left: 20px;
+  width: calc(100% - 40px);
+  top: 50px;
+  height: calc(100% - 70px);
+  overflow-y: scroll;
+  word-wrap: normal;
+}
+
+/* line 4621, ../sass/_indexLogistics.scss */
+.mainBody .mainPage .fullFooter .content .terms .cont .info {
+  font-size: 12px;
+  color: #fff;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,289 @@
+
+
+.custom-md-tooltip{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 65%;
+    left: calc(50% - 50px);
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+}
+.tipped:hover .custom-md-tooltip-retry, .tipped:hover .custom-md-tooltip-dateFilt, .tipped:hover .custom-md-tooltip-shipment-status, .tipped:hover .custom-md-tooltip-edit-company, .tipped:hover .custom-md-tooltip-user-add-company, .tipped:hover .custom-md-tooltip-unit,.tipped:hover .custom-md-tooltip, .tipped:hover .custom-md-tooltip-menuMap, .tipped:hover .custom-md-tooltip-menuDash, .tipped:hover .custom-md-tooltip-arrow-right, .tipped:hover .custom-md-tooltip-arrow-left, .tipped:hover .custom-md-tooltip-arrow-left-bot{
+    visibility: visible;
+    opacity: 1;
+    outline: none;
+}
+.custom-md-tooltip-retry{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: -65px;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+    white-space: nowrap;
+}
+.custom-md-tooltip-dateFilt{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: calc(100% + 2px);
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+    white-space: nowrap;
+}
+.custom-md-tooltip-menuDash{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 100%;
+    left: 15px;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+}
+.custom-md-tooltip-menuMap{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 100%;
+    left: 70px;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+}
+.custom-md-tooltip-arrow-right{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: calc(50% - 30px);
+    right: 5px;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+}
+.custom-md-tooltip-arrow-left{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: calc(50% - 40px);
+    left: 5px;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+}
+.custom-md-tooltip-arrow-left-bot{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    bottom: 80px;
+    left: 5px;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+}
+.tipped{
+    outline: none;
+}
+.tipped .a, .tipped .b, .tipped .c, .tipped .d, .tipped .e, .tipped .f{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    bottom: 60px;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+}
+.tipped .a{
+    left: 20px;
+}
+.tipped .b{
+    left: 80px;
+}
+.tipped .c{
+    left: 120px;
+}
+.tipped .d{
+    left: 170px;
+}
+.tipped .e{
+    left: 220px;
+}
+.tipped .f{
+    left: 250px;
+}
+.tipped .g{
+    bottom: 35px;
+}
+.tipped .h{
+    position: relative;
+    bottom: 35px;
+    left: -60px;
+}
+.custom-md-tooltip-unit{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: -20px;
+    right: 0;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+    white-space: nowrap;
+}
+.custom-md-tooltip-edit-company{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 2px;
+    right: 25px;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+    white-space: nowrap;
+}
+.custom-md-tooltip-user-add-company{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 100px;
+    left: 110%;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+    white-space: nowrap;
+}
+.custom-md-tooltip-shipment-status{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 110%;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+    white-space: nowrap;
+}
+/******************************************************************************************
+*** Index ***
+******************************************************************************************/
+.index-custom-md-tooltip{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+    left: 80%;
+    padding: 3px;
+    background-color: rgba(40,40,40,1);
+    border: 1px solid rgba(40,40,40,1);
+    color: #999;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    z-index: 99999999999999999999999999999999;
+    outline: none;
+    cursor: default;
+    white-space: nowrap;
+}
+.tipped:hover .index-custom-md-tooltip{
+    visibility: visible;
+    opacity: 1;
+    outline: none;
+    white-space: nowrap;
+}

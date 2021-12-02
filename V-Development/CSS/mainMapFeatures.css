@@ -1,0 +1,542 @@
+/************************************************************* Map Main Features **************************************************/
+
+/* ::mapLegend
+/************************************************************* Create Location Popup **************************************************/
+.mainCreateLocation.ng-enter{
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.mainCreateLocation.ng-enter-active{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
+.mainCreateLocation.ng-leave{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
+.mainCreateLocation.ng-leave-active{
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.mainCreateLocation{
+    position: absolute;
+    width: 500px;
+    height: 430px;
+    left: calc(50vw - 250px);
+    top: calc(50vh - 275px);
+    background-color: rgba(0,14,23,1);
+    z-index: 9994;
+    opacity: 1;
+    border-radius: 5px;
+    transition: all 0.5s ease-in;
+    border-bottom: 5px solid rgba(0,102,204,1);
+    overflow: hidden;
+}
+.mainCreateLocation .main.ng-enter{
+    left: -200%;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .main.ng-enter-active{
+    left: 0;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .main.ng-leave{
+    left: 0;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .main.ng-leave-active{
+    left: -200%;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .main{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: calc(100% - 30px);
+    transition: all 0.4s linear;
+    overflow: visible;
+}
+.mainCreateLocation .head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(0,102,204,1);
+}
+.mainCreateLocation .head .txt{
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-size: 16px;
+    color: #fff;
+    font-family: Arial-nova, sans-serif;
+    cursor: default;
+}
+.mainCreateLocation .head .close{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 16px;
+    color: #fff;
+    font-family: Arial-nova, sans-serif;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    outline: none;
+}
+.mainCreateLocation .head .close:hover{
+    color: rgba(0,30,48,1);
+}
+.mainCreateLocation .main .name{
+    position: absolute;
+    left: 15px;
+    top: 60px;
+    width: calc(100% - 30px);
+    height: 30px;
+    border: 1px solid rgba(100,100,100,0);
+    background-color: rgba(0,7,13,1);
+    border-radius: 3px;
+}
+.mainCreateLocation .main .name .txt{
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    color: #fff;
+    font-size: 12px;
+    cursor: default;
+}
+.mainCreateLocation .main .name .sep{
+    position: absolute;
+    left: 40px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(100,100,100,0.5);
+}
+.mainCreateLocation .main .name .input{
+    position: absolute;
+    top: 0;
+    left: 41px;
+    border: none;
+    width: calc(100% - 51px);
+    height: 100%;
+    outline: none;
+    color: rgba(0,102,204,1);
+    font-size: 12px;
+    background-color: transparent;
+    padding: 0 5px 0 5px;
+}
+.mainCreateLocation .main .address{
+    position: absolute;
+    left: 15px;
+    top: 110px;
+    width: calc(100% - 30px);
+    height: 30px;
+    border: 1px solid rgba(100,100,100,0);
+    background-color: rgba(0,7,13,1);
+    border-radius: 3px;
+}
+.mainCreateLocation .main .long{
+    position: absolute;
+    left: 15px;
+    top: 160px;
+    width: calc(100% - 30px);
+    height: 30px;
+    border: 1px solid rgba(100,100,100,0);
+    background-color: rgba(0,7,13,1);
+    border-radius: 3px;
+}
+.mainCreateLocation .main .lat{
+    position: absolute;
+    left: 15px;
+    top: 210px;
+    width: calc(100% - 30px);
+    height: 30px;
+    border: 1px solid rgba(100,100,100,0);
+    background-color: rgba(0,7,13,1);
+    border-radius: 3px;
+}
+.mainCreateLocation .main .mail{
+    position: absolute;
+    left: 15px;
+    top: 260px;
+    width: calc(100% - 30px);
+    height: 30px;
+    border: 1px solid rgba(100,100,100,0);
+    background-color: rgba(0,7,13,1);
+    border-radius: 3px;
+}
+.mainCreateLocation .main .num{
+    position: absolute;
+    left: 15px;
+    top: 310px;
+    width: calc(100% - 30px);
+    height: 30px;
+    border: 1px solid rgba(100,100,100,0);
+    background-color: rgba(0,7,13,1);
+    border-radius: 3px;
+}
+.mainCreateLocation .main .type{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: calc(100% - 30px);
+    height: auto;
+}
+.mainCreateLocation .main .name .ico, .mainCreateLocation .main .address .ico, .mainCreateLocation .main .long .ico, .mainCreateLocation .main .lat .ico, .mainCreateLocation .main .mail .ico, .mainCreateLocation .main .num .ico{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    fill: #fff;
+    cursor: default;
+}
+.mainCreateLocation .main .address .txt, .mainCreateLocation .main .long .txt, .mainCreateLocation .main .lat .txt, .mainCreateLocation .main .mail .txt, .mainCreateLocation .main .num .txt{
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    color: #fff;
+    font-size: 12px;
+    cursor: default;
+}
+.mainCreateLocation .main .address .sep, .mainCreateLocation .main .long .sep, .mainCreateLocation .main .lat .sep, .mainCreateLocation .main .mail .sep, .mainCreateLocation .main .num .sep{
+    position: absolute;
+    left: 40px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(100,100,100,0.5);
+}
+.mainCreateLocation .main .address .input, .mainCreateLocation .main .long .input, .mainCreateLocation .main .lat .input, .mainCreateLocation .main .mail .input, .mainCreateLocation .main .num .input{
+    position: absolute;
+    top: 0;
+    left: 41px;
+    border: none;
+    width: calc(100% - 51px);
+    height: 100%;
+    outline: none;
+    color: rgba(0,102,204,1);
+    font-size: 12px;
+    background-color: transparent;
+    padding: 0 5px 0 5px;
+}
+.mainCreateLocation .main .type .div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    height: 30px;
+    border: 1px solid rgba(100,100,100,0);
+    background-color: rgba(0,7,13,1);
+    border-radius: 3px;
+    transition: all 0.25s linear;
+    outline: none;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+}
+.mainCreateLocation .main .type .div .txt{
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    color: #aaa;
+    font-size: 12px;
+    cursor: default;
+}
+.mainCreateLocation .main .type .div .ico{
+    position: absolute;
+    top: -1px;
+    right: 0;
+    fill: rgba(0,102,204,1);
+    transition: all 0.25s linear;
+}
+.mainCreateLocation .main .cancel, .mainCreateLocation .msg .cancel{
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 100px;
+    height: 20px;
+    border: 1px solid rgba(255,255,255,1);
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0);
+    transition: all 0.25s linear;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: Segoe Ui, sans-serif;
+    color: #fff;
+    padding: 7px 0 5px 0;
+}
+.mainCreateLocation .main .accept, .mainCreateLocation .msg .accept{
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    width: 100px;
+    height: 20px;
+    border: 1px solid rgba(0,102,204,1);
+    border-radius: 3px;
+    background-color: rgba(0,102,204,1);
+    transition: all 0.25s linear;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: Segoe Ui, sans-serif;
+    color: #fff;
+    padding: 7px 0 5px 0;
+}
+.mainCreateLocation .main .cancel:hover, .mainCreateLocation .msg .cancel:hover{
+    background-color: rgba(255,255,255,0.8);
+    color: #000;
+    font-weight: bold;
+}
+.mainCreateLocation .main .accept:hover, .mainCreateLocation .msg .accept:hover{
+    background-color: rgba(0,102,204,0.8);
+    color: #000;
+    font-weight: bold;
+}
+/************************ Create Location Type Dropdown ***************************/
+.mainCreateLocation .main .typeDrop.ng-enter{
+    height: 0;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .main .typeDrop.ng-enter-active{
+    height: 185px;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .main .typeDrop.ng-leave{
+    height: 185px;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .main .typeDrop.ng-leave-active{
+    height: 0;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .main .typeDrop{
+    position: absolute;
+    left: 10px;
+    top: 42px;
+    width: calc(100% - 19px);
+    height: 185px;
+    background-color: rgba(0,0,0,0.95);
+    z-index: 9994;
+    border-bottom: 3px solid rgba(0,51,128,1);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow: hidden;
+}
+.mainCreateLocation .main .typeDrop .crLocTypeList{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 15px;
+    padding: 3px 0 3px 0;
+    width: 100%;
+    outline: none;
+    cursor: default;
+    margin-top: 5px;
+}
+.mainCreateLocation .main .typeDrop .crLocTypeList .itemDiv{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    outline: none;
+}
+.mainCreateLocation .main .typeDrop .crLocTypeList .itemDiv .item{
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    font-family: Arial-nova, sans-serif;
+    font-size: 12px;
+    color: #fff;
+}
+.mainCreateLocation .main .typeDrop .crLocTypeList .itemDiv:hover{
+    background-color: rgba(30,30,30,0.8);
+}
+/************************ Create Location (Message Div) ***************************/
+.mainCreateLocation .msg.ng-enter{
+    left: 200%;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .msg.ng-enter-active{
+    left: 0;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .msg.ng-leave{
+    left: 0;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .msg.ng-leave-active{
+    left: 200%;
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .msg{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: calc(100% - 30px);
+    transition: all 0.4s linear;
+}
+.mainCreateLocation .msg .question{
+    position: absolute;
+    left: 30px;
+    width: calc(100% - 60px);
+    top: 15px;
+    height: auto;
+    text-align: left;
+}
+.mainCreateLocation .msg .question .txt{
+    position: relative;
+    color: #fff;
+    font-family: Arial-nova, sans-serif;
+    font-size: 20px;
+    white-space: pre;
+}
+
+/************************ CSS styles used by custom infobox template ***************************/
+.mapPinHoverToolTip{
+    background-color:rgba(0,7,20,1);
+    color:rgba(100,100,100,1);
+    padding:5px;
+    text-align:center;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.customInfobox {
+    background-color: rgba(0,7,20,0.95);
+    border: 1px solid rgba(0,7,20,1);
+    color: #aaa;
+    border-radius: 10px;
+    padding: 10px;
+    font-size:11px;
+    pointer-events:auto !important;
+    white-space: pre;
+}
+.customInfobox .title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #fff;
+    cursor: default;
+}
+a.customInfoboxCloseButton:link, a.customInfoboxCloseButton:visited {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 0 1px 0 0;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    background-color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 5px;
+    right:10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:bold;
+    font-size:14px;
+    transition: all 0.25s linear;
+    outline: none;
+}
+a.customInfoboxCloseButton:hover{
+    background-color: rgba(50,50,50,0.5);
+    color: #000;
+}
+.infoBoxButtonDiv{
+    position: relative;
+    left: 0;
+    margin-top: 5px;
+}
+.infoOriginBtn{
+    position: relative;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background-color: transparent;
+    transition: all 0.25s linear;
+    cursor: pointer;
+    outline: none;
+    color: rgba(0,102,204,1);
+    padding: 4px;
+    font-family: Segoe Ui, sans-serif;
+    font-size: 12px;
+}
+.infoDestBtn{
+    position: relative;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background-color: transparent;
+    transition: all 0.25s linear;
+    cursor: pointer;
+    outline: none;
+    margin-left: 5px;
+    color: rgba(200,200,200,1);
+    padding: 4px;
+    font-family: Segoe Ui, sans-serif;
+    font-size: 12px;
+}
+.infoOriginBtn:hover, .infoDestBtn:hover{
+    /*background-color: rgba(0,51,128,0.5);*/
+    -webkit-box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.5);
+    -moz-box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.5);
+    box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.5);
+}
+/************************ CSS styles used by custom Context Menu ***************************/
+.customContextMenu{
+    background-color:rgba(0,7,20,0.9);
+    border:1px solid rgba(0,7,20,0.9);
+    padding: 0;
+    border-radius: 3px;
+}
+.customContextDiv{
+    width: 100%;
+    border-top: 1px solid rgba(100,100,100,1);
+}
+.customContextHeader{
+    left: 15px;
+    background-color: transparent;
+    border: none;
+    color: #aaa;
+    font-family: Segoe Ui, sans-serif;
+    font-size: 14px;
+    cursor: default;
+    outline: none;
+    transition: all 0.25s linear;
+    padding: 5px 20px 5px 5px;
+}
+.customContextButton{
+    left: 15px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: Segoe Ui, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.25s linear;
+    padding: 5px 20px 5px 5px;
+}
+.customContextButton:hover{
+    color: rgba(0,102,204,1);
+}
+.customContextFromDiv{
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgba(0,102,204,1);
+}
+.customContextToDiv{
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgba(0,255,0,1);
+}

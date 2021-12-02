@@ -1,0 +1,16 @@
+<div class="indexMain" ng-cloak>
+    <div class="body">
+        <div class="imgHead">
+            <img src="Images/Intellicargo Logo small.png" class="headIcon" />
+        </div>
+        <div class="selections" layout="row">
+            <div class="opt" ng-click="" layout="column">
+                <div class="txtCont" layout="row">
+                    <font class="txtOne">System update</font><font class="txt">In Progress</font>
+                </div>
+                <md-icon md-svg-src="Images/SVG/update.svg" class="ico"></md-icon>
+                <span class="detail">Please try again later.</span>
+            </div>
+        </div>
+    </div>
+</div>

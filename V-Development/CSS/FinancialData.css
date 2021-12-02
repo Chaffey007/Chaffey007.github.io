@@ -1,0 +1,780 @@
+/************************************************************* Financial Data **************************************************/
+.finPopup{
+    font-family: Arial-nova, sans-serif;
+    background-color: rgba(0,0,0,0.7);
+    border: 1px solid rgba(100,100,100,0.5);
+    border-radius: 3px;
+    position: absolute;
+    top: 64px;
+    height: calc(100vh - 70px);
+    left: 0;
+    width: calc(100vw - 19px);
+    opacity: 0;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    display: block;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 99991;
+}
+.finPopup md-toolbar{
+    background-color: rgba(20,20,20,0.85);
+    min-height: 0;
+    height: 30px;
+}
+.finTitle{
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+}
+.finPopup .popClose{
+    position: absolute;
+    right: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.25s linear;
+}
+.finPopup .popClose:hover{
+    -webkit-box-shadow: 0 0 7px 3px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0 0 7px 3px rgba(255,255,255,0.5);
+    box-shadow: 0 0 7px 3px rgba(255,255,255,0.5);
+}
+.finBack{
+
+}
+.finBack .right{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    border-left: 2px solid rgba(100,100,100,1);
+    height: calc(100% - 30px);
+    top: 30px;
+}
+.finBack .right .top{
+    position: absolute;
+    top: 0;
+    height: 65%;
+    width: 100%;
+    border-bottom: 1px solid rgba(100,100,100,1);
+}
+.finBack .right .top .head{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: calc(100% - 20px);
+    border-bottom: 1px solid rgba(100,100,100,0.5);
+    height: 40px;
+}
+.finBack .right .top .head .title{
+    font-family: Arial-nova, sans-serif;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    cursor: default;
+}
+.finBack .right .top .head .contain{
+    position: absolute;
+    left: 120px;
+    top: 11px;
+    height: 19px;
+    width: 19px;
+    border-radius: 3px;
+    background-color: #fff;
+    text-align: center;
+    cursor: default;
+}
+.finBack .right .top .head .contain .txt{
+    position: relative;
+    top: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(0,51,128,1);
+}
+.finBack .right .top .head .view{
+    position: absolute;
+    right: 0;
+    top: 13px;
+    font-size: 11px;
+    color: rgba(242,65,0,1);
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.finBack .right .top .head .view:hover{
+    color: rgba(0,51,128,1);
+}
+.finBack .right .bottom{
+    position: absolute;
+    bottom: 0;
+    height: 35%;
+    width: 100%;
+}
+.finBack .right .bottom .head{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: calc(100% - 20px);
+    border-bottom: 1px solid rgba(100,100,100,0.5);
+    height: 40px;
+}
+.finBack .right .bottom .head .title{
+    font-family: Arial-nova, sans-serif;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    cursor: default;
+}
+.finBack .right .bottom .head .contain{
+    position: absolute;
+    left: 80px;
+    top: 11px;
+    height: 19px;
+    width: 19px;
+    border-radius: 3px;
+    background-color: #fff;
+    text-align: center;
+    cursor: default;
+}
+.finBack .right .bottom .head .contain .txt{
+    position: relative;
+    top: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(0,51,128,1);
+}
+.finBack .right .bottom .head .view{
+    position: absolute;
+    right: 0;
+    top: 13px;
+    font-size: 11px;
+    color: rgba(242,65,0,1);
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.finBack .right .bottom .head .view:hover{
+    color: rgba(0,51,128,1);
+}
+.finBack .left .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 300px);
+    height: 250px;
+    border-top: 1px solid rgba(100,100,100,0.3);
+}
+.finBack .left .bottom .header{
+    font-family: Arial-nova, sans-serif;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    color: rgba(100,100,100,1);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: default;
+}
+.finBack .left .bottom .table{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: calc(100% - 25px);
+    height: 210px;
+}
+.finBack .left .bottom .table .head{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,51,128,1);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: calc(100% / 7);
+    width: 100%;
+}
+.finBack .left .bottom .table .head .txt{
+    position: relative;
+    width: calc(100% / 10);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    top: 8px;
+    cursor: default;
+}
+.finBack .left .bottom .table .mode{
+    position: relative;
+    left: 0;
+    width: calc((100% / 10) - 2px);
+    height: calc(100% - (100% / 7));
+}
+.finBack .left .bottom .table .mode .txt{
+    position: relative;
+    height: 20px;
+    color: #fff;
+    border-right: 1px solid rgba(100,100,100,0.5);
+    border-bottom: 1px solid rgba(100,100,100,0.5);
+    border-left: 1px solid rgba(100,100,100,0.5);
+    text-align: center;
+    font-size: 11px;
+    padding: 8px 0 0 0;
+    cursor: default;
+}
+.finBack .left .bottom .table .content{
+    position: relative;
+    left: 0;
+    width: calc(((100% / 10) * 8) - 1px);
+    height: calc(100% - (100% / 7));
+}
+.finBack .left .bottom .table .content .txt{
+    position: relative;
+    height: 20px;
+    color: #fff;
+    border-right: 1px solid rgba(100,100,100,0.5);
+    border-bottom: 1px solid rgba(100,100,100,0.5);
+    text-align: center;
+    font-size: 11px;
+    padding: 8px 0 0 0;
+    cursor: default;
+}
+.finBack .left .bottom .table .dets{
+    position: relative;
+    left: 0;
+    width: calc((100% / 10) - 1px);
+    height: calc(100% - (100% / 7));
+}
+.finBack .left .bottom .table .dets .txt{
+    position: relative;
+    height: 20px;
+    border-right: 1px solid rgba(100,100,100,0.5);
+    border-bottom: 1px solid rgba(100,100,100,0.5);
+    text-align: center;
+    color: rgba(242,65,0,1);
+    font-size: 11px;
+    padding: 8px 0 0 0;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.finBack .left .bottom .table .dets .txt:hover{
+    color: rgba(0,51,128,1);
+}
+.finBack .left .top{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    height: calc(100% - 280px);
+    width: calc(100% - 300px);
+}
+.finBack .left .top .left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 190px;
+    border-right: 1px solid rgba(100,100,100,0.2);
+    height: 100%;
+}
+.finBack .left .top .left .topBtnList{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.finBack .left .top .left .topBtnList .btn{
+    position: relative;
+    margin-top: 5px;
+    border: 1px solid rgba(100,100,100,0.4);
+    border-radius: 3px;
+    text-align: center;
+    color: rgba(100,100,100,0.6);
+    cursor: pointer;
+    width: 90%;
+    left: 4%;
+    padding: 5px 0 5px 0;
+    font-size: 11px;
+    transition: all 0.25s linear;
+}
+.finBack .left .top .left .topBtnList .btn:hover{
+    border: 1px solid rgba(0,51,128,1);
+    color: rgba(0,51,128,1);
+}
+.finBack .left .top .left .topBtnList .btnAct{
+    position: relative;
+    margin-top: 5px;
+    border: 1px solid rgba(100,100,100,1);
+    border-radius: 3px;
+    text-align: center;
+    color: rgba(0,51,128,1);
+    cursor: pointer;
+    width: 90%;
+    left: 4%;
+    padding: 5px 0 5px 0;
+    font-size: 11px;
+    transition: all 0.25s linear;
+}
+.finBack .left .top .left .totBudSpend{
+    position: absolute;
+    width: 90%;
+    left: 4%;
+    height: 50px;
+    bottom: 58px;
+    border: 1px solid rgba(100,100,100,0.5);
+    border-radius: 3px;
+}
+.finBack .left .top .left .totBudPrev{
+    position: absolute;
+    width: 90%;
+    left: 4%;
+    height: 50px;
+    bottom: 4px;
+    border: 1px solid rgba(100,100,100,0.5);
+    border-radius: 3px;
+}
+.totBudSpend .head, .totBudPrev .head{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: #aaa;
+    cursor: default;
+    font-size: 9px;
+}
+.totBudSpend .view{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: rgba(242,65,0,1);
+    cursor: pointer;
+    transition: all 0.25s linear;
+    font-size: 9px;
+}
+.totBudSpend .view:hover{
+    color: rgba(0,51,128,1);
+}
+.totBudSpend .dataRow, .totBudPrev .dataRow{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    cursor: default;
+    font-size: 12px;
+}
+.totBudSpend .dataRow .cur, .totBudPrev .dataRow .cur{
+    position: relative;
+    left: 2px;
+    color: #ccc;
+    font-size: 12px;
+}
+.totBudSpend .dataRow .tot, .totBudPrev .dataRow .tot{
+    position: relative;
+    left: 5px;
+    color: rgba(0,51,128,1);
+    font-size: 12px;
+}
+.totBudSpend .dataRow .type{
+    position: relative;
+    left: 10px;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: bold;
+}
+.totBudPrev .dets{
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    height: 12px;
+    width: 50px;
+    border: 1px solid rgba(0,51,128,1);
+    background-color: rgba(0,51,128,1);
+    cursor: pointer;
+    transition: all 0.25s linear;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 3px;
+    padding-top: 1px;
+}
+.totBudPrev .dets:hover{
+    background-color: rgba(0,51,128,0.5);
+}
+/*******************************************************************************************************/
+.finBack .left .doghnut{
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    height: calc(100% - 150px);
+    width: 100%;
+}
+.finCat{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    top: 0;
+}
+.finCatTxt{
+    position: relative;
+    top: 5px;
+}
+.doghnut .circle-chart{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    left: calc(50% - 50px);
+    top: 20px;
+}
+.circle-chart__background{
+    stroke: rgba(100,100,100,0.2);
+    stroke-width: 20;
+    fill: none;
+}
+.circle-chart__circle {
+    animation: circle-chart-fill 0.8s reverse;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform-origin: center;
+    stroke: rgba(0,51,128,1);
+    stroke-width: 20;
+    stroke-linecap: round;
+    fill: none;
+}
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 534; }
+}
+.finBack .left .percTxt{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: calc(50% - 23px);
+    top: calc(50% + 40px);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: default;
+    background-color: rgba(100,100,100,0);
+}
+/*******************************************************************************************************/
+.finBack .left .top .right{
+    position: absolute;
+    left: 190px;
+    top: 0;
+    width: calc(100% - 190px);
+    height: 100%;
+}
+.finBack .left .top .right .head{
+    position: absolute;
+    top: 10px;
+    height: 30px;
+    width: 96%;
+    left: calc(2% - 2px);
+    border-bottom: 2px solid rgba(100,100,100,0.5);
+}
+.finBack .left .top .right .head .title{
+    font-family: Arial-nova, sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba(100,100,100,1);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: default;
+}
+.finBack .left .top .right .body{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: calc(100% - 40px);
+    width: 100%;
+}
+.finBack .left .top .right .body .graph{
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    width: calc(100% - 100px);
+    border-left: 2px solid rgba(100,100,100,0.5);
+    border-bottom: 2px solid rgba(100,100,100,0.5);
+    height: calc(100% - 55px);
+}
+.finBack .left .top .right .body .graph .devider{
+    position: relative;
+    width: 100%;
+    height: calc(100% / 4);
+    border-top: 1px solid rgba(100,100,100,0.1);
+}
+.finBack .left .top .right .body .graphLeft{
+    position: absolute;
+    left: 5px;
+    width: 55px;
+    text-align: center;
+    height: calc(100% - 55px);
+    top: 15px;
+}
+.finBack .left .top .right .body .graphLeft .txtOne{
+    position: relative;
+    color: rgba(100,100,100,1);
+    font-size: 10px;
+    cursor: default;
+}
+.finBack .left .top .right .body .graphLeft .txtTwo{
+    position: relative;
+    color: rgba(100,100,100,1);
+    font-size: 10px;
+    cursor: default;
+    top: calc((100% / 4) - 11px);
+}
+.finBack .left .top .right .body .graphLeft .txtThree{
+    position: relative;
+    color: rgba(100,100,100,1);
+    font-size: 10px;
+    cursor: default;
+    top: calc((100% / 2) - 22px);
+}
+.finBack .left .top .right .body .graphLeft .txtFour{
+    position: relative;
+    color: rgba(100,100,100,1);
+    font-size: 10px;
+    cursor: default;
+    top: calc(((100% / 4) * 3) - 33px);
+}
+.finBack .left .top .right .body .graphBot{
+    position: absolute;
+    top: calc(100% - 30px);
+    left: 60px;
+    width: calc(100% - 100px);
+}
+.finBack .left .top .right .body .graphBot .months{
+    position: relative;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.finBack .left .top .right .body .graphBot .months .mnth{
+    position: relative;
+    width: calc(100% / 12);
+    color: rgba(100,100,100,1);
+    text-align: center;
+}
+/****************************************** "Spent" Popup *************************************************************/
+.finBack .spentPop.ng-enter{
+    right: -10px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentPop.ng-enter-active{
+    right: 0;
+    width: 300px;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentPop.ng-leave{
+    right: 0;
+    width: 300px;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentPop.ng-leave-active{
+    right: -10px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentPop{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 300px;
+    height: calc(100% - 30px);
+    background-color: #000;
+    z-index: 9993;
+    border-left: 2px solid #666;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentPop .spentPopList{
+    position: relative;
+    border: 1px solid #666;
+    border-radius: 3px;
+    height: calc((100% - 60px) / 8);
+    width: calc(100% - 10px);
+    left: 5px;
+    margin-top: 5px;
+    transition: all 0.25s linear;
+    cursor: pointer;
+}
+.finBack .spentPop .spentPopList .btn{
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border: 1px solid rgba(100,100,100,0.5);
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s linear;
+}
+.finBack .spentPop .spentPopList .btnAct{
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border: 1px solid rgba(0,51,128,1);
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s linear;
+}
+.finBack .spentPop .spentPopList .btn .title{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    color: #bbb;
+    font-size: 12px;
+    transition: all 0.1s linear;
+}
+.finBack .spentPop .spentPopList .btn .titleAct{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    color: rgba(0,51,128,1);
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.1s linear;
+}
+.finBack .spentPop .spentPopList:hover{
+    border: 1px solid rgba(0,51,128,1);
+}
+.finBack .spentPop .spentPopList:hover > .btn{
+    border: 1px solid rgba(0,51,128,1);
+}
+.finBack .spentPop .spentPopList .detail{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 60%;
+    cursor: default;
+}
+.finBack .spentPop .spentPopList .detail .cur{
+    color: #999;
+    font-size: 12px;
+}
+.finBack .spentPop .spentPopList .detail .amount{
+    position: relative;
+    color: rgba(0,51,128,1);
+    font-size: 12px;
+    left: 5px;
+}
+.finBack .spentPop .spentPopList .detail .type{
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    left: 10px;
+}
+/****************************************** "Spent" Sub-Popup *************************************************************/
+.finBack .spentSubPop.ng-enter{
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentSubPop.ng-enter-active{
+    width: 200px;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentSubPop.ng-leave{
+    width: 200px;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentSubPop.ng-leave-active{
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentSubPop{
+    position: absolute;
+    top: 30px;
+    right: 300px;
+    height: calc(100% - 30px);
+    width: 200px;
+    border-left: 2px solid rgba(0,51,128,1);
+    background-color: #000;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+.finBack .spentSubPop .head{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: default;
+}
+.finBack .spentSubPop .spentSubPopList{
+    position: relative;
+    top: 20px;
+    height: calc((100% - 20px) / 4);
+}
+.finBack .spentSubPop .finCat{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    top: 0;
+}
+
+.finBack .spentSubPop .circle-chart{
+    position: absolute;
+    width: 150px;
+    height: 130px;
+    left: calc(50% - 75px);
+    top: 0;
+}
+.finBack .spentSubPop .circle-chart__background{
+    stroke: rgba(100,100,100,0.2);
+    stroke-width: 20;
+    fill: none;
+}
+.finBack .spentSubPop .circle-chart__circle {
+    animation: circle-chart-fill 0.8s reverse;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform-origin: center;
+    stroke: rgba(0,51,128,1);
+    stroke-width: 20;
+    stroke-linecap: round;
+    fill: none;
+}
+.finBack .spentSubPop @keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 534; }
+}
+.finBack .spentSubPop .spentSubPopList .finCat .percTxt{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: calc(50% - 23px);
+    top: calc(50% - 28px);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: default;
+    background-color: rgba(100,100,100,0);
+}
+.finBack .spentSubPop .spentSubPopList .finCat .finCatTxt{
+    position: relative;
+    top: 100px;
+}

@@ -1,0 +1,444 @@
+/************************************************************* Overview **************************************************/
+.oVPopup{
+    font-family: Arial-nova, sans-serif;
+    background-color: rgba(0,0,0,0.7);
+    border: 1px solid rgba(100,100,100,0.5);
+    border-radius: 3px;
+    position: absolute;
+    top: 64px;
+    height: calc(100vh - 70px);
+    left: 0;
+    width: calc(100vw - 19px);
+    opacity: 0;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    display: block;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 99991;
+}
+.oVPopup md-toolbar{
+    background-color: rgba(20,20,20,0.85);
+    min-height: 0;
+    height: 30px;
+}
+.oVhTitle{
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+}
+.oVPopup .popClose{
+    position: absolute;
+    right: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.25s linear;
+}
+.oVPopup .popClose:hover{
+    -webkit-box-shadow: 0 0 7px 3px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0 0 7px 3px rgba(255,255,255,0.5);
+    box-shadow: 0 0 7px 3px rgba(255,255,255,0.5);
+}
+.oVBack{
+
+}
+.oVBack .top{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: calc(100% - 22px);
+    height: calc(100% - 270px);
+    border-radius: 3px;
+    border: 1px solid rgba(100,100,100,0.5);
+}
+.oVBack .top .left{
+    position: absolute;
+    left: 0;
+    width: 250px;
+    top: 0;
+    height: 100%;
+    border-right: 2px solid rgba(100,100,100,0.5);
+}
+.oVBack .top .left .head{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(200,200,200,1);
+    cursor: default;
+}
+/*******************************************************************************************************/
+.oVBack .top .left .circle-chart{
+    position: relative;
+    width: 150px;
+    top: 80px;
+    height: 150px;
+    left: calc(50% - 75px);
+}
+.oVBack .top .left .circle-chart .circle-chart__background{
+    stroke: rgba(100,100,100,0.2);
+    stroke-width: 20;
+    fill: none;
+}
+.oVBack .top .left .circle-chart .circle-chart__circle {
+    animation: circle-chart-fill 0.8s reverse;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform-origin: center;
+    stroke: rgba(0,51,128,1);
+    stroke-width: 20;
+    stroke-linecap: round;
+    fill: none;
+}
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 534; }
+}
+.oVBack .top .left .percTxt{
+    position: absolute;
+    width: 80%;
+    height: 15px;
+    left: calc(50% - 40%);
+    top: 150px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: default;
+    background-color: rgba(100,100,100,0);
+    text-align: center;
+}
+.oVBack .top .right{
+    position: absolute;
+    left: 253px;
+    width: calc(100% - 255px);
+    top: 0;
+    height: 100%;
+    border-right: 2px solid rgba(100,100,100,0.5);
+}
+.oVBack .top .right .head{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: calc(100% - 20px);
+    border-bottom: 2px solid rgba(100,100,100,0.5);
+    height: 30px;
+}
+.oVBack .top .right .head .lgnd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+}
+.oVBack .top .right .head .lgnd .dotOne, .oVBack .top .right .head .lgnd .dotTwo{
+    position: relative;
+    top: 5px;
+    margin-left: 15px;
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+}
+.oVBack .top .right .head .lgnd .dotOne{
+    background-color: rgba(242,65,0,1);
+}
+.oVBack .top .right .head .lgnd .dotTwo{
+    background-color: rgba(0,242,0,1);
+}
+.oVBack .top .right .head .lgnd .txt{
+    position: relative;
+    top: 6px;
+    font-size: 12px;
+    margin-left: 5px;
+    color: rgba(200,200,200,1);
+    cursor: default;
+}
+.oVBack .top .right .head .timeBut{
+    position: absolute;
+    left: 320px;
+    top: 2px;
+    border: 1px solid rgba(100,100,100,0.5);
+    width: 150px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.25s linear;
+}
+.oVBack .top .right .head .timeBut .createTxt{
+    position: absolute;
+    color: rgba(200,200,200,1);
+    font-size: 12px;
+    top: 3px;
+    left: 5px;
+    transition: all 0.25s linear;
+}
+.oVBack .top .right .head .timeBut .timeArrow{
+    position: absolute;
+    right: 2px;
+    top: -3px;
+    fill: rgba(200,200,200,1);
+    transition: all 0.25s linear;
+}
+.oVBack .top .right .head .timeBut:hover{
+    border: 1px solid rgba(0,51,128,1);
+    -webkit-box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+    -moz-box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+    box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+}
+.oVBack .top .right .head .timeBut:hover > .timeArrow, .oVBack .top .right .head .timeBut:hover > .createTxt{
+    fill: rgba(242,65,0,1);
+    color: rgba(242,65,0,1);
+}
+.oVBack .top .right .head .ovMode{
+    position: absolute;
+    left: 480px;
+    top: 2px;
+    border: 1px solid rgba(100,100,100,0.5);
+    width: 150px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.25s linear;
+}
+.oVBack .top .right .head .ovMode .txt{
+    position: absolute;
+    left: 5px;
+    color: rgba(200,200,200,1);
+    font-size: 12px;
+    top: 3px;
+    transition: all 0.25s linear;
+}
+.oVBack .top .right .head .ovMode .sep{
+    position: absolute;
+    right: 30px;
+    background-color: rgba(100,100,100,0.5);
+    width: 1px;
+    height: 16px;
+    top: 2px;
+    transition: all 0.25s linear;
+}
+.oVBack .top .right .head .ovMode .icon{
+    position: absolute;
+    right: 2px;
+    fill: rgba(100,100,100,0.5);
+    top: -2px;
+    transition: all 0.25s linear;
+}
+.oVBack .top .right .head .ovMode:hover{
+    border: 1px solid rgba(0,51,128,1);
+    -webkit-box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+    -moz-box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+    box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+}
+.oVBack .top .right .head .ovMode:hover > .txt, .oVBack .top .right .head .ovMode:hover > .icon{
+    fill: rgba(242,65,0,1);
+    color: rgba(242,65,0,1);
+}
+.oVBack .top .right .head .ovModeDiv.ng-enter{
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.oVBack .top .right .head .ovModeDiv.ng-enter-active{
+    height: 140px;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+.oVBack .top .right .head .ovModeDiv.ng-leave{
+    height: 140px;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+.oVBack .top .right .head .ovModeDiv.ng-leave-active{
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.oVBack .top .right .head .ovModeDiv{
+    position: absolute;
+    top: 25px;
+    opacity: 1;
+    transition: all 0.3s linear;
+    left: 480px;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 9992;
+    width: 150px;
+    height: 140px;
+    border-bottom: 3px solid rgba(0,51,128,1);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.oVBack .top .right .head .ovModeDiv .ovModeList{
+    position: relative;
+    margin-top: 8px;
+    color: rgba(200,200,200,1);
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    left: 10px;
+    top: 5px;
+}
+.oVBack .top .right .head .ovModeDiv .ovModeList:hover{
+    color: rgba(0,51,128,1);
+}
+.oVBack .top .right .head .dets{
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    height: 17px;
+    border: 1px solid rgba(0,51,128,1);
+    background-color: rgba(0,51,128,1);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Segoe Ui, sans-serif;
+    text-align: center;
+    width: 80px;
+    padding: 3px 0 0 0;
+}
+.oVBack .top .right .head .dets:hover{
+    background-color: rgba(0,51,128,0.5);
+    -webkit-box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+    -moz-box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+    box-shadow: 0 0 7px 3px rgba(0,51,128,0.5);
+}
+.oVBack .top .right .title{
+    position: absolute;
+    left: 10px;
+    top: 40px;
+    color: rgba(200,200,200,1);
+    font-size: 12px;
+    font-weight: bold;
+}
+.oVBack .top .right .botBar{
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 2px;
+    background-color: rgba(100,100,100,1);
+}
+.oVBack .top .right .year{
+    position: absolute;
+    bottom: 5px;
+    width: calc(100% - 30px);
+    left: 15px;
+    height: 20px;
+    background-color: rgba(100,100,100,0);
+}
+.oVBack .top .right .year .month{
+    position: relative;
+    top: 0;
+    width: calc(100% / 12);
+    text-align: center;
+    color: rgba(200,200,200,1);
+    font-size: 15px;
+    cursor: default;
+}
+.oVBack .bottom{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 22px);
+    height: 200px;
+    border-radius: 3px;
+    border: 1px solid rgba(100,100,100,0.5);
+}
+.oVBack .bottom .head{
+    position: absolute;
+    top: 5px;
+    height: 20px;
+    width: calc(100% - 20px);
+    border-bottom: 2px solid rgba(100,100,100,0.5);
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(200,200,200,1);
+}
+.oVBack .bottom .graphDiv{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 25px);
+    top: 25px;
+}
+.oVBack .bottom .graphDiv .graphList{
+    position: relative;
+    left: 0;
+    width: calc(100% / 9);
+    height: 100%;
+    top: 0;
+}
+/*******************************************************************************************************/
+.oVBack .bottom .graphDiv .graphList .circle-chart{
+    position: relative;
+    width: 100px;
+    height: 150px;
+    left: calc(50% - 50px);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .circle-chart__background{
+    stroke: rgba(100,100,100,0.2);
+    stroke-width: 20;
+    fill: none;
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .circle-chart__circle {
+    animation: circle-chart-fill 0.8s reverse;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform-origin: center;
+    /*stroke: rgba(0,51,128,1);*/
+    stroke-width: 20;
+    stroke-linecap: round;
+    fill: none;
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGraphone{
+    stroke: rgba(200,200,200,1);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGraphtwo{
+    stroke: rgba(200,200,200,0.8);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGraphthree{
+    stroke: rgba(200,200,200,0.7);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGraphfour{
+    stroke: rgba(200,200,200,0.6);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGraphfive{
+    stroke: rgba(200,200,200,0.5);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGraphsix{
+    stroke: rgba(200,200,200,0.4);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGraphseven{
+    stroke: rgba(200,200,200,0.3);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGrapheight{
+    stroke: rgba(200,200,200,0.2);
+}
+.oVBack .bottom .graphDiv .graphList .circle-chart .ovGraphnine{
+    stroke: rgba(200,200,200,0.1);
+}
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 534; }
+}
+.oVBack .bottom .graphDiv .graphList .percTxt{
+    position: absolute;
+    width: 80%;
+    height: 15px;
+    left: calc(50% - 40%);
+    top: 150px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: default;
+    background-color: rgba(100,100,100,0);
+    text-align: center;
+}

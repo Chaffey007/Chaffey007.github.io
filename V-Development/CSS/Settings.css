@@ -1,0 +1,326 @@
+/************************************************************* Settings **************************************************/
+.settingsPopup{
+    font-family: Arial-nova, sans-serif;
+    background-color: rgba(0,30,34,1);
+    border-radius: 3px;
+    position: absolute;
+    top: 105px;
+    height: calc(100vh - 210px);
+    left: 250px;
+    width: calc(100vw - 500px);
+    opacity: 0;
+    /*box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);*/
+    display: block;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 99991;
+    -webkit-box-shadow: 0 2px 7px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 2px 7px 3px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 7px 3px rgba(0,0,0,0.5);
+}
+.settingsPopup md-toolbar{
+    background-color: rgba(0,77,112,0.95);
+    min-height: 0;
+    height: 30px;
+}
+.settingsTitle{
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+}
+.settingsPopup .popClose{
+    position: absolute;
+    right: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.25s linear;
+}
+.settingsPopup .popClose:hover{
+    color: rgba(0,9,15,1);
+}
+.settingsPopup .md-dialog-content{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.settingsBack{
+    z-index: 1;
+}
+.settingsBack .settingsIcon{
+    position: absolute;
+    width: calc(100% - 250px);
+    height: calc(100% - 35px);
+    left: calc(50% - 125px);
+    top: calc(50% - 260px);
+    fill: rgba(0,59,86,0.1);
+}
+
+/*********************************************************************************************************/
+/********************************************** Left Menu ************************************************/
+/*********************************************************************************************************/
+.settingsFront{
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: calc(100% - 35px);
+}
+.settingsFront .leftOptions{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0,59,86,0.9);
+}
+.settingsFront .leftOptions .sectOne{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 40px;
+    transition: all 0.25s linear;
+}
+.settingsFront .leftOptions .sectOneAct{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 212px;
+    transition: all 0.25s linear;
+}
+.settingsFront .leftOptions .header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    margin-top: 3px;
+    background-color: rgba(0,128,255,1);
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+.settingsFront .leftOptions .header .txt{
+    position: relative;
+    font-family: Segoe UI, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    top: 8px;
+}
+.settingsFront .leftOptions .header .Icon{
+    position: absolute;
+    right: 10px;
+    fill: rgba(0,59,86,1);
+    top: 10px;
+}
+.settingsFront .leftOptions .opt{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0,77,122,1);
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    margin-top: 3px;
+    transition: all 0.25s linear;
+    border-left: 4px solid rgba(0,128,255,0);
+}
+.settingsFront .leftOptions .opt:hover{
+    background-color: rgba(0,77,122,0.5);
+}
+.settingsFront .leftOptions .optAct{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    margin-top: 3px;
+    transition: all 0.25s linear;
+    border-left: 4px solid rgba(0,128,255,1);
+}
+.settingsFront .leftOptions .optAct:hover{
+    background-color: transparent;
+    cursor: default;
+}
+.settingsFront .leftOptions .setOptTxt{
+    position: relative;
+    left: 20px;
+    font-family: Segoe UI, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    top: 10px;
+}
+/*********************************************************************************************************/
+/******************************************** Notifications **********************************************/
+/*********************************************************************************************************/
+.settingsFront .rightDisp{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: calc(100% - 30px);
+    width: calc(100% - 250px);
+    overflow: hidden;
+}
+/*********************************************************************************************************/
+/******************************************** Notifications **********************************************/
+/*********************************************************************************************************/
+.settingsFront .rightDisp .divNotif.ng-enter{
+    transition: all 0.25s linear;
+    left: -100%;
+}
+.settingsFront .rightDisp .divNotif.ng-enter-active{
+    transition: all 0.25s linear;
+    left: 0;
+}
+.settingsFront .rightDisp .divNotif.ng-leave{
+    transition: all 0.25s linear;
+    left: 0;
+}
+.settingsFront .rightDisp .divNotif.ng-leave-active{
+    transition: all 0.25s linear;
+    left: 100%;
+}
+.settingsFront .rightDisp .divNotif{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    transition: all 0.25s linear;
+    overflow-y: auto;
+}
+.settingsFront .rightDisp .divNotif .sect{
+    position: relative;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: fit-content;
+}
+.settingsFront .rightDisp .divNotif .sect .ttl{
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: Segoe UI, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(0,128,255,1);
+    cursor: default;
+    margin-bottom: 10px;
+}
+.settingsFront .rightDisp .divNotif .sect .set{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 5px;
+    width: calc(100% - 40px);
+    height: fit-content;
+}
+.settingsFront .rightDisp .divNotif .sect .set .txt{
+    position: relative;
+    left: 0;
+    top: 0;
+    font-family: Segoe UI, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(100,100,100,1);
+    width: 50%;
+}
+.settingsFront .rightDisp .divNotif .sect .set .right{
+    position: relative;
+    left: 0;
+    top: 0;
+    font-family: Segoe UI, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(100,100,100,1);
+    width: 50%;
+}
+.settingsFront .rightDisp .divNotif .sect .set .right .unsetTxt{
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Segoe UI, sans-serif;
+    color: rgba(100,100,100,0.5);
+    cursor: default;
+    transition: all 0.25s linear;
+}
+.settingsFront .rightDisp .divNotif .sect .set .right .setTxt{
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Segoe UI, sans-serif;
+    color: rgba(0,128,255,1);
+    cursor: default;
+    transition: all 0.25s linear;
+}
+.settingsFront .rightDisp .divNotif .sect .set .right .tog{
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30px;
+    cursor: pointer;
+    outline: none;
+}
+.settingsFront .rightDisp .divNotif .sect .set .right .tog .line{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgba(100,100,100,0.5);
+    top: 7px;
+    transition: all 0.25s linear;
+}
+.settingsFront .rightDisp .divNotif .sect .set .right .tog .lineAct{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgba(0,51,128,1);
+    top: 7px;
+    transition: all 0.25s linear;
+}
+.settingsFront .rightDisp .divNotif .sect .set .right .tog .ball{
+    position: absolute;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
+    background-color: rgba(0,128,255,1);
+    top: 4px;
+    transition: all 0.25s linear;
+}
+.settingsFront .rightDisp .divNotif .sect .set .right .tog .ballAct{
+    position: absolute;
+    left: 21px;
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
+    background-color: rgba(0,128,255,1);
+    top: 4px;
+    transition: all 0.25s linear;
+}
+
+

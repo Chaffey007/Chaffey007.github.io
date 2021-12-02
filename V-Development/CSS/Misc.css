@@ -1,0 +1,487 @@
+/* unsupport */
+
+#icon {
+    display: block;
+    box-sizing: border-box;
+    width:100%;
+    height:250px;
+    background: #FFF;
+    margin:auto;
+    padding: 60px;
+}
+#options {
+    margin-top:50px;
+    margin-bottom: 75px;
+    text-align:center;
+}
+
+.option {
+    width:400px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
+}
+label {
+    text-align: right;
+    display: inline-block;
+    font-size:20px;
+    width:100px;
+}
+
+/*
+Fading
+*/
+.fading.ng-enter{
+    opacity: 0;
+    transition: all 0.35s linear;
+}
+.fading.ng-enter-active{
+    opacity: 1;
+    transition: all 0.35s linear;
+}
+.fading.ng-leave{
+    opacity: 1;
+    transition: all 0.35s linear;
+}
+.fading.ng-leave-active{
+    opacity: 0;
+    transition: all 0.35s linear;
+}
+.fading{
+    opacity: 1;
+    transition: all 0.35s linear;
+}
+/*
+Fading Slow
+*/
+.fadingSlow.ng-enter{
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.fadingSlow.ng-enter-active{
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.fadingSlow.ng-leave{
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.fadingSlow.ng-leave-active{
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.fadingSlow{
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+/******************************************************************************************
+*** Loader ***
+******************************************************************************************/
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,7,20,1);
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999999;
+    text-align: center;
+    overflow: hidden;
+}
+.loadImgContainer{
+    position: absolute;
+    top: 150px;
+    height: 88px;
+    width: 500px;
+    left: calc(50vw - 250px);
+    z-index: 9999999991;
+}
+.loadImgContainer .loaderImg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+.loadingProgress .loaderImg{
+    position: absolute;
+    top: 0;
+    height: 88px;
+    width: 500px;
+    left: 0;
+}
+.loadingProgress.ng-enter{
+    width: 0;
+    transition: all 5s linear;
+}
+.loadingProgress.ng-enter-active{
+    width: 500px;
+    transition: all 5s linear;
+}
+.loadingProgress.ng-leave{
+    width: 500px;
+    transition: all 5s linear;
+}
+.loadingProgress.ng-leave-active{
+    width: 0;
+    transition: all 5s linear;
+}
+.loadingProgress{
+    position: absolute;
+    top: 150px;
+    height: 88px;
+    width: 500px;
+    left: calc(50vw - 250px);
+    z-index: 9999999992;
+    background-color: rgba(0,7,20,1);
+    overflow: hidden;
+}
+.ldt{
+    position: absolute;
+    width: 200px;
+    left: calc(50% - 100px);
+    bottom: 150px;
+    font-family: Segoe Ui, sans-serif;
+    font-size: 30px;
+    color: #fff;
+    z-index: 9999999994;
+    transition: all 0.35s linear;
+}
+.loader .optMenu{
+    position: absolute;
+    bottom: 110px;
+    height: 30px;
+    width: 100%;
+}
+.loader .optMenu .collection{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    align-content: center;
+    alignment: center;
+    align-self: center;
+    text-align: center;
+}
+.loader .optMenu .collection .opt{
+    position: relative;
+    top: 0;
+    height: calc(100% - 1px);
+    margin: auto;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    transition: all 0.25s linear;
+    outline: none;
+}
+.loader .optMenu .collection .opt:hover{
+    border-bottom: 1px solid rgba(0,128,255,1);
+    -webkit-box-shadow: 0 6px 10px -5px rgba(0, 102, 204, 0.5);
+    -moz-box-shadow: 0 6px 10px -5px rgba(0, 102, 204, 0.5);
+    box-shadow: 0 6px 10px -5px rgba(0, 102, 204, 0.5);
+}
+.loader .optMenu .collection .opt .txt{
+    position: relative;
+    font-family: Segoe UI, sans-serif;
+    font-size: 20px;
+    color: #fff;margin: auto;
+    outline: none;
+}
+.loader .home{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 130px;
+    border-bottom: 1px solid rgba(0,128,255,0);
+    height: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.25s linear;
+}
+.loader .home:hover{
+    border-bottom: 1px solid rgba(0,128,255,1);
+    -webkit-box-shadow: 0 6px 10px -5px rgba(0, 102, 204, 0.5);
+    -moz-box-shadow: 0 6px 10px -5px rgba(0, 102, 204, 0.5);
+    box-shadow: 0 6px 10px -5px rgba(0, 102, 204, 0.5);
+}
+.loader .home .txt{
+    position: absolute;
+    left: 0;
+    font-family: Segoe UI, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    top: 3px;
+    color: rgba(255,255,255,0);
+    transition: all 0.25s linear;
+}
+.loader .home:hover > .txt{
+    color: rgba(255,255,255,1);
+}
+.loader .home .ico{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 25px;
+    width: 25px;
+    fill: rgba(255,255,255,1);
+}
+.loader .foot{
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100vw;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 102, 204, 0.5);
+    -moz-box-shadow: 0 0 5px 2px rgba(0, 102, 204, 0.5);
+    box-shadow: 0 0 5px 2px rgba(0, 102, 204, 0.5);
+}
+.loader .foot .botAnim.ng-enter{
+    transition: all 5.5s linear;
+    width: 1%;
+}
+.loader .foot .botAnim.ng-enter-active{
+    transition: all 5.5s linear;
+    width: 100%;
+}
+.loader .foot .botAnim.ng-leave{
+    transition: all 5.5s linear;
+    width: 100%;
+}
+.loader .foot .botAnim.ng-leave-active{
+    transition: all 5.5s linear;
+    width: 1%;
+}
+.loader .foot .botAnim{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 1%;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0.5);
+    -moz-box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0.5);
+    box-shadow: 0 0 10px 5px rgba(0, 102, 204, 0.5);
+    transition: all 5.5s linear;
+}
+.loader .foot .botAnimPlseBright{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 15px 7px rgba(0, 102, 204, 0.5);
+    -moz-box-shadow: 0 0 15px 7px rgba(0, 102, 204, 0.5);
+    box-shadow: 0 0 15px 7px rgba(0, 102, 204, 0.5);
+    transition: all 0.7s linear;
+}
+.loader .foot .botAnimPlseDim{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 102, 204, 0.5);
+    -moz-box-shadow: 0 0 5px 2px rgba(0, 102, 204, 0.5);
+    box-shadow: 0 0 5px 2px rgba(0, 102, 204, 0.5);
+    transition: all 0.7s linear;
+}
+/******************************************************************************************
+*** Misc ***
+******************************************************************************************/
+body{
+    font-family: Arial-nova, sans-serif;
+    overflow: hidden;
+    background-color: rgba(0,14,32,1);
+    /*background: url("../Images/globe01.jpg") top center no-repeat fixed;
+    background-size: 100% 100%;*/
+    color: #fff;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+}
+#bodyContents{
+    overflow: hidden;
+}
+.bod{
+    overflow: hidden;
+}
+.credits{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 25px 0 0 0;
+}
+.log-reg{
+    display: block;
+    min-height: 10px;
+    padding: 6% 0 0 0;
+}
+.iglo{
+    color: rgba(153,255,0,1);
+}
+.btn-primary{
+    background-color: rgba(0,98,189,1);
+    border: 1px solid rgba(0,98,189,1);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.btn-primary:hover {
+    border: 1px solid rgba(0, 109, 181, 1);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0,50,100,0.7);
+    -webkit-box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0.5);
+    -moz-box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0.5);
+    box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0.5);
+}
+.btn-primary:disabled{
+    background-color: rgba(0,98,189,0.2);
+    border: 1px solid rgba(0,98,189,0.2);
+    color: #555;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: default;
+}
+.btn-primary:disabled:hover{
+    background-color: rgba(0,98,189,0.2);
+    border: 1px solid rgba(0,98,189,0.2);
+    color: #555;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: default;
+    -webkit-box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0);
+    -moz-box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0);
+    box-shadow: 0 0 10px 5px rgba(0, 109, 181, 0);
+}
+
+.btn-link{
+    background-color: rgba(0,98,189,1);
+    border: 1px solid rgba(0,98,189,1);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+.btn-link:hover {
+    border: 1px solid rgba(0, 109, 181, 1);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0,50,100,0.7);
+}
+.progressCircle{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 9999999999;
+}
+md-progress-circular svg path
+{
+    stroke: rgba(0,102,204,1);
+}
+/******************************************************************************************
+*** Loader 2 ***
+******************************************************************************************/
+.tt{
+    -webkit-transition:  .8s ;
+    -moz-transition:  .8s ;
+    transition:  .8s ;
+}
+.tt.ng-enter {
+    opacity: 0;
+}
+
+.tt.ng-leave {
+    opacity: 1;
+}
+
+.tt.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.tt.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+/******************************************************************************************
+*** Main Page On Load ***
+******************************************************************************************/
+header .mainPageLoad.ng-enter{
+    transition: all 0.3s linear;
+    opacity: 0;
+}
+header .mainPageLoad.ng-enter-active{
+    transition: all 0.3s linear;
+    opacity: 1;
+}
+header .mainPageLoad.ng-leave{
+    transition: all 0.3s linear;
+    opacity: 1;
+}
+header .mainPageLoad.ng-leave-active{
+    transition: all 0.3s linear;
+    opacity: 0;
+}
+header .mainPageLoad{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999999999999;
+    background-color: rgba(0,0,0,0.9);
+    transition: all 0.3s linear;
+    opacity: 1;
+}
+header .mainPageLoad .imgCont{
+    position: absolute;
+    width: 500px;
+    height: 88px;
+    top: calc(50% - 44px);
+    left: calc(50% - 250px);
+}
+header .mainPageLoad .imgCont .img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/******************************************************************************************
+*** Image Crop ***
+******************************************************************************************/
+img-crop{
+    width:100%;
+    height:100%;
+    display:block;
+    position:relative;
+    overflow:hidden
+}
+img-crop canvas{
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    outline:0;
+    -webkit-tap-highlight-color:transparent
+}
