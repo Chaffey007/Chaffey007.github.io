@@ -240,7 +240,7 @@
         $scope.logout = function(){
             $rootScope.loading = true;
             $http({
-                url: 'app-services/credentialsClear.php',
+                url: 'app-services/credentialsClear.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -268,7 +268,7 @@
         $scope.miniLogin = function() {
             $rootScope.loading = true;
             $http({
-                url: 'app-services/serverLogin.php',
+                url: 'app-services/serverLogin.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -277,7 +277,7 @@
             }).then(function(response) {
                     if(response.data.status === 'loggedin') {
                         $http({
-                            url: 'app-services/credentialsSet.php',
+                            url: 'app-services/credentialsSet.html',
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -299,7 +299,7 @@
                                     $scope.miniPost = responseOne.data.adrPostal;
                                     $scope.onInactive(900000, $scope.logout);
                                     $rootScope.loading = false;
-                                    /*window.location.assign("Interface.php#!/home");*/
+                                    /*window.location.assign("Interface.html#!/home");*/
                                 }
                             },
                             function(e ){
@@ -430,7 +430,7 @@
             if($scope.possibleQuoteContin){
                 $rootScope.loading = true;
                 $http({
-                    url: 'app-services/manageLogistics.php',
+                    url: 'app-services/manageLogistics.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -1282,7 +1282,7 @@
                 descript = descript.replace(/ /g, "");
                 selItemName = searchProcessed[0].descript;
                 $http({
-                    url: 'app-services/PayFastMain.php',
+                    url: 'app-services/PayFastMain.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
@@ -1331,7 +1331,7 @@
             //console.log('listening');
             $scope.paymentLoading = true;
             $http({
-                url: 'app-services/PayFastListen.php',
+                url: 'app-services/PayFastListen.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -1604,7 +1604,7 @@
             $rootScope.miniLoggedIn ? miniLogStat = '1' : miniLogStat = '0';
             let action = 'webQuote';
             $http({
-                url: 'app-services/manageLogistics.php',
+                url: 'app-services/manageLogistics.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -1930,7 +1930,7 @@
                 $rootScope.loading = true;
                 let action = 'enquiry';
                 $http({
-                    url: 'app-services/mailWebReq.php',
+                    url: 'app-services/mailWebReq.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -2000,7 +2000,7 @@
             if(($scope.uname === 'pass') && ($scope.mail === 'pass') && ($scope.pass === 'pass') && ($scope.passCon === 'pass')){
 
                 $http({
-                    url: 'app-services/userRegister.php',
+                    url: 'app-services/userRegister.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'

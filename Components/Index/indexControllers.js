@@ -23,12 +23,12 @@ log
         $routeProvider
         //.......... Standard ..........
             .when('/main',{
-                //templateUrl: (_tst())?'Templates/indexMainMobile.php':'Templates/indexMain.php',
-                templateUrl: (_tst())?'Templates/index_Update_Mobile.php':'Templates/indexMain.php',
+                //templateUrl: (_tst())?'Templates/indexMainMobile.html':'Templates/indexMain.html',
+                templateUrl: (_tst())?'Templates/index_Update_Mobile.html':'Templates/indexMain.html',
                 controller: (_tst())?'mainControllerMobile':'mainController'
             })
             .when('/logistics',{
-                templateUrl: (_tst())?'Templates/indexLogisticsMobile.php':'Templates/indexLogistics.php',
+                templateUrl: (_tst())?'Templates/indexLogisticsMobile.html':'Templates/indexLogistics.html',
                 controller: (_tst())?'logisticsControllerMobile':'logisticsController'
             })
             .otherwise({
@@ -367,7 +367,7 @@ log
             if($scope.possibleQuoteContin){
                 $rootScope.loading = true;
                 $http({
-                    url: 'app-services/manageLogistics.php',
+                    url: 'app-services/manageLogistics.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -1336,7 +1336,7 @@ log
                 let dta = 'act='+action+'&tot='+$scope.quoteOfferList[$scope.actOffer].inVat+'&cur='+$scope.quoteOfferList[$scope.actOffer].curr+'&pType='+PM+'&pBrand='+CT+'&cardNo='+tmpCardNo.toString()+'&cardHol='+tmpCardHol+'&expM='+tmpCardExpM+'&expY='+tmpCardExpY.toString()+'&cvv='+tmpCardCvv.toString();
                 console.log(dta);
                 $http({
-                    url: 'app-services/PeachPay-index.php',
+                    url: 'app-services/PeachPay-index.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
@@ -1378,7 +1378,7 @@ log
                 $rootScope.loading = false;
                 payFastListening();
                 /*$http({
-                    url: 'app-services/PayFastMain.php',
+                    url: 'app-services/PayFastMain.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
@@ -1427,7 +1427,7 @@ log
             //console.log('listening');
             $scope.paymentLoading = true;
             $http({
-                url: 'app-services/PayFastListen.php',
+                url: 'app-services/PayFastListen.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -1703,7 +1703,7 @@ log
             $rootScope.miniLoggedIn ? miniLogStat = '1' : miniLogStat = '0';
             let action = 'webQuote';
             $http({
-                url: 'app-services/manageLogistics.php',
+                url: 'app-services/manageLogistics.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -1780,7 +1780,7 @@ log
         $scope.logout = function(){
             $rootScope.loading = true;
             $http({
-                url: 'app-services/credentialsClear.php',
+                url: 'app-services/credentialsClear.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -1807,7 +1807,7 @@ log
         $scope.miniLogin = function() {
             $rootScope.loading = true;
             $http({
-                url: 'app-services/serverLogin.php',
+                url: 'app-services/serverLogin.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -1816,7 +1816,7 @@ log
             }).then(function(response) {
                     if(response.data.status === 'loggedin') {
                         $http({
-                            url: 'app-services/credentialsSet.php',
+                            url: 'app-services/credentialsSet.html',
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -1838,7 +1838,7 @@ log
                                     $scope.miniPost = responseOne.data.adrPostal;
                                     $scope.onInactive(900000, $scope.logout);
                                     $rootScope.loading = false;
-                                    /*window.location.assign("Interface.php#!/home");*/
+                                    /*window.location.assign("Interface.html#!/home");*/
                                 }
                             },
                             function(e ){
@@ -2148,7 +2148,7 @@ log
                 $rootScope.loading = true;
                 let action = 'enquiry';
                 $http({
-                    url: 'app-services/mailWebReq.php',
+                    url: 'app-services/mailWebReq.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -2218,7 +2218,7 @@ log
             if(($scope.uname === 'pass') && ($scope.mail === 'pass') && ($scope.pass === 'pass') && ($scope.passCon === 'pass')){
 
                 $http({
-                    url: 'app-services/userRegister.php',
+                    url: 'app-services/userRegister.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -2373,7 +2373,7 @@ log
         $rootScope.loginRegister = function(){
             if($rootScope.miniLoggedIn){
                 $rootScope.loading = true;
-                window.location.assign("Interface.php#!/home");
+                window.location.assign("Interface.html#!/home");
             }else{
                 $rootScope.showLogPop = !$rootScope.showLogPop;
                 $scope.logpop = "login";
@@ -2408,7 +2408,7 @@ log
                 let action = 'pwReset';
                 $rootScope.loading = true;
                 $http({
-                    url: 'app-services/mailWebReq.php',
+                    url: 'app-services/mailWebReq.html',
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -2449,7 +2449,7 @@ log
             var username = $rootScope.loginUsername;
             var password = $rootScope.loginPassword;
             $http({
-                url: 'app-services/serverLogin.php',
+                url: 'app-services/serverLogin.html',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -2458,7 +2458,7 @@ log
             }).then(function(response) {
                     if(response.data.status === 'loggedin') {
                         $http({
-                            url: 'app-services/credentialsSet.php',
+                            url: 'app-services/credentialsSet.html',
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -2466,7 +2466,7 @@ log
                             data: response.data
                         }).then(function(responseOne){
                                 if(responseOne.data.status === 'loggedin'){
-                                    window.location.assign("Interface.php#!/home");
+                                    window.location.assign("Interface.html#!/home");
                                 }
                             },
                             function(e ){
