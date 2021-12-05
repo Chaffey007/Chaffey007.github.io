@@ -26,189 +26,69 @@
         <div class="mainPageCont" ng-if="$root.curPage === 0">
             <div class="med-overlay">
                 <div class="left">
-                    <font class="head" ng-show="(actPhase >= 1) && (actPhase <= 3)">Get Quote</font>
-                    <font class="head" ng-show="(actPhase >= 4) && (actPhase <= 6)">Book Shipment</font>
-                    <font class="head" ng-show="actPhase >= 7">Shipment Status</font>
+                    <font class="head" ng-show="(actPhase >= 1) && (actPhase <= 3)">Hello There</font>
                     <div class="quoteCont">
                         <!------------------------------------------------ Phase 1 -------------------------------------------------->
                         <div class="phase" ng-show="actPhase === 1 && !hidePhase">
                             <div class="EQN">
-                                <input class="longIn" ng-change="checkQN(EQNin)" ng-model="EQNin" id="EQNin" placeholder="Enter Quote ID" type="text" />
-                                <button class="clickEQN" ng-class="{clickEQNdis: !possibleQuoteContin}" ng-click="procPrevShipID()">Proceed</button>
-                                <font class="searchMsg" ng-show="phse1SearchMsg !== ''">{{phse1SearchMsg}}</font>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="40%" class="ttl txt">My name is:</td>
+                                        <td width="60%" class="data txt">Frederick John Chaffey</td>
+                                    </tr>
+                                    <tr><td style="height: 20px"></td></tr>
+                                    <tr>
+                                        <td width="40%" class="ttl txt">I reside at:</td>
+                                        <td width="60%" class="data txt">21 Pendoring Ave, Proteapark, Rustenburg</td>
+                                    </tr>
+                                    <tr><td style="height: 20px"></td></tr>
+                                    <tr>
+                                        <td width="40%" class="ttl txt">You can call me on:</td>
+                                        <td width="60%" class="data txt">0826174057</td>
+                                    </tr>
+                                    <tr><td style="height: 20px"></td></tr>
+                                    <tr>
+                                        <td width="40%" class="ttl txt">Or even Email me at:</td>
+                                        <td width="60%" class="data txt">chaffey007@gmail.com</td>
+                                    </tr>
+                                    <tr><td style="height: 20px"></td></tr>
+                                    <tr>
+                                        <td align="center" colspan="2" width="40%" class="ttl txt" style="font-size: 18px"><br>This is my online CV.<br>Feel free to peruse and contact me with any queries.</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <div class="addresses" layout="row">
-                                <div class="addr O">
-                                    <font class="title" ng-class="{titleRight: swapLocs}">{{oLoc}}</font>
-                                    <input class="siteAddrOne" ng-change="setOriginStreet(siteOrStreet)" ng-model="siteOrStreet" id="siteOrStreet" placeholder="Street Address" type="text" />
-                                    <input class="siteAddrOne" ng-change="setOriginCity(siteOrCity)" ng-model="siteOrCity" id="siteOrCity" placeholder="City" type="text" />
-                                    <input class="siteAddrOne" ng-change="setOriginProv(siteOrProv)" ng-model="siteOrProv" id="siteOrProv" placeholder="Province / State" type="text" />
-                                    <div class="lastLine" layout="row">
-                                        <input class="sitePostOne" ng-change="setOriginPost(siteOrPost)" ng-model="siteOrPost" id="siteOrPost" placeholder="Postal Code" type="text" />
-                                        <div class="siteCountry" id="orlocDropT" ng-click="togOrCoDr()" ng-blur="closeOrCoDr()">
-                                            <font class="txt">{{orCountry}}</font>
-                                            <ng-md-icon class="icon orig" icon="{{orLocDropArrow}}" size="20"></ng-md-icon>
-                                        </div>
-                                        <div class="countryDrop" ng-show="orCoDr" ng-mouseleave="closeOrCoDr()">
-                                            <div class="scrl">
-                                                <div class="list" ng-repeat="country in countries" ng-click="setNewOrCountry($index)">
-                                                    <font class="txt">{{country.name}}</font>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="addr D">
-                                    <font class="title" ng-class="{titleLeft: swapLocs}">{{dLoc}}</font>
-                                    <input class="siteAddrOne" ng-change="setDestStreet(siteDeStreet)" ng-model="siteDeStreet" id="siteDeStreet" placeholder="Street Address" type="text" />
-                                    <input class="siteAddrOne" ng-change="setDestCity(siteDeCity)" ng-model="siteDeCity" id="siteDeCity" placeholder="City" type="text" />
-                                    <input class="siteAddrOne" ng-change="setDestProv(siteDeProv)" ng-model="siteDeProv" id="siteDeProv" placeholder="Province / State" type="text" />
-                                    <div class="lastLine" layout="row">
-                                        <input class="sitePostOne" ng-change="setDestPost(siteDePost)" ng-model="siteDePost" id="siteDePost" placeholder="Postal Code" type="text" />
-                                        <div class="siteCountry" ng-click="togDeCoDr()" ng-blur="closeDeCoDr()">
-                                            <font class="txt">{{deCountry}}</font>
-                                            <ng-md-icon class="icon" icon="{{deLocDropArrow}}" size="20"></ng-md-icon>
-                                        </div>
-                                        <div class="countryDrop" ng-show="deCoDr" ng-mouseleave="closeDeCoDr()">
-                                            <div class="scrl">
-                                                <div class="list" ng-repeat="country in countries" ng-click="setNewDeCountry($index)">
-                                                    <font class="txt">{{country.name}}</font>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="EQN">
+
                             </div>
-                            <div class="switch" layout="column" ng-click="swapLocations()">
+
+                            <!--<div class="switch" layout="column" ng-click="swapLocations()">
                                 <font class="txt">Switch</font>
                                 <ng-md-icon class="icon f" ng-class="{fAct: swapLocs}" icon="arrow_forward" size="15"></ng-md-icon>
                                 <ng-md-icon class="icon b" ng-class="{bAct: swapLocs}" icon="arrow_back" size="15"></ng-md-icon>
-                            </div>
+                            </div>-->
                         </div>
-                    </div>
-                    <!------------------------------------------------ Phase Controlls -------------------------------------------------->
-                    <div class="controls">
-                        <button class="canc" ng-click="toPrevPhase()" ng-class="{cancGone: actPhase === 1 || paymentLoading}" >Back</button>
-                        <div class="txtSect" layout="row">
-                            <div class="center">
-                                <font class="txt one">Step</font>
-                                <font class="txt two"> {{actPhase}} </font>
-                                <font class="txt three">of 6</font>
-                            </div>
-
-                        </div>
-                        <button class="proc" ng-click="toNextPhase()" ng-class="{procDis: !validStep, procGone: actPhase === 6}">Proceed</button>
                     </div>
                 </div>
 
                 <!------------------------------------------------ Mini Login -------------------------------------------------->
                 <div class="containerMain">
                     <form id="loginForm" name="form" ng-show="$root.mainTabDisp === 'miniLogin'" ng-submit="miniLogin()" role="form" class="quote">
-                        <font class="head">Login</font>
-                        <div class="contentCont">
-                            <input type="text" class="input" name="miniLogEmail" id="miniLogEmail" ng-model="miniLogEmail" placeholder="Email Address" ng-change="clearError(); setLogMail(miniLogEmail)" required/>
+                        <font class="head">Me:</font>
+                        <div class="imgHead">
+                            <img src="Images/me.jpg" class="headIcon" style="width: auto;height: auto;max-width: 350px;border-radius: 200px" />
                         </div>
-                        <div class="contentCont">
-                            <input type="password" class="input" id="miniLogPass" ng-model="miniLogPass" placeholder="Password" ng-change="clearError(); setLogPass(miniLogPass)" required />
-                        </div>
-
-                        <div class="underInput" layout="row">
-                            <font class="forgottPW" ng-click="selectContainerMain('fpass')">Forgot Password?</font>
-                            <font class="regButt" ng-click="selectContainerMain('reg')">Register</font>
-                        </div>
-
-                        <font class="qtMsg" ng-class="{qtEr: miniLogResp.includes('Error')}">{{miniLogResp}}</font>
-                        <button class="quoteBtn" ng-click="miniLogin()" ng-disabled="form.$invalid || loading">Login</button>
-
                     </form>
-                    <!------------------------------------------------ Register -------------------------------------------------->
-                    <div class="register" ng-show="$root.mainTabDisp === 'reg'">
-                        <div class="regPage" layout="column">
-                            <font class="head">Register</font>
-                            <div class="contentCont">
-                                <input class="input" type="text" id="regNameb" ng-model="regNamePriv" placeholder="First Name" ng-change="validateReg('uname', regNamePriv)" required />
-                            </div>
-                            <div class="contentCont">
-                                <input class="input" type="text" id="regMailb" ng-model="regMailPriv" placeholder="Email" ng-change="validateReg('email', regMailPriv)" required />
-                            </div>
-                            <div class="contentCont">
-                                <input class="input" type="password" id="regPassb" ng-model="regPass" placeholder="Password" ng-change="validateReg('password', regPass)" required />
-                            </div>
-                            <div class="contentCont">
-                                <input class="input" type="password" id="regPassConb" ng-model="regPassCon" placeholder="Confirm Password" ng-change="validateReg('passwordCon', regPassCon)" required />
-                            </div>
-                            <div class="underReg">
-                                <font class="logBtn" ng-click="selectContainerMain('miniLogin')">Login</font>
-                            </div>
-
-                            <font class="msg" ng-class="{msgEr: !regMsg.includes('Successful!')}">{{regMsg}}</font>
-                            <button class="regButton" ng-click="userRegister(regType)">Register</button>
-                        </div>
-                    </div>
-                    <!------------------------------------------------ Forgot Password -------------------------------------------------->
-                    <form id="loginFormPass" name="formPass" ng-show="$root.mainTabDisp === 'fpass'" ng-submit="$root.reset()" role="form" class="fPass">
-                        <font class="head">Password Reset</font>
-                        <div class="contentCont">
-                            <input class="input" type="text" id="fPW" ng-model="fPW" placeholder="Email Address" ng-change="$root.validateReset(fPW)" required />
-                        </div>
-                        <font class="forgotPW" ng-click="selectContainerMain('miniLogin')">Back To Login</font>
-                        <button class="resetBtn" ng-click="$root.reset()" ng-disabled="formPass.$invalid || loading">Reset Password</button>
-                        <div class="logErrorMsg" ng-class="{logErrorMsgOK: $root.resetResp.includes('Successfully')}" ng-show="$root.resetResp !== null">{{$root.resetResp}}</div>
-                    </form>
-                    <!------------------------------------------------ Logged In Profile -------------------------------------------------->
-                    <div class="loggedProf" ng-show="$root.mainTabDisp === 'miniProf'">
-                        <div class="head" layout="row">
-                            <div class="profPic">
-                                <ng-md-icon class="icon" icon="account_circle" size="80"></ng-md-icon>
-                                <img class="crp" ng-class="{crpNone: dispMiniImg === ''}" ng-src="{{dispMiniImg}}"/>
-                            </div>
-                            <div class="title" layout="column">
-                                <font class="nme">{{miniName}}</font>
-                                <font class="comp">Private</font>
-                            </div>
-                        </div>
-                        <div class="dets">
-                            <div class="line">
-                                <font class="ttl">Email:</font>
-                                <font class="data">{{miniMail}}</font>
-                            </div>
-                            <div class="line">
-                                <font class="ttl">Tel:</font>
-                                <font class="data">{{miniTel}}</font>
-                            </div>
-                            <div class="line">
-                                <font class="ttl">Address:</font>
-                                <font class="data">{{miniAdr}}</font>
-                            </div>
-                            <div class="line">
-                                <font class="ttl">City:</font>
-                                <font class="data">{{miniCity}}</font>
-                            </div>
-                            <div class="line">
-                                <font class="ttl">Country:</font>
-                                <font class="data">{{miniCount}}</font>
-                            </div>
-                            <div class="line">
-                                <font class="ttl">Postal Code:</font>
-                                <font class="data">{{miniPost}}</font>
-                            </div>
-                        </div>
-                        <div class="out" layout="row" ng-click="logout()">
-                            <font class="txt">Sign Out</font>
-                            <ng-md-icon class="icon" icon="logout" size="25"></ng-md-icon>
-                        </div>
-                    </div>
                 </div>
             </div>
 
 
         </div>
-        <!------------------------------------------------ About Us -------------------------------------------------->
+        <!------------------------------------------------ About Me -------------------------------------------------->
         <div class="mainPageCont" ng-if="$root.curPage === 1">
             <div class="aboutUs" ng-init="resetPageCounters()">
                 <div class="overlay">
                     <div class="left" layout="column">
-                        <div class="head"><font class="txt">About Intellicargo International</font></div>
+                        <div class="head"><font class="txt">More About Me</font></div>
                         <div class="info">
                             <font class="txt">{{AboutUsInfo}}</font>
                         </div>
@@ -218,7 +98,7 @@
                             <div class="block one" layout="row">
                                 <font class="count">{{aboutOne}}</font>
                                 <font class="plus">+</font>
-                                <font class="txt">Industry Experts Within Our Network</font>
+                                <font class="txt">Hours Spent Developing Software</font>
                                 <md-icon md-svg-src="Images/SVG/Customer.svg" class="ico"></md-icon>
                             </div>
                         </div>
@@ -226,32 +106,32 @@
                             <div class="block two" layout="column">
                                 <font class="count">{{aboutTwo}} +</font>
                                 <md-icon md-svg-src="Images/SVG/Global Countries.svg" class="ico"></md-icon>
-                                <font class="txt">Serviced Countries</font>
+                                <font class="txt">Different Projects</font>
                             </div>
 
                             <div layout="column" style="width: calc(50% - 5px)">
                                 <div class="block three" layout="column">
                                     <font class="count">{{aboutThree}} +</font>
                                     <md-icon md-svg-src="Images/SVG/airplane-shape.svg" class="ico"></md-icon>
-                                    <font class="txt">Major Airlines</font>
+                                    <font class="txt">Different Coding Languages</font>
                                 </div>
                                 <div class="block four" layout="column">
                                     <font class="count">{{aboutFour}} +</font>
                                     <md-icon md-svg-src="Images/SVG/boat.svg" class="ico"></md-icon>
-                                    <font class="txt">Major Shipping Lines</font>
+                                    <font class="txt">Different Platforms</font>
                                 </div>
                             </div>
                         </div>
                         <div class="row bot" layout="row">
                             <div class="block five" layout="column">
-                                <font class="count">{{aboutFive}} +</font>
+                                <font class="count">{{aboutFive}} %</font>
                                 <md-icon md-svg-src="Images/SVG/boxCircle.svg" class="ico"></md-icon>
-                                <font class="txt">Solutions</font>
+                                <font class="txt">Satisfaction</font>
                             </div>
                             <div class="block five" layout="column">
-                                <font class="count">{{aboutSix}} +</font>
+                                <font class="count">{{aboutSix}} %</font>
                                 <md-icon md-svg-src="Images/SVG/handshake.svg" class="ico"></md-icon>
-                                <font class="txt">Global Logistics SP</font>
+                                <font class="txt">Work Ethic</font>
                             </div>
                         </div>
 
@@ -260,7 +140,7 @@
                 </div>
             </div>
         </div>
-        <!------------------------------------------------ Transport Services -------------------------------------------------->
+        <!------------------------------------------------ Experience Overview -------------------------------------------------->
         <div class="mainPageCont" ng-if="$root.curPage === 2">
             <div class="transpServ">
                 <div class="overlay">
@@ -275,38 +155,48 @@
                                 <div class="listing" layout="column">
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoExpress</div>
-                                        <div class="nme">International Document</div>
+                                        <div class="srv">Back End</div>
+                                        <div class="nme">PHP</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoExpress</div>
-                                        <div class="nme">International Parcel</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">HTML5</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoExpress</div>
-                                        <div class="nme">International Distribution</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">AngularJS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoExpress</div>
-                                        <div class="nme">eCommerce</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">CSS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoExpress</div>
-                                        <div class="nme">Fulfillment</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">SCSS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoExpress</div>
-                                        <div class="nme">Pharma & Healthcare</div>
+                                        <div class="srv">Database</div>
+                                        <div class="nme">MySQL</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoExpress</div>
-                                        <div class="nme">Domestic</div>
+                                        <div class="srv">Mobile</div>
+                                        <div class="nme">Android</div>
+                                    </div>
+                                    <div class="itemise" layout="row">
+                                        <div class="ar">></div>
+                                        <div class="srv">Mobile</div>
+                                        <div class="nme">IOS</div>
+                                    </div>
+                                    <div class="itemise" layout="row">
+                                        <div class="ar">></div>
+                                        <div class="srv">Other</div>
+                                        <div class="nme">Multiple</div>
                                     </div>
                                 </div>
                             </div>
@@ -316,57 +206,54 @@
                                     <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="divIco"></md-icon>
                                 </div>
                                 <font class="divTxt">{{textFive}}</font>
-                                <div layout="row">
+                                <div layout="row" style="margin-top: 15px">
                                     <div class="listingNo" layout="column">
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargoAir</div>
+                                            <div class="ar">> Python 2</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargoOcean</div>
+                                            <div class="ar">> Python 3</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargoRoad</div>
+                                            <div class="ar">> PHP</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargoRail</div>
+                                            <div class="ar">> MySql</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargoExpress</div>
+                                            <div class="ar">> HTML5</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargoDistribution</div>
+                                            <div class="ar">> CSS</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargoProduction</div>
+                                            <div class="ar">> Android</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargoFulfillment</div>
+                                            <div class="ar">> IOS</div>
                                         </div>
                                     </div>
                                     <div class="listingNo" layout="column">
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargo Aftermarket</div>
+                                            <div class="ar">> XML</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargo eCommerce</div>
+                                            <div class="ar">> JQuery</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargo Spares</div>
+                                            <div class="ar">> JavaScript</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargo Projects</div>
+                                            <div class="ar">> Linux</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargo Warehousing</div>
+                                            <div class="ar">> IPL</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargo Industries Specialised</div>
+                                            <div class="ar">> AWS</div>
                                         </div>
                                         <div class="itemise" layout="row">
-                                            <div class="ar">> iCargo Management Systems</div>
-                                        </div>
-                                        <div class="itemise" layout="row">
-                                            <div class="ar">> iCargo Technologies</div>
+                                            <div class="ar">> etc...</div>
                                         </div>
                                     </div>
                                 </div>
@@ -382,33 +269,28 @@
                                 <div class="listing" layout="column">
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoAir</div>
-                                        <div class="nme">Priority</div>
+                                        <div class="srv">Platform</div>
+                                        <div class="nme">Microsoft Windows</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoAir</div>
-                                        <div class="nme">Express</div>
+                                        <div class="srv">Language</div>
+                                        <div class="nme">C#</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoAir</div>
-                                        <div class="nme">Economy</div>
+                                        <div class="srv">Database (Initial)</div>
+                                        <div class="nme">Microsoft Access</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoAir</div>
-                                        <div class="nme">Charter Service</div>
+                                        <div class="srv">Database (Update)</div>
+                                        <div class="nme">MySql</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoAir</div>
-                                        <div class="nme">Temperature Controlled</div>
-                                    </div>
-                                    <div class="itemise" layout="row">
-                                        <div class="ar">></div>
-                                        <div class="srv">iCargoAir</div>
-                                        <div class="nme">Multimodal Solutions</div>
+                                        <div class="srv">API</div>
+                                        <div class="nme">ABSA</div>
                                     </div>
                                 </div>
                             </div>
@@ -421,38 +303,48 @@
                                 <div class="listing" layout="column">
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoOcean</div>
-                                        <div class="nme">FCL (Full Container Load)</div>
+                                        <div class="srv">Back End</div>
+                                        <div class="nme">PHP</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoOcean</div>
-                                        <div class="nme">LCL (Less than Container Load)</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">HTML5</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoOcean</div>
-                                        <div class="nme">Bulk & Breakbulk</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">AngularJS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoOcean</div>
-                                        <div class="nme">Charter Services</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">CSS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoOcean</div>
-                                        <div class="nme">Temperature Controlled</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">SCSS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoOcean</div>
-                                        <div class="nme">Multiline Console</div>
+                                        <div class="srv">Database</div>
+                                        <div class="nme">MySQL</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoOcean</div>
-                                        <div class="nme">Multimodal</div>
+                                        <div class="srv">Mobile</div>
+                                        <div class="nme">Android</div>
+                                    </div>
+                                    <div class="itemise" layout="row">
+                                        <div class="ar">></div>
+                                        <div class="srv">Mobile</div>
+                                        <div class="nme">IOS</div>
+                                    </div>
+                                    <div class="itemise" layout="row">
+                                        <div class="ar">></div>
+                                        <div class="srv">Other</div>
+                                        <div class="nme">Multiple</div>
                                     </div>
                                 </div>
                             </div>
@@ -465,38 +357,48 @@
                                 <div class="listing" layout="column">
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoLand</div>
-                                        <div class="nme">Road FTL (Full Truck Load)</div>
+                                        <div class="srv">Back End</div>
+                                        <div class="nme">PHP</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoLand</div>
-                                        <div class="nme">Road LTL (Less than Truck Load)</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">HTML5</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoLand</div>
-                                        <div class="nme">Road Groupage</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">AngularJS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoLand</div>
-                                        <div class="nme">Road Distribution</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">CSS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoLand</div>
-                                        <div class="nme">Rail FCL & LCL</div>
+                                        <div class="srv">Front End</div>
+                                        <div class="nme">SCSS</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoLand</div>
-                                        <div class="nme">Rail Specialised</div>
+                                        <div class="srv">Database</div>
+                                        <div class="nme">MySQL</div>
                                     </div>
                                     <div class="itemise" layout="row">
                                         <div class="ar">></div>
-                                        <div class="srv">iCargoLand</div>
-                                        <div class="nme">Rail Multimodal</div>
+                                        <div class="srv">Mobile</div>
+                                        <div class="nme">Android</div>
+                                    </div>
+                                    <div class="itemise" layout="row">
+                                        <div class="ar">></div>
+                                        <div class="srv">Mobile</div>
+                                        <div class="nme">IOS</div>
+                                    </div>
+                                    <div class="itemise" layout="row">
+                                        <div class="ar">></div>
+                                        <div class="srv">Other</div>
+                                        <div class="nme">Multiple</div>
                                     </div>
                                 </div>
                             </div>
@@ -505,7 +407,7 @@
                 </div>
             </div>
         </div>
-        <!------------------------------------------------ Technology Overview -------------------------------------------------->
+        <!------------------------------------------------ Goals Overview -------------------------------------------------->
         <div class="mainPageCont" ng-if="$root.curPage === 3">
             <div class="techOver">
                 <div class="overlay">
@@ -532,7 +434,7 @@
                 </div>
             </div>
         </div>
-        <!------------------------------------------------ Solutions Overview -------------------------------------------------->
+        <!------------------------------------------------ Skills Overview -------------------------------------------------->
         <div class="mainPageCont" ng-if="$root.curPage === 4">
             <div class="solutOv">
                 <div class="overlay">
@@ -587,7 +489,7 @@
                 </div>
             </div>
         </div>
-        <!------------------------------------------------ Contact Us -------------------------------------------------->
+        <!------------------------------------------------ API -------------------------------------------------->
         <div class="mainPageCont" ng-if="$root.curPage === 5">
             <div class="overlayEnq">
                 <div class="contactForm" layout="column" ng-if="!showEnqStatus">
@@ -643,35 +545,23 @@
                             <div class="list bord" layout="column">
                                 <div class="item" layout="row">
                                     <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
-                                    <font class="txts">Africa</font>
+                                    <font class="txts">Tel:</font>
                                 </div>
                                 <div class="item" layout="row">
                                     <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
-                                    <font class="txts">Asia</font>
+                                    <font class="txts">Email:</font>
                                 </div>
                                 <div class="item" layout="row">
                                     <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
-                                    <font class="txts">Australia & Oceana</font>
-                                </div>
-                                <div class="item" layout="row">
-                                    <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
-                                    <font class="txts">Europe</font>
-                                </div>
-                                <div class="item" layout="row">
-                                    <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
-                                    <font class="txts">North America</font>
-                                </div>
-                                <div class="item" layout="row">
-                                    <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
-                                    <font class="txts">South America</font>
+                                    <font class="txts">LinkedIn:</font>
                                 </div>
                             </div>
                             <div class="list" layout="column">
                                 <div class="item">
-                                    <font class="mail">info@intellicargoglobal.com</font>
+                                    <font class="mail">0826174057</font>
                                 </div>
                                 <div class="item">
-                                    <font class="mail">info@intellicargoglobal.com</font>
+                                    <font class="mail">chaffey007@gmail.com</font>
                                 </div>
                                 <div class="item">
                                     <font class="mail">info@intellicargoglobal.com</font>

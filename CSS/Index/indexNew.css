@@ -917,9 +917,23 @@ md-progress-circular svg path {
   top: 20px;
   margin-left: 40px;
   font-size: 35px;
-  color: #646464;
+  color: #ccc;
   font-weight: bold;
   font-family: Segoe Ui, sans-serif; }
+
+.mainBody .mainPage .mainPageCont .med-overlay .left .txt {
+  position: relative;
+  top: 20px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Segoe Ui, sans-serif; }
+
+.mainBody .mainPage .mainPageCont .med-overlay .left .ttl {
+  color: #777; }
+
+.mainBody .mainPage .mainPageCont .med-overlay .left .data {
+  color: #005299; }
 
 .mainBody .mainPage .mainPageCont .med-overlay .left .quoteCont {
   position: absolute;
