@@ -353,7 +353,7 @@
 ******************************************************************************************/
 .indexMainMobile {
   /*background-color: rgba(0,0,0,1);*/
-  background: url("../../Images/wall0013.jpg") top center no-repeat;
+  background: url("../../Images/wall02.jpg") top center no-repeat;
   background-size: auto 100%; }
 
 .indexMainMobile .body {
@@ -499,7 +499,7 @@
 ******************************************************************************************/
 .mainBodyMobile {
   z-index: 99991;
-  background: url("../../Images/wall0011.jpg") top center no-repeat fixed;
+  background: url("../../Images/wall02.jpg") top center no-repeat fixed;
   background-size: cover; }
 
 /***************************************** Header *****************************************/
@@ -2929,6 +2929,20 @@
   top: 0;
   width: 70%;
   word-wrap: normal; }
+
+.phase .EQN .txt {
+  position: relative;
+  top: 20px;
+  margin-left: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Segoe Ui, sans-serif; }
+
+.phase .EQN .ttl {
+  color: #777; }
+
+.phase .EQN .data {
+  color: #005299; }
 
 .mainBodyMobile .mainPage .mainPageContAct .aboutUs .overlay .left .head .txt {
   font-size: 40px;

@@ -23,8 +23,7 @@ log
         $routeProvider
         //.......... Standard ..........
             .when('/main',{
-                //templateUrl: (_tst())?'Templates/indexMainMobile.html':'Templates/indexMain.html',
-                templateUrl: (_tst())?'Templates/index_Update_Mobile.html':'Templates/indexMain.html',
+                templateUrl: (_tst())?'Templates/indexMainMobile.html':'Templates/indexMain.html',
                 controller: (_tst())?'mainControllerMobile':'mainController'
             })
             .when('/logistics',{
@@ -34,7 +33,6 @@ log
             .otherwise({
                 redirectTo: '/main'
             });
-
     }]);
     /** ***********************************************************************************************************/
     /************************************************* Initialise Run ************************************************************/
@@ -179,7 +177,7 @@ log
 
         /******************************** Menu Selection *************************************/
         $scope.menuOptionList = [];
-        $scope.menuOptions = ['Home','About Me','Experience Overview','Goals Overview','Education & Qualifications','API','More'];
+        $scope.menuOptions = ['Home','About Me','Experience Overview','Goals Overview','Skills Overview','My GitHub','More'];
         for(let a = 0; a < $scope.menuOptions.length; a++){
             $scope.menuOptionList.push({
                 id: a,
@@ -564,6 +562,9 @@ log
             });
         }
         getGitInfo();
+
+        $scope.terms = 'Website Terms of Use\n' +
+            'This is a privately created website. No trademarks, certificates, or autenticators have been created or broken.\n\nPlease do not misuse the information on this page.';
 
 
     }]);
