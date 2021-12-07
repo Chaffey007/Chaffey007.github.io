@@ -492,40 +492,50 @@
         <!------------------------------------------------ API -------------------------------------------------->
         <div class="mainPageCont" ng-if="$root.curPage === 5">
             <div class="overlayEnq">
-                <div class="contactForm" layout="column" ng-if="!showEnqStatus">
-                    <font class="headerTxt">{{enqHead}}</font>
+                <div class="contactForm" layout="column" >
+                    <font class="headerTxt">My Public GitHub</font>
                     <div class="desc">
-                        <font class="descript">{{enqDesc}}</font>
-                        <font class="descriptSpec">{{enqDescSpec}}</font>
-                        <font class="descript">{{enqDescCont}}</font>
+                        <font class="descript">Here i use the GitHub API to display the online repository for </font>
+                        <font class="descriptSpec">chaffey007</font>
+                        <font class="descript">, my online account.</font>
                     </div>
-                    <div class="form" layout="column">
-                        <div class="bar thin">
-                            <input ng-change="newFullname(webEnqName)" ng-model="webEnqName" id="webEnqName" placeholder="Name & Surname" class="in" type="text" />
+                    <div layout="column">
+                        <div ng-show="userNotFound">
+                            <h2 style="font-size: 30px; color: rgba(100,100,100,0.9);text-align: center;margin-top: 100px">No User Info Found</h2>
                         </div>
-                        <div class="bar thin">
-                            <input ng-change="newEmail(webEnqMail)" ng-model="webEnqMail" id="webEnqMail" placeholder="Email" class="in" type="text" />
-                        </div>
-                        <div class="bar thin">
-                            <div class="toDrop" ng-click="togEnqDrop()">
-                                <font class="txt">{{enqOpt}}</font>
-                                <ng-md-icon class="icon" icon="{{enqOptArrow}}" size="25"></ng-md-icon>
-                                <div class="drop" ng-if="showEnqDrop">
-                                    <div class="scr" layout="column">
-                                        <div class="list" ng-repeat="item in enqList">
-                                            <div class="cont" ng-click="newEnqType(item.title)">
-                                                <font class="item">{{item.title}}</font>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div ng-show="Gitloaded">
+                            <h2 style="font-size: 30px; color: rgba(100,100,100,0.9);text-align: center;"> {{git_user.name}}
+                                <span class="smallname">(@<a href="{{git_user.html_url}}" target="_blank"> {{git_user.login}} </a>)</span>
+                            </h2>
+
+                            <div class="ghcontent desc">
+                                <div class="avi">
+                                    <a href="{{ git_user.html_url }}" target="_blank">
+                                        <img src="{{ git_user.avatar_url }}" width="200" height="200" alt="{{ git_user.login }}" style="position:relative;border-radius: 200px;left: calc(50% - 100px)"></a>
+                                </div>
+                                <div style="position: absolute; top: 0">
+                                    <font class="descript">Followers: </font>
+                                    <font class="descriptSpec">{{ git_user.followers }}</font>
+                                    <br>
+                                    <font class="descript">Following: </font>
+                                    <font class="descriptSpec">{{ git_user.following }}</font>
+                                    <br>
+                                    <font class="descript">Repos: </font>
+                                    <font class="descriptSpec">{{ git_user.public_repos }}</font>
+                                </div>
+                            </div>
+
+                            <div class="repolist clearfix" style="position: absolute; bottom: 10px">
+                                <font ng-hide="reposFound"  class="headerTxt">No repos!</font>
+
+                                <div ng-show="reposFound">
+                                    <font  class="headerTxt">Repos List:</font>
+                                    <ul ng-repeat="repo in repos">
+                                        <li><a href="{{repo.html_url}}" target="_blank"> {{repo.name}} </a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="bar thick">
-                            <textarea ng-change="newMessage(webEnqMsg)" ng-model="webEnqMsg" id="webEnqMsg" placeholder="Message" class="in" ></textarea>
-                        </div>
-                        <font class="msg" ng-class="{msgFail: enqResult === 'Enquiry Submition Failed.'}">{{enqResult}}</font>
-                        <button class="submit" ng-class="{submitDis: !isValidEnq}" ng-click="sendNewEnq()">Send Enquiry</button>
                     </div>
                 </div>
 
@@ -542,21 +552,18 @@
                 <div class="content">
                     <div class="top" layout="row">
                         <div class="left" layout="row">
-                            <div class="list bord" layout="column">
+                            <div class="list bord" layout="column" style="width: 35%">
                                 <div class="item" layout="row">
-                                    <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
                                     <font class="txts">Tel:</font>
                                 </div>
                                 <div class="item" layout="row">
-                                    <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
                                     <font class="txts">Email:</font>
                                 </div>
                                 <div class="item" layout="row">
-                                    <md-icon md-svg-src="Images/SVG/international-delivery.svg" class="ico"></md-icon>
                                     <font class="txts">LinkedIn:</font>
                                 </div>
                             </div>
-                            <div class="list" layout="column">
+                            <div class="list" layout="column" style="width: 65%">
                                 <div class="item">
                                     <font class="mail">0826174057</font>
                                 </div>
@@ -564,96 +571,25 @@
                                     <font class="mail">chaffey007@gmail.com</font>
                                 </div>
                                 <div class="item">
-                                    <font class="mail">info@intellicargoglobal.com</font>
+                                    <font class="mail">https://www.linkedin.com/in/fred-chaffey-516b82138/</font>
                                 </div>
-                                <div class="item">
-                                    <font class="mail">info@intellicargoglobal.com</font>
-                                </div>
-                                <div class="item">
-                                    <font class="mail">info@intellicargoglobal.com</font>
-                                </div>
-                                <div class="item">
-                                    <font class="mail">info@intellicargoglobal.com</font>
-                                </div>
-                            </div>
-                            <div class="listLast" layout="column">
-                                <div class="item">
-                                    <font class="txts">Products & Services</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Air</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Ocean</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Road</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Rail</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Express</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Warehousing</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">SupplyChain</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Online</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Fulfill</font>
-                                </div>
-                                <div class="itema" layout="row">
-                                    <font class="maila">></font>
-                                    <font class="mailb">Trade</font>
-                                </div>
-
                             </div>
                         </div>
                         <div class="right">
-                            <div class="topLeft">
-                                <font class="txt">Please note that all products are subject to availablility withineach global section and it's countries.</font>
-                            </div>
                             <div class="toTop" ng-click="selectDispPage(0)">
                                 <ng-md-icon class="icon" icon="keyboard_arrow_up" size="40"></ng-md-icon>
                                 <font class="toptxt">Back To Top</font>
                             </div>
-                            <img src="Images/Intellicargo Logo White small.png" class="footImg" />
-                            <!--<div class="social" layout="row">
-                                <div class="circ">
-                                    <ng-md-icon class="icon" icon="linkedin" size="20"></ng-md-icon>
-                                </div>
-                                <div class="circ">
-                                    <ng-md-icon class="icon" icon="google-plus" size="20"></ng-md-icon>
-                                </div>
-                                <div class="circ">
-                                    <ng-md-icon class="icon" icon="facebook" size="20"></ng-md-icon>
-                                </div>
-                                <div class="circ">
-                                    <ng-md-icon class="icon" icon="twitter" size="20"></ng-md-icon>
-                                </div>
-                            </div>-->
+                            <a href="cv.pdf" target="_blank" title="Download PDF Version"><img src="Images/logo.png" alt="Download PDF" border="0" class="footImg" style="top: 20%"/></a>
+
+
                         </div>
 
                     </div>
                     <div class="bot">
-                        <font class="ttl">Copyright Intellicargo International Group 2018. All Rights Reserved</font>
+                        <font class="ttl">Created By FJ Chaffey.</font>
                         <div class="right" layout="row">
-                            <font class="btn" ng-click="showTerms = true">Terms & Conditions</font>
-                            <!--<font class="btn bord">Payment Policy</font>-->
+                            <font class="btn" ng-click="showTerms = true">Website Terms Of Use</font>
                         </div>
                     </div>
                     <div class="terms" ng-show="showTerms === true">
@@ -667,51 +603,5 @@
             </div>
         </div>
     </div>
-    <!------------------------------------------------ Quote Popup -------------------------------------------------->
-    <div class="QteSum" ng-show="showQteSumPop">
-    <!--<div class="QteSum" ng-show="showQteSumPop">-->
-        <div class="container">
-            <div class="block" ng-show="qtPop === 0">
-                <font class="title">Quote Summary</font>
-                <font class="close" ng-click="closeQteSumPop()">Close</font>
-                <div class="scr" layout="column">
-                    <div class="sect" layout="column" ng-repeat="section in quoteSuum">
-                        <font class="title">{{section.title}}</font>
-                        <div class="line" ng-repeat="line in section.subs">
-                            <font class="ttl">{{line.title}}</font>
-                            <font class="data">{{line.data}}</font>
-                        </div>
-                    </div>
-                    <div class="bot" layout="row">
-                        <div class="info">
-                            <font class="txt">{{acceptTxh}}</font>
-                        </div>
-                        <button class="btn" ng-click="requestQte()">Accept</button>
-                    </div>
-                </div>
-            </div>
-            <div class="block" ng-show="qtPop === 1">
-                <font class="title">Quote Result</font>
-                <font class="close" ng-click="closeQteSumPop()">Close</font>
-                <div class="scr" layout="column">
-                    <font class="infoTxt">Your request has been received successfully.<br>Check your email regularly for updates and quote returns.</font>
-                    <div class="bot" layout="row">
-                        <button class="btn" ng-click="closeQteSumPop()">Continue</button>
-                    </div>
-                </div>
-            </div>
-            <div class="block" ng-show="qtPop === 2">
-                <font class="title">Term & Conditions</font>
-                <font class="close" ng-click="closeQteSumPop()">Close</font>
-                <div class="scr" layout="column">
-                    <font class="payTerms">{{payTerms}}</font>
-                    <div class="bot" layout="row">
-                        <button class="btn" ng-click="acceptPayTerms()">Accept</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 </div>

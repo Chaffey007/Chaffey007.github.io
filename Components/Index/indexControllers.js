@@ -97,7 +97,6 @@ log
             }
             $location.path('/logistics');
         }
-
     }]);
 
     /** ***********************************************************************************************************/
@@ -526,445 +525,47 @@ log
         $scope.solheadSix = 'Misc';
         $scope.soltextSix = 'I have completed a course in Tridium, the developer of Niagara Framework. I have also completed numerous projects on a Raspberry Pi using Linux, Raspbian and Python. Furthermore, I have aquired skills in numerous lesser known languages like IPL and FP. Anything i dont yet know, I will learn as needed.';
 
+
         /******************************** API Page *************************************/
-        $scope.enqHead = 'Contact Us';
-        $scope.enqDesc = 'Intellicargo International provides a wide range of services and solutions within our global network. ' +
-            'For any information regarding our services, please fill in our form or email us at ';
-        $scope.enqDescSpec = 'info@intellicargoglobal.com';
-        $scope.enqDescCont = '. Please note that any service estimate request can take up to 48 hours.';
-        var newName = '',
-            newMail = '',
-            newMsg = '';
-        $scope.enqOpt = 'Enquiry Type';
-        $scope.enqOptArrow = 'keyboard_arrow_down';
-        $scope.enqList = [];
-        var enqListItems = ['Other'];
-        for(let a = 0; a < enqListItems.length; a++){
-            $scope.enqList.push({
-                id: a,
-                title: enqListItems[a]
+        function getGitInfo() {
+            let user = "chaffey007";
+            $scope.userNotFound = false;
+            $scope.Gitloaded = false;
+            $rootScope.loading = true;
+
+            $http({
+                method: 'GET',
+                url: 'https://api.github.com/users/'+user
+            }).then(function (response){
+                if (response.data.name == "") {
+                    data.name = response.data.login;
+                }
+                $scope.git_user = response.data;
+                $scope.Gitloaded = true;
+                $rootScope.loading = false;
+                console.log(response.data);
+                $http({
+                    method: 'GET',
+                    url: "https://api.github.com/users/" + user + "/repos"
+                }).then(function (response2){
+                    $scope.repos = response2.data;
+                    $scope.reposFound = response2.data.length > 0;
+                    $rootScope.loading = false;
+                    console.log(response2.data);
+                },function (error){
+                    $scope.userNotFound = true;
+                    $rootScope.loading = false;
+                    alert("Github API Failure 2");
+                });
+            },function (error){
+                $scope.userNotFound = true;
+                $rootScope.loading = false;
+                alert("Github API Failure");
             });
         }
-        //... Toggle Type Drop ...
-        $scope.togEnqDrop = TogEnqDrop;
-        function TogEnqDrop(){
-            $scope.showEnqDrop = !$scope.showEnqDrop;
-            if(!$scope.showEnqDrop){
-                $scope.enqOptArrow = 'keyboard_arrow_down';
-            }
-            else if($scope.showEnqDrop){
-                $scope.enqOptArrow = 'keyboard_arrow_up';
-            }
-        }
-        //... Select Enquiry Type ...
-        $scope.newEnqType = function(sel){
-            $scope.enqOpt = sel;
-            $timeout(function(){
-                enqValid('', '');
-            },100);
-        };
-        //... Type Name ...
-        $scope.newFullname = function(txt){
-            newName = txt;
-            $timeout(function(){
-                enqValid('name', newName);
-            },100);
-        };
-        //... Type Mail ...
-        $scope.newEmail = function(txt){
-            newMail = txt;
-            $timeout(function(){
-                enqValid('mail', newMail);
-            },100);
-        };
-        //... Type Msg ...
-        $scope.newMessage = function(txt){
-            newMsg = txt;
-            $timeout(function(){
-                enqValid('msg', newMsg);
-            },100);
-        };
-        //... Test Form Validity ...
-        var tstNme = false,
-            tstMail = false,
-            tstMsg = false;
-        $scope.isValidEnq = false;
-        function enqValid(type, data){
-            let unme = /^[0-9a-zA-Z]+$/;
-            let mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if((type === 'name')){
-                (data.match(unme) && data !== '' && data !== undefined) ? tstNme = true : tstNme = false;
-            }
-            if((type === 'mail')){
-                (data.match(mail) && data !== '' && data !== undefined) ? tstMail = true : tstMail = false;
-            }
-            if(type === 'msg'){
-                (data !== '' && data !== undefined) ? tstMsg = true : tstMsg = false;
-            }
-            ($scope.enqOpt !== 'Enquiry Type' && tstNme && tstMail && tstMsg) ? $scope.isValidEnq = true : $scope.isValidEnq = false;
-        }
-        //...
-        $scope.enqResult = '';
-        //... Submit Enquiry ...
-        $scope.sendNewEnq = SendNewEnq;
-        function SendNewEnq(){
-            if($scope.isValidEnq){
-                $rootScope.loading = true;
-                let action = 'enquiry';
-                $http({
-                    url: 'app-services/mailWebReq.html',
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    data: 'act='+action+'&nme='+newName+'&mail='+newMail+'&msg='+newMsg+'&tpe='+$scope.enqOpt
-                }).then(function(getResponse){
-                    newName = $scope.webEnqName = '';
-                    newMail = $scope.webEnqMail = '';
-                    newMsg = $scope.webEnqMsg = '';
-                    enqValid('msg', '');
-                    if(getResponse.data === 'Mail sent'){
-                        //console.log(getResponse);
-                        $scope.enqResult = 'Enquiry Submitted Successfully.';
-                    }
-                    else if (getResponse.data !== 'Mail sent'){
-                        console.log(getResponse.data);
-                        $scope.enqResult = 'Enquiry Submition Failed.';
-                    }
-                    $rootScope.loading = false;
-                });
-            }
-        }
-
-        $scope.terms = 'Website Terms of Use\n' +
-            '  \n' +
-            'Please read these terms of use carefully as they apply to your use of the IESCO Pty Ltd trading as Intellicargo International (“Intellicargo International”), website. By using the Intellicargo International website, you agree to be bound by these terms of use. We may amend these terms of use at any time. Your continued use of the Intellicargo International website is considered to be acceptance of the amended terms of use.   \n' +
-            '  \n' +
-            'Liability \n' +
-            'Intellicargo International makes no warranties or representations about this website or any of its content. We are not responsible to you or anyone else for any direct or consequential loss suffered in connection with the use of this website. We exclude, to the extent permitted by law, any liability which may arise as a result of use of this website. By using Intellicargo International website, you agree to indemnify us for any loss or liability arising out of your use of this website.  \n' +
-            '\n' +
-            'Intellicargo International Intellectual Property   \t \n' +
-            'Intellicargo International owns this intellectual property, including copyright, in all content of the Intellicargo International website. We are happy for you to link our website; however, it is your responsibility to maintain the currency of your links to our website. We reserve the right to deny any person permission to link our website.     \n' +
-            '\n' +
-            'Links from this website    \n' +
-            'The external linked websites within the Intellicargo International website are not under the control of Intellicargo International. We do not take responsibility for the content in, or currency of, any externally linked sites. The inclusion of any link within our website does not imply endorsement by Intellicargo International of the linked website, nor does it suggest any relationship with the organization linked.    \n' +
-            'SPAM  \n' +
-            'Intellicargo International publishes electronic addresses on this website to facilitate communication relating to our business functions. This is not to be inferred as consent by Intellicargo International or the relevant addresses to receiving unsolicited commercial messages or SPAM.  \n' +
-            ' \n' +
-            'Electronic Communications  \n' +
-            'When a user visits Intellicargo International or sends an email to Intellicargo International, that user consents to receiving communications from Intellicargo International electronically and agrees that all agreements, notices, disclosures and other communications sent by Intellicargo International satisfies any legal requirements, including but not limited to, the requirements that such communications should be “in writing”. \n' +
-            ' \n' +
-            'Framing \n' +
-            'No person, business or web site may frame this site or any of the pages on this site in any way whatsoever. \n' +
-            ' \n' +
-            'Spiders and Crawlers \n' +
-            'No person, business or web site may use any technology to search and gain any information from this site without the prior written permission of Intellicargo International.   \n' +
-            '        \n' +
-            'Disclaimer \n' +
-            'Apart from the provision of sections 43(5) and 43(6) of the Electronic Communications and Transactions Act, neither Intellicargo International nor any of its agents or representatives shall be liable for any damage, loss or liability of whatsoever nature arising from the use or inability to use this web site or representations or warranties, implied or otherwise, that amongst others, the content and technology available from this website are free from errors or omissions or that the service will be 100% uninterrupted and error free. Users are encouraged to report any possible malfunctions and errors to queries@intellicargoi.com\n' +
-            ' \n' +
-            'This website is supplied on an “as is” basis and has not been compiled or supplied to meet the user’s individual requirements.  It is the sole responsibility of the user to satisfy itself prior to entering into this agreement with Intellicargo International that the service available from and through this web site will meet the user’s individual requirements and be compatible with the user’s hardware and/or software. \n' +
-            ' \n' +
-            'Information, ideas and opinions expressed on this site should not be regarded as professional advice or the official opinion of Intellicargo International and users are encouraged to consult professional advice before taking any course of action related to information, ideas or opinions expressed on this site. \n' +
-            ' \n' +
-            'Neither Intellicargo International nor any of its agents or representatives shall be liable for any damage, loss or liability of whatsoever nature arising from the use of inability to use any product sold on this web site. \n';
-
-        /************************************************ Register *****************************************************/
-        var uname = '',
-            email = '',
-            passw = '';
-        $scope.regMsg = '';
-        $scope.userRegister = function(regType){
-            $rootScope.loading = true;
-
-            var error = "Invalid data!";
-
-            if(($scope.uname === 'pass') && ($scope.mail === 'pass') && ($scope.pass === 'pass') && ($scope.passCon === 'pass')){
-
-                $http({
-                    url: 'app-services/userRegister.html',
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    data: 'unme='+uname+'&mail='+email+'&pass='+passw
-                }).then(function(getResponse){
-                    $log.log(getResponse.data.status);
-                    if(getResponse.data.status.includes('Yes')){
-                        $rootScope.loading = false;
-                        document.getElementById('regNameb').value = '';
-                        document.getElementById('regMailb').value = '';
-                        document.getElementById('regPassb').value = '';
-                        document.getElementById('regPassConb').value = '';
-                        $scope.regMsg = "Registration Successful!\r\nPlease log in using your credentials.";
-                    }
-                    else if (getResponse.data.status === 'Unavailible'){
-                        $scope.regMsg = 'This email address is already registered.\nPlease use another email or recover your password.';
-                        $rootScope.loading = false;
-                    }
-                    else if (getResponse.data.status === 'DB Problem'){
-                        $scope.regMsg = 'The server was unable to connect.\\r\\nPlease try again later.';
-                        $rootScope.loading = false;
-                    }
-                    else {
-                        $scope.regMsg = "An unexpected error stopped the registration process.\nPlease try again.";
-                        $rootScope.loading = false;
-                    }
-                });
-            }
-            else{
-                if(($scope.uname === 'fail') || ($scope.mail === 'fail') || ($scope.pass === 'fail') || ($scope.passCon === 'fail')){
-                    error += "\r\nMake sure that:\n";
-                }
-
-                if($scope.uname === 'fail'){
-                    error += "- Username consists of only alphanumeric characters (a-z, A-Z, 0-9).\n";
-
-                }
-                if($scope.mail === 'fail'){
-                    error += "- Email address is valid (user@example.com).\n";
-
-                }
-                if($scope.pass === 'fail'){
-                    error += "- Password contains at least 8 alphabetic characters (a-z, A-Z), at least 1 numeric character (0-9) and 1 special character ($@$!%*#?&).\n";
-
-                }
-                if($scope.passCon === 'fail'){
-                    error += "- 'Password' matches 'Confirm Password'.";
-
-                }
-                $scope.regMsg = error;
-                //alert(error);
-                $rootScope.loading = false;
-            }
-        };
-
-        $scope.validateReg = function(type, data){
-            $scope.regMsg = '';
-            var unme = /^[0-9a-zA-Z ]+$/;
-            var mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            var pass = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
-            if((type === 'uname')){
-                uname = data;
-                if(data === undefined){
-                    $scope.uname = 'fail';
-                }
-                else if(data.match(unme)){
-                    $scope.uname = 'pass';
-                }
-                else{
-                    $scope.uname = 'fail';
-                }
-            }
-            if((type === 'email')){
-                email = data;
-                if(data === undefined){
-                    $scope.mail = 'fail';
-                }
-                else if(data.match(mail)){
-                    $scope.mail = 'pass';
-                }
-                else{
-                    $scope.mail = 'fail';
-                }
-            }
-            if((type === 'password')){
-                passw = data;
-                $scope.regPassCon = "";
-                $scope.passCon = 'fail';
-                if(data === undefined){
-                    $scope.pass = 'fail';
-                }
-                else if(data.match(pass)){
-                    $scope.pass = 'pass';
-                }
-                else{
-                    $scope.pass = 'fail';
-                }
-            }
-            if((type === 'passwordCon')){
-                if(data === undefined){
-                    $scope.passCon = 'fail';
-                }
-                else if(data === passw){
-                    $scope.passCon = 'pass';
-                }
-                else{
-                    $scope.passCon = 'fail';
-                }
-            }
-        };
-
-        /*************** Currencies ******************/
-        $timeout(function(){
-            //... Get Currencies ...
-            $http({
-                url: 'https://openexchangerates.org/api/latest.json?app_id=f4a23fe692cf401a85f151cfc4e290c3',
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            }).then(function(response){
-                if(response.data.error !== 'true'){
-                    //console.log(response.data);
-                    GlobeVars.currencyList = response.data.rates;
-
-                }
-                else{
-                    GlobeVars.currencyList = [];
-                }
-            },function(){
-                console.warn('currency offline');
-            },500);
-        });
+        getGitInfo();
 
 
     }]);
 
-    /** ***********************************************************************************************************/
-    /************************************************* Login ************************************************************/
-    /** ***********************************************************************************************************/
-
-    /******************************** Login / Register *************************************/
-    myApp.controller('loginCntrl',['$scope','$rootScope','$timeout','$mdSidenav','$log','$http', function ($scope, $rootScope, $timeout, $mdSidenav, $log, $http) {
-        $rootScope.showLogPop = false;
-
-        /*** Main ***/
-        $rootScope.Registerlog = false;
-        $scope.loginInputOne = "Email";
-
-        //... Go to login page ...
-        $rootScope.loginRegister = function(){
-            if($rootScope.miniLoggedIn){
-                $rootScope.loading = true;
-                window.location.assign("Interface.html#!/home");
-            }else{
-                $rootScope.showLogPop = !$rootScope.showLogPop;
-                $scope.logpop = "login";
-            }
-        };
-        //... Go to register page
-        $rootScope.registerPage = function(){
-            $rootScope.showRegPop = false;
-            $rootScope.mainTabDisp = 'reg';
-        };
-
-        //... Go to Forgot password page
-        $scope.logpop = "login";
-        $scope.togLogPops = function(sel){
-            $scope.logpop = sel;
-        };
-
-        //... Change mail ...
-        var email = '',
-            maile = false;
-        $rootScope.validateReset = function(data){
-            $scope.logError = false;
-            $scope.logErrorMsg = "";
-            var mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            email = data;
-            ((data.match(mail)) && (data !== undefined) && (data !== '')) ? maile = true : maile = false ;
-        };
-        /***************************** Reset ************************************/
-        $rootScope.reset = Reset;
-        function Reset(){
-            if(maile){
-                let action = 'pwReset';
-                $rootScope.loading = true;
-                $http({
-                    url: 'app-services/mailWebReq.html',
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    data: 'act='+action+'&mail='+email
-                }).then(function(getResponse){
-                    $log.error(getResponse.data);
-                    maile = false;
-                    if(getResponse.data === 'DB Problem'){
-                        $scope.logError = true;
-                        $scope.logErrorMsg = "Connection Error. Please Try again later.";
-                    }
-                    else if(getResponse.data === 'notFound'){
-                        $scope.logError = true;
-                        $scope.logErrorMsg = "Error... The email address entered is not registered yet.";
-                    }
-                    else if(getResponse.data.includes("Success")){
-                        $rootScope.mainTabDisp = "miniLogin";
-                        $scope.logError = true;
-                        $scope.logErrorMsg = $rootScope.resetResp = "Recovery mail Successfully sent to " + email;
-                    }
-                    else{
-                        $scope.logError = true;
-                        $scope.logErrorMsg = "Error... Recovery email not sent. Please try again.";
-                    }
-                    $rootScope.loading = false;
-                });
-            }else{
-                $scope.logError = true;
-                $scope.logErrorMsg = "Invalid Email Address";
-            }
-        }
-
-
-        /***************************** Login ************************************/
-        $scope.login = function() {
-            $rootScope.loading = true;
-            var username = $rootScope.loginUsername;
-            var password = $rootScope.loginPassword;
-            $http({
-                url: 'app-services/serverLogin.html',
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                data: 'username='+username+'&password='+password
-            }).then(function(response) {
-                    if(response.data.status === 'loggedin') {
-                        $http({
-                            url: 'app-services/credentialsSet.html',
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded'
-                            },
-                            data: response.data
-                        }).then(function(responseOne){
-                                if(responseOne.data.status === 'loggedin'){
-                                    window.location.assign("Interface.html#!/home");
-                                }
-                            },
-                            function(e ){
-                                //alert('!!! Failed to login !!! \r\n\r\n Please try again later.\r\n\r\n' + e);
-                                $scope.logError = true;
-                                $scope.logErrorMsg = "** Failed to login !!! Please try again later. **";
-                                $rootScope.loading = false;
-                            });
-                    }
-                    else if(response.data.status === 'notFound') {
-                        $rootScope.loading = false;
-                        $scope.logError = true;
-                        $scope.logErrorMsg = "** This Email address is not yet registered. **";
-                    }
-                    else if(response.data.status === 'DB Problem'){
-                        $scope.logErrorMsg = "** DB Error **";
-                    }
-                    else {
-                        $rootScope.loading = false;
-                        $scope.logError = true;
-                        $scope.logErrorMsg = "** Incorrect Password **";
-                    }
-                },
-                function(){
-                    $scope.logErrorMsg = "** ERROR **";
-                });
-        };
-
-        //... Clear Error Messge ...
-        $scope.clearError = function(){
-            $scope.logError = false;
-            $scope.logErrorMsg = "";
-        };
-
-
-    }]);
 })();
