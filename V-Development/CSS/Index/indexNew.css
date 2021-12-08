@@ -10,7 +10,7 @@
 
 .cont, .indexMain .body, .indexMain .body .imgHead .headIcon {
   height: 100%;
-  width: 100%;
+  width: auto;
   top: 0;
   left: 0; }
 
@@ -457,11 +457,11 @@ md-progress-circular svg path {
 ******************************************************************************************/
 .indexMain {
   /*background-color: rgba(0,0,0,1);*/
-  background: url("../../Images/wall0013.jpg") top center no-repeat fixed;
+  background: url("../../Images/wall02.jpg") top center no-repeat fixed;
   background-size: 100% 100%; }
 
 .indexMain .body {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .indexMain .body .selections {
   position: relative;
@@ -603,7 +603,7 @@ md-progress-circular svg path {
 ******************************************************************************************/
 .mainBody {
   z-index: 99991;
-  background: url("../../Images/wall0011.jpg") top center no-repeat fixed;
+  background: url("../../Images/wall02.jpg") top center no-repeat fixed;
   background-size: 100% 100%; }
 
 /***************************************** Header *****************************************/
